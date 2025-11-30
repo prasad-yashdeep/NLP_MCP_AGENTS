@@ -1,0 +1,66 @@
+kind: llm
+spec:
+  name: ollama-llm
+  type: ollama
+  config:
+    model_name: gpt-oss:20b
+    temperature: 0.7
+    max_completion_tokens: 4096
+    seed: 12345
+
+---
+kind: agent
+spec:
+  name: ReAct-agent
+  type: react
+  config:
+    llm: ollama-llm
+    instruction: You are an agent for Browser automation.
+    max_iterations: 20
+    summarize_tool_response: false
+
+---
+kind: benchmark
+spec:
+  description: Browser Automation with gpt-oss:20b
+  agent: ReAct-agent
+  tasks:
+    - test/browser_automation/playwright_paper_task_0001.json
+    - test/browser_automation/playwright_paper_task_0002.json
+    - test/browser_automation/playwright_paper_task_0003.json
+    - test/browser_automation/playwright_paper_task_0004.json
+    - test/browser_automation/playwright_paper_task_0005.json
+    - test/browser_automation/playwright_paper_task_0006.json
+    - test/browser_automation/playwright_paper_task_0007.json
+    - test/browser_automation/playwright_paper_task_0008.json
+    - test/browser_automation/playwright_sports_task_0001.json
+    - test/browser_automation/playwright_sports_task_0002.json
+    - test/browser_automation/playwright_sports_task_0003.json
+    - test/browser_automation/playwright_sports_task_0004.json
+    - test/browser_automation/playwright_sports_task_0005.json
+    - test/browser_automation/playwright_sports_task_0006.json
+    - test/browser_automation/playwright_sports_task_0007.json
+    - test/browser_automation/playwright_sports_task_0008.json
+    - test/browser_automation/playwright_huggingface_task_0001.json
+    - test/browser_automation/playwright_huggingface_task_0002.json
+    - test/browser_automation/playwright_huggingface_task_0003.json
+    - test/browser_automation/playwright_huggingface_task_0004.json
+    - test/browser_automation/playwright_huggingface_task_0005.json
+    - test/browser_automation/playwright_huggingface_task_0006.json
+    - test/browser_automation/playwright_huggingface_task_0007.json
+    - test/browser_automation/playwright_google_map_task_0001.json
+    - test/browser_automation/playwright_google_map_task_0002.json
+    - test/browser_automation/playwright_google_map_task_0003.json
+    - test/browser_automation/playwright_google_map_task_0004.json
+    - test/browser_automation/playwright_google_map_task_0005.json
+    - test/browser_automation/playwright_google_map_task_0006.json
+    - test/browser_automation/playwright_google_map_task_0007.json
+    - test/browser_automation/playwright_booking_task_0001.json
+    - test/browser_automation/playwright_booking_task_0002.json
+    - test/browser_automation/playwright_booking_task_0003.json
+    - test/browser_automation/playwright_booking_task_0004.json
+    - test/multi_server/multi-server_task_playwright_notion_0001.json
+    - test/multi_server/multi-server_task_playwright_notion_0002.json
+    - test/multi_server/multi-server_task_playwright_notion_0003.json
+    - test/multi_server/multi-server_task_playwright_notion_0004.json
+    - test/multi_server/multi-server_task_playwright_notion_0005.json
