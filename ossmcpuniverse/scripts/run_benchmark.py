@@ -29,8 +29,8 @@ load_dotenv(Path(__file__).parent.parent / ".env")
 # Import MCP Universe components
 from mcpuniverse.benchmark.runner import BenchmarkRunner
 from mcpuniverse.benchmark.report import BenchmarkReport
-from mcpuniverse.tracer.file import FileCollector
-from mcpuniverse.callbacks import get_vprint_callbacks
+from mcpuniverse.tracer.collectors.file import FileCollector
+from mcpuniverse.callbacks.handlers.vprint import get_vprint_callbacks
 
 # Available models and benchmarks
 # GPU server models: gpt-oss-20b, deepseek-r1-14b, gemma3-12b
