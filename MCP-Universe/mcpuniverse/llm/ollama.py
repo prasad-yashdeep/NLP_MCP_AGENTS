@@ -118,7 +118,8 @@ class OllamaModel(BaseLLM):
         if response_format is not None:
             data["format"] = "json"
 
-        response = requests.post(url, json=data, timeout=int(kwargs.get("timeout", 30)))
+        # Increased default timeout to 300s for larger models
+        response = requests.post(url, json=data, timeout=int(kwargs.get("timeout", 300)))
         json_data = json.loads(response.text)
         content = json_data["message"]["content"]
         if response_format is None:

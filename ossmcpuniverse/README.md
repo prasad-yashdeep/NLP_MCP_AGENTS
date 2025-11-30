@@ -24,6 +24,29 @@ Run MCP Universe benchmarks with local Ollama models for open-source LLM evaluat
 
 ## Prerequisites
 
+### RHEL GPU Server Setup (REQUIRED)
+
+If you're on the RHEL GPU server, you **must** activate the conda environment and load the Node.js module before running benchmarks:
+
+```bash
+# Activate conda environment
+conda activate /scratch/yp2693/NLP_MCP_AGENTS/penv
+
+# Load Node.js module (required for google-maps and playwright MCP servers)
+module load node/22.9.0
+
+# Or use the setup script to do both
+source setup_env.sh
+```
+
+Add this to your `~/.bashrc` to load automatically:
+```bash
+echo "conda activate /scratch/yp2693/NLP_MCP_AGENTS/penv" >> ~/.bashrc
+echo "module load node/22.9.0" >> ~/.bashrc
+```
+
+**Note:** The `repository_management` benchmark requires Docker (not available on this server) and will be skipped.
+
 ### 1. Install Ollama
 
 ```bash
@@ -72,6 +95,23 @@ cp .env.example .env
 ```
 
 ## Usage
+
+### Quick Start (RHEL GPU Server)
+
+```bash
+# 1. Activate conda environment and load Node.js module
+conda activate /scratch/yp2693/NLP_MCP_AGENTS/penv
+module load node/22.9.0
+
+# 2. Or use the setup script to do both
+source setup_env.sh
+
+# 3. Run a quick test (5 tasks)
+python scripts/run_benchmark.py --model gpt-oss-20b --benchmark location_navigation --limit 5
+
+# 4. Or use the wrapper script (auto-loads everything)
+./run_with_node.sh python scripts/run_benchmark.py --model gpt-oss-20b --benchmark location_navigation --limit 5
+```
 
 ### Check Ollama Setup
 
@@ -213,17 +253,32 @@ Example results file structure:
 
 The benchmarks require these MCP servers to be configured in MCP-Universe:
 
-- **google_maps** - For location navigation tasks
-- **playwright** - For browser automation tasks
-- **yfinance** - For financial analysis tasks
-- **calculator** - For financial calculations
-- **weather** - For multi-server location tasks
-- **github** - For repository management tasks
-- **google-search** - For web search tasks
-- **fetch** - For fetching web content
-- **notion** - For multi-server tasks
+| MCP Server | Command | Benchmarks | Available on RHEL? |
+|------------|---------|------------|-------------------|
+| google-maps | `npx` | location_navigation | ✓ (with module load) |
+| playwright | `npx` | browser_automation | ✓ (with module load) |
+| yfinance | `python3` | financial_analysis | ✓ |
+| calculator | `python3` | financial_analysis | ✓ |
+| github | `docker` | repository_management | ✗ (no Docker) |
+| google-search | `python3` | web_search | ✓ |
+
+**On RHEL GPU Server:** 4 out of 5 benchmarks work after loading Node.js module
 
 ## Troubleshooting
+
+### "The command must be a valid string" Error
+
+```
+ValueError: The command must be a valid string
+```
+
+**Cause:** Node.js module not loaded (required for google-maps, playwright, etc.)
+
+**Solution:**
+```bash
+module load node/22.9.0
+# Then retry your benchmark command
+```
 
 ### Ollama Connection Error
 

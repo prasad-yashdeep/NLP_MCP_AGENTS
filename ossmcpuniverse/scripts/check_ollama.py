@@ -63,12 +63,14 @@ def test_model_generation(model_name: str) -> bool:
                 "stream": False,
                 "options": {"num_predict": 10}
             },
-            timeout=60
+            timeout=300
         )
         if response.status_code == 200:
             data = response.json()
             content = data.get("message", {}).get("content", "")
             return len(content) > 0
+        else:
+            print(f"Status code: {response.status_code}, Response: {response.text}")
         return False
     except Exception as e:
         print(f"  Error testing {model_name}: {e}")
