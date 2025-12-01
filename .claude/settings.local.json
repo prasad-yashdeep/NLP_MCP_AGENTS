@@ -1,15 +1,7 @@
 {
   "permissions": {
     "allow": [
-      "Bash(source:*)",
-      "Bash(python -m pip:*)",
-      "Bash(python3 -c \"import sys; sys.path.insert(0, ''../MCP-Universe''); from mcpuniverse.tracer.collectors.file import FileCollector; print(''Import successful!'')\")",
-      "Bash(python3 -m pip install:*)",
-      "Bash(/Users/yashdeepprasad/Desktop/NLP_MCP_AGENTS/.conda/bin/python -m pip install:*)",
-      "Bash(/Users/yashdeepprasad/Desktop/NLP_MCP_AGENTS/.conda/bin/python:*)",
-      "Bash(module avail)",
-      "Bash(./run_with_node.sh:*)",
-      "Bash(conda env list:*)"
+      "Bash(./run_with_node.sh python scripts/test_react_search.py)"
     ],
     "deny": [],
     "ask": []

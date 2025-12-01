@@ -6,3 +6,4 @@ terminals/
 penv/
 ollama/
 containers/
+cache/

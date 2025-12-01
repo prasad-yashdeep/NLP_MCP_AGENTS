@@ -3,8 +3,8 @@ spec:
   name: ollama-llm
   type: ollama
   config:
-    model_name: gpt-oss:20b
-    temperature: 0.6
+    model_name: gemma3:27b
+    temperature: 0.7
     max_completion_tokens: 4096
     seed: 12345
 
@@ -15,7 +15,6 @@ spec:
   type: react
   config:
     llm: ollama-llm
-    system_prompt: /scratch/yp2693/NLP_MCP_AGENTS/ossmcpuniverse/prompts/react_reasoning_prompt.j2
     instruction: You are an agent for repository management.
     max_iterations: 20
     summarize_tool_response: false
@@ -23,7 +22,7 @@ spec:
 ---
 kind: benchmark
 spec:
-  description: Repository Management with gpt-oss:20b
+  description: Repository Management with gemma3:27b
   agent: ReAct-agent
   tasks:
     - test/repository_management/github_task_0001.json

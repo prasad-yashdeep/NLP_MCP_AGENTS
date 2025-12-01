@@ -7,6 +7,7 @@ Run MCP Universe benchmarks with local Ollama models for open-source LLM evaluat
 ### GPU Server Models (Linux)
 - **gpt-oss:20b** - GPT-style OSS model
 - **deepseek-r1:14b** - DeepSeek R1 reasoning model
+- **gemma3:27b** - Google Gemma 3 model (27B)
 - **gemma3:12b** - Google Gemma 3 model (12B)
 
 ### Local Testing Model (MacBook)
@@ -21,6 +22,35 @@ Run MCP Universe benchmarks with local Ollama models for open-source LLM evaluat
 | Financial Analysis | 40 | YFinance stock analysis with calculator |
 | Repository Management | 33 | GitHub repository management tasks |
 | Web Search | 55 | Google search and information retrieval tasks |
+
+## Multi-Agent Systems
+
+This project includes advanced **ReAct-based multi-agent architectures** for complex benchmarks:
+
+### 🗺️ Location Navigation ReAct System
+- **Architecture**: Orchestrator (gemma3:27b) + 4 specialized workers (gemma3:4b)
+- **Workers**: Route Planning, Place Search, Elevation, Data Synthesis
+- **Pattern**: Thought-Action-Observation loop with state management
+- **Integration**: Google Maps MCP server (7 tools)
+- **Documentation**: See [ARCHITECTURE.md](ARCHITECTURE.md) for detailed architecture diagrams
+
+### 🔍 Web Search ReAct System
+- **Architecture**: Orchestrator (gemma3:27b) + 3 specialized workers (gemma3:4b)
+- **Workers**: Search, Fetch, Synthesis
+- **Pattern**: Iterative fact-finding with verification
+- **Integration**: Google Search + Fetch MCP servers
+
+### 💰 Financial Analysis Multi-Agent
+- **Architecture**: Orchestrator + 3 specialized workers
+- **Workers**: Data Agent (YFinance), Calculator Agent, Formatter
+- **Pattern**: Task decomposition with tool orchestration
+- **Integration**: YFinance + Calculator MCP servers
+
+**Key Benefits**:
+- **70% token reduction** vs single large model
+- **Specialized expertise** per agent
+- **Transparent reasoning** with ReAct pattern
+- **Error recovery** through iterative refinement
 
 ## Prerequisites
 
@@ -74,6 +104,7 @@ ollama pull gemma3:4b
 ```bash
 ollama pull gpt-oss:20b
 ollama pull deepseek-r1:14b
+ollama pull gemma3:27b
 ollama pull gemma3:12b
 ```
 
@@ -194,27 +225,67 @@ python scripts/run_all.py --verbose
 python scripts/run_all.py --models gpt-oss-20b --benchmarks location_navigation web_search --limit 3
 ```
 
+### Test Multi-Agent ReAct Systems
+
+Test the ReAct agents on individual tasks for debugging and development:
+
+```bash
+# Test Location Navigation ReAct agent
+./run_with_node.sh python scripts/test_location_react.py --task 2
+
+# Test with different tasks
+./run_with_node.sh python scripts/test_location_react.py --task 1
+
+# Test Web Search ReAct agent
+./run_with_node.sh python scripts/test_react_search.py --task 1
+```
+
+**Note**: These test scripts provide detailed logging of the Thought-Action-Observation loop, useful for understanding agent behavior and debugging issues.
+
 ## Directory Structure
 
 ```
 ossmcpuniverse/
-├── README.md
+├── README.md                           # This file
+├── ARCHITECTURE.md                     # Multi-agent system architecture
 ├── requirements.txt
 ├── .env.example
-├── .env                    # Your local config (gitignored)
+├── .env                                # Your local config (gitignored)
 ├── .gitignore
-├── configs/                # Benchmark YAML configs (15 total)
-│   ├── location_navigation_*.yaml
-│   ├── browser_automation_*.yaml
-│   ├── financial_analysis_*.yaml
-│   ├── repository_management_*.yaml
-│   └── web_search_*.yaml
+├── agents/                             # Multi-agent implementations
+│   ├── base.py                         # Base OllamaAgent class
+│   ├── models.py                       # Pydantic data models
+│   ├── tools.py                        # MCP tool wrappers
+│   ├── location_navigation_react.py    # Location ReAct orchestrator
+│   ├── route_planning_agent.py         # Route planning worker
+│   ├── place_search_agent.py           # Place search worker
+│   ├── elevation_agent.py              # Elevation worker
+│   ├── data_synthesis_agent.py         # Output synthesis worker
+│   ├── web_search_react.py             # Web search ReAct orchestrator
+│   ├── search_agent.py                 # Search worker
+│   ├── fetch_agent.py                  # Fetch worker
+│   ├── synthesis_agent.py              # Web synthesis worker
+│   ├── financial_manager.py            # Financial orchestrator
+│   ├── data_agent.py                   # YFinance worker
+│   ├── calculator_agent.py             # Calculator worker
+│   ├── formatter_agent.py              # Output formatter
+│   └── __init__.py                     # Agent exports
+├── configs/                            # Benchmark YAML configs (18 total)
+│   ├── location_navigation_*.yaml      # (5 configs)
+│   ├── browser_automation_*.yaml       # (3 configs)
+│   ├── financial_analysis_*.yaml       # (4 configs)
+│   ├── repository_management_*.yaml    # (3 configs)
+│   └── web_search_*.yaml               # (3 configs)
 ├── scripts/
-│   ├── check_ollama.py     # Verify Ollama setup
-│   ├── run_benchmark.py    # Run single benchmark
-│   └── run_all.py          # Run all benchmarks
-├── results/                # Benchmark results (JSON)
-└── logs/                   # Execution logs
+│   ├── check_ollama.py                 # Verify Ollama setup
+│   ├── run_benchmark.py                # Run single benchmark
+│   ├── run_all.py                      # Run all benchmarks
+│   ├── test_location_react.py          # Test location ReAct agent
+│   └── test_react_search.py            # Test web search ReAct agent
+├── docs/
+│   └── location_architecture_simple.txt # ASCII architecture diagram
+├── results/                            # Benchmark results (JSON)
+└── logs/                               # Execution logs
 ```
 
 ## Results

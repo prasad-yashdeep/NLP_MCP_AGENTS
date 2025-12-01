@@ -1,24 +1,34 @@
+# Multi-Agent Financial Analysis Configuration
+# Uses gemma3:27b as orchestrator (brain) and gemma3:4b for specialized sub-agents
+
 kind: llm
 spec:
-  name: ollama-llm
+  name: orchestrator-llm
   type: ollama
   config:
-    model_name: deepseek-r1:14b
-    temperature: 0.6
+    model_name: gemma3:27b
+    temperature: 0.3
     max_completion_tokens: 4096
-    seed: 12345
+
+---
+kind: llm
+spec:
+  name: worker-llm
+  type: ollama
+  config:
+    model_name: gemma3:4b
+    temperature: 0.2
+    max_completion_tokens: 2048
 
 ---
 kind: agent
 spec:
-  name: ReAct-agent
-  type: react
+  name: MultiAgent-Financial
+  type: multi_agent_financial
   config:
-    llm: ollama-llm
-    system_prompt: /scratch/yp2693/NLP_MCP_AGENTS/ossmcpuniverse/prompts/react_reasoning_prompt.j2
-    instruction: You are an agent for financial analysis. If you need to calculate the result, you can use the calculator tool.
-    max_iterations: 20
-    summarize_tool_response: false
+    orchestrator_model: gemma3:27b
+    worker_model: gemma3:4b
+    max_iterations: 10
     servers:
       - name: yfinance
       - name: calculator
@@ -26,8 +36,8 @@ spec:
 ---
 kind: benchmark
 spec:
-  description: Financial Analysis with deepseek-r1:14b
-  agent: ReAct-agent
+  description: Financial Analysis with Multi-Agent System (Orchestrator-Worker Pattern)
+  agent: MultiAgent-Financial
   tasks:
     - test/financial_analysis/yfinance_task_0001.json
     - test/financial_analysis/yfinance_task_0002.json

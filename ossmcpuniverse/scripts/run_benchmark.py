@@ -33,9 +33,9 @@ from mcpuniverse.tracer.collectors.file import FileCollector
 from mcpuniverse.callbacks.handlers.vprint import get_vprint_callbacks
 
 # Available models and benchmarks
-# GPU server models: gpt-oss-20b, deepseek-r1-14b, gemma3-12b
+# GPU server models: gpt-oss-20b, deepseek-r1-14b, gemma3-27b, gemma3-12b
 # Local MacBook model: gemma3-4b
-MODELS = ["gpt-oss-20b", "deepseek-r1-14b", "gemma3-12b", "gemma3-4b"]
+MODELS = ["gpt-oss-20b", "deepseek-r1-14b", "gemma3-27b", "gemma3-12b", "gemma3-4b"]
 BENCHMARKS = [
     "location_navigation",
     "browser_automation",

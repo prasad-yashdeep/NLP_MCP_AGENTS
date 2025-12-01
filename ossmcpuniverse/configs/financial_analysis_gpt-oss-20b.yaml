@@ -4,7 +4,7 @@ spec:
   type: ollama
   config:
     model_name: gpt-oss:20b
-    temperature: 0.7
+    temperature: 0.6
     max_completion_tokens: 4096
     seed: 12345
 
@@ -15,6 +15,7 @@ spec:
   type: react
   config:
     llm: ollama-llm
+    system_prompt: /scratch/yp2693/NLP_MCP_AGENTS/ossmcpuniverse/prompts/react_reasoning_prompt.j2
     instruction: You are an agent for financial analysis. If you need to calculate the result, you can use the calculator tool.
     max_iterations: 20
     summarize_tool_response: false

@@ -16,6 +16,7 @@ OLLAMA_URL = os.getenv("OLLAMA_URL", "http://localhost:11434")
 GPU_MODELS = [
     "gpt-oss:20b",
     "deepseek-r1:14b",
+    "gemma3:27b",
     "gemma3:12b",
 ]
 
@@ -67,8 +68,11 @@ def test_model_generation(model_name: str) -> bool:
         )
         if response.status_code == 200:
             data = response.json()
-            content = data.get("message", {}).get("content", "")
-            return len(content) > 0
+            message = data.get("message", {})
+            # Check both content and thinking fields (for reasoning models like deepseek-r1)
+            content = message.get("content", "")
+            thinking = message.get("thinking", "")
+            return len(content) > 0 or len(thinking) > 0
         else:
             print(f"Status code: {response.status_code}, Response: {response.text}")
         return False
