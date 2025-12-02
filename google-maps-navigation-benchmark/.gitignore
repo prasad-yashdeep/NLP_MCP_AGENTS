@@ -1,0 +1,44 @@
+# Virtual Environment
+NLP/
+venv/
+env/
+.venv/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+dist/
+build/
+
+# Environment variables
+.env
+.env.local
+
+# Results
+results/
+*.json
+!tasks/*.json
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+install_log.txt
+
+# Temporary files
+*.tmp
+*.bak
+
