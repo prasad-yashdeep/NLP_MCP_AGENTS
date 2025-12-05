@@ -30,7 +30,10 @@ model_name_map = {
     "GLM4_5_AIR_OR": "z-ai/glm-4.5-air",
     "KimiK2_OR": "moonshotai/kimi-k2",
     "Qwen3Max_OR": "qwen/qwen3-max",
-    "KimiK2_0905_OR": "moonshotai/kimi-k2-0905"
+    "KimiK2_0905_OR": "moonshotai/kimi-k2-0905",
+    "Gemma3_27B_OR": "google/gemma-3-27b-it",
+    "Gemini_2.5_Flash_OR": "google/gemini-2.0-flash-exp:free",
+    "Gemini_2.5_Pro_OR": "google/gemini-2.5-pro",
 }
 
 @dataclass

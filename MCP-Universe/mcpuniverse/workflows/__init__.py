@@ -3,11 +3,13 @@ from .evaluator_optimizer import EvaluatorOptimizer
 from .orchestrator import Orchestrator
 from .parallelization import Parallelization
 from .router import Router
+from .web_search_orchestrator import WebSearchOrchestrator
 
 __all__ = [
     "Chain",
     "EvaluatorOptimizer",
     "Orchestrator",
     "Parallelization",
-    "Router"
+    "Router",
+    "WebSearchOrchestrator",
 ]
