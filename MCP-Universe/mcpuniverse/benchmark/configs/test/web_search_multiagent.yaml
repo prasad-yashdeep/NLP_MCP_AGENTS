@@ -1,0 +1,100 @@
+# Multi-Agent Web Search Benchmark Configuration
+# Uses HarmonyReAct pattern with specialized worker agents
+
+# LLM Configuration - Single LLM for all agents (GPTOSS120B_OR via OpenRouter)
+kind: llm
+spec:
+  name: gptoss120b-llm
+  type: openrouter
+  config:
+    model_name: GPTOSS120B_OR
+    reasoning: high
+    temperature: 0.1
+    max_completion_tokens: 4096
+
+---
+# Query Formulation Agent - Optimizes search queries (no MCP tools)
+kind: agent
+spec:
+  name: query-formulation-agent
+  type: query_formulation
+  config:
+    llm: gptoss120b-llm
+    instruction: You are a search query optimization specialist. Transform user questions into effective search queries.
+    max_iterations: 2
+    summarize_tool_response: false
+
+---
+# Search Execution Agent - Executes searches via Google Search MCP
+kind: agent
+spec:
+  name: search-execution-agent
+  type: search_execution
+  config:
+    llm: gptoss120b-llm
+    instruction: You are a search execution specialist using Google Search MCP.
+    max_iterations: 5
+    summarize_tool_response: true
+    servers:
+      - name: google-search
+
+---
+# Content Fetch Agent - Retrieves full page content via Fetch MCP
+kind: agent
+spec:
+  name: content-fetch-agent
+  type: content_fetch
+  config:
+    llm: gptoss120b-llm
+    instruction: You are a content retrieval specialist using Fetch MCP.
+    max_iterations: 4
+    summarize_tool_response: true
+    servers:
+      - name: fetch
+
+---
+# Fact Verification Agent - Cross-references facts via Google Search MCP
+kind: agent
+spec:
+  name: fact-verification-agent
+  type: fact_verification
+  config:
+    llm: gptoss120b-llm
+    instruction: You are a fact verification specialist. Cross-reference information from multiple sources.
+    max_iterations: 2
+    summarize_tool_response: true
+    servers:
+      - name: google-search
+
+---
+# Web Search Orchestrator Workflow - Coordinates all worker agents
+# Uses OpenAI Agent SDK for reliable orchestration with native function calling
+# Orchestrator generates final answer directly (no separate synthesis agent)
+kind: workflow
+spec:
+  name: web-search-orchestrator
+  type: web_search_orchestrator
+  is_main: true
+  config:
+    llm: gptoss120b-llm
+    query_agent: query-formulation-agent
+    search_agent: search-execution-agent
+    fetch_agent: content-fetch-agent
+    verify_agent: fact-verification-agent
+    max_iterations: 10
+    model: GPTOSS120B_OR
+
+---
+# Benchmark Specification
+kind: benchmark
+spec:
+  description: Multi-agent web search benchmark using HarmonyReAct pattern with specialized workers
+  agent: web-search-orchestrator
+  tasks:
+    - test/web_search/info_search_task_0001.json
+    - test/web_search/info_search_task_0002.json
+    - test/web_search/info_search_task_0003.json
+    - test/web_search/info_search_task_0004.json
+    - test/web_search/info_search_task_0048.json
+    - test/web_search/info_search_task_0049.json
+    - test/web_search/info_search_task_0050.json

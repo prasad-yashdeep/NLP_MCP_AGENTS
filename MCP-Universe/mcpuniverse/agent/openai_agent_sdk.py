@@ -52,7 +52,8 @@ OPENROUTER_MODEL_MAP = {
     "GLM4_5_AIR_OR": "z-ai/glm-4.5-air",
     "KimiK2_OR": "moonshotai/kimi-k2",
     "Qwen3Max_OR": "qwen/qwen3-max",
-    "KimiK2_0905_OR": "moonshotai/kimi-k2-0905"
+    "KimiK2_0905_OR": "moonshotai/kimi-k2-0905",
+    "Gemma3_27b_OR": "google/gemma-3-27b-it",
 }
 
 OPENROUTER_BASE_URL = "https://openrouter.ai/api/v1"

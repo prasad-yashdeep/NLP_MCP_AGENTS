@@ -1,0 +1,471 @@
+==================================================================
+Testing QueryFormulationAgent
+==================================================================
+
+============================================================
+[HANDOFF] Orchestrator -> QueryFormulationAgent
+[ACTION] formulate_query({'topic': 'Tokyo population'})
+============================================================
+ 
+
+------------------------------------------------------------
+[COMPLETE] QueryFormulationAgent -> Orchestrator
+[RESULT] {"queries": ["Tokyo city population 2024 official statistics site:gov", "Tokyo prefecture population 2024 census data site:gov", "Tokyo metropolitan area population 2024 latest data"]}
+------------------------------------------------------------
+ 
+
+Query Agent Result: {'worker': 'QueryFormulationAgent', 'result': '{"queries": ["Tokyo city population 2024 official statistics site:gov", "Tokyo prefecture population 2024 census data site:gov", "Tokyo metropolitan area population 2024 latest data"]}', 'trace_id': 'dc963e54-9cbe-4edb-af43-c769077a7522'}
+.2025-12-05 03:50:26,659.659 74714 Service:google_search INFO [main():107] Starting the MCP server
+[12/05/25 03:50:26] INFO     Processing request of type ListToolsRequest                                                       server.py:624
+WARNING:asyncio:Executing <Task pending name='Task-6' coro=<IsolatedAsyncioTestCase._asyncioLoopRunner() running at /Users/yashdeepprasad/Desktop/NLP_MCP_AGENTS/.conda/lib/python3.10/unittest/async_case.py:101> created at /Users/yashdeepprasad/Desktop/NLP_MCP_AGENTS/.conda/lib/python3.10/unittest/async_case.py:117> took 0.149 seconds
+2025-12-05 03:50:27,306.306 74716 Service:google_search INFO [main():107] Starting the MCP server
+[12/05/25 03:50:27] INFO     Processing request of type ListToolsRequest                                                       server.py:624
+2025-12-05 03:50:27,333.333 74659 Benchmark INFO [run():218] Running task: test/web_search/info_search_task_0001.json
+INFO:Benchmark:Running task: test/web_search/info_search_task_0001.json
+
+ 
+================================================================== 
+Task Description: 
+------------------------------------------------------------------ 
+I'm looking for someone based on the clues below: - Score 16 goals in 2024-25 season - Score 1 goal in UEFA Champions League 2024-25 season - Score 11 goals in 2021-22 season - Score 2 goals in the EFL Cup of 2020-21 season. 
+------------------------------------------------------------------ 
+
+======================================================================
+[WEB SEARCH ORCHESTRATOR] Starting search
+Query: I'm looking for someone based on the clues below: - Score 16 goals in 2024-25 season - Score 1 goal in UEFA Champions League 2024-25 season - Score 11 goals in 2021-22 season - Score 2 goals in the EFL Cup of 2020-21 season.
+Model: GPTOSS120B_OR
+======================================================================
+ 
+npm error code E500
+npm error 500 Internal Server Error - GET https://registry.npmjs.org/@modelcontextprotocol%2fserver-google-maps
+npm error A complete log of this run can be found in: /Users/yashdeepprasad/.npm/_logs/2025-12-05T08_49_17_769Z-debug-0.log
+2025-12-05 03:50:28,510.510 74659 WebSearchOrchestrator INFO [_handle_formulate_query():333] [TOOL] formulate_query(topic=player scored 16 goals 2024-25 season 1 goal Champ...)
+INFO:WebSearchOrchestrator:[TOOL] formulate_query(topic=player scored 16 goals 2024-25 season 1 goal Champ...)
+
+============================================================
+[HANDOFF] Orchestrator -> QueryFormulationAgent
+[ACTION] formulate_query({'topic': 'player scored 16 goals 2024-25 season 1 goal Champions League 2024-25 11 goals 2021-22 se...)
+============================================================
+ 
+
+------------------------------------------------------------
+[COMPLETE] QueryFormulationAgent -> Orchestrator
+[RESULT] {"queries": ["player who scored 16 goals in 2024-25 Premier League official statistics", "player who scored 1 goal in 2024-25 UEFA Champions League official statistics", "player who scored 11 goals in...
+------------------------------------------------------------
+ 
+2025-12-05 03:50:45,358.358 74659 WebSearchOrchestrator INFO [_handle_search_web():360] [TOOL] search_web(query=16 goals 2024-25 season 1 goal Champions League 20..., type=web)
+INFO:WebSearchOrchestrator:[TOOL] search_web(query=16 goals 2024-25 season 1 goal Champions League 20..., type=web)
+
+============================================================
+[HANDOFF] Orchestrator -> SearchExecutionAgent
+[ACTION] search({'query': '16 goals 2024-25 season 1 goal Champions League 2024-25 11 goals 2021-22 season 2 goals E...)
+============================================================
+ 
+2025-12-05 03:50:48,606.606 74659 SearchExecutionAgent:9e0dd473-9d9c-46ba-a82a-ef6f356d401d INFO [call_tool():433] Executing tool search of server google-search
+INFO:SearchExecutionAgent:9e0dd473-9d9c-46ba-a82a-ef6f356d401d:Executing tool search of server google-search
+2025-12-05 03:50:48,606.606 74659 SearchExecutionAgent:9e0dd473-9d9c-46ba-a82a-ef6f356d401d INFO [call_tool():435] With arguments: {'query': '16 goals 2024-25 season 1 goal Champions League 2024-25 11 goals 2021-22 season 2 goals EFL Cup 2020-21'}
+INFO:SearchExecutionAgent:9e0dd473-9d9c-46ba-a82a-ef6f356d401d:With arguments: {'query': '16 goals 2024-25 season 1 goal Champions League 2024-25 11 goals 2021-22 season 2 goals EFL Cup 2020-21'}
+2025-12-05 03:50:48,606.606 74659 MCPClient INFO [execute_tool():205] Executing search...
+INFO:MCPClient:Executing search...
+[12/05/25 03:50:48] INFO     Processing request of type CallToolRequest                                                        server.py:624
+[12/05/25 03:50:52] INFO     HTTP Request: GET                                                                               _client.py:1740
+                             https://serpapi.com/search.json?api_key=060d834007b2075b765a593609ea1cce509429205d915b5a79c541a                
+                             45fd9b6b9&q=16+goals+2024-25+season+1+goal+Champions+League+2024-25+11+goals+2021-22+season+2+g                
+                             oals+EFL+Cup+2020-21&location=&engine=google&num=10&start=0 "HTTP/1.1 200 OK"                                  
+[12/05/25 03:50:54] INFO     HTTP Request: GET                                                                               _client.py:1740
+                             https://serpapi.com/search.json?api_key=060d834007b2075b765a593609ea1cce509429205d915b5a79c541a                
+                             45fd9b6b9&q=16+goals+2024-25+season+1+goal+Champions+League+2024-25+11+goals+2021-22+season+2+g                
+                             oals+EFL+Cup+2020-21&location=&engine=google&num=10&start=10 "HTTP/1.1 200 OK"                                 
+WARNING:asyncio:Executing <Task pending name='Task-59' coro=<WebSearchOrchestrator._create_function_tool.<locals>.on_invoke() running at /Users/yashdeepprasad/Desktop/NLP_MCP_AGENTS/MCP-Universe/mcpuniverse/workflows/web_search_orchestrator.py:313> wait_for=<Future pending cb=[Task.task_wakeup()] created at /Users/yashdeepprasad/Desktop/NLP_MCP_AGENTS/.conda/lib/python3.10/asyncio/base_events.py:429> cb=[gather.<locals>._done_callback() at /Users/yashdeepprasad/Desktop/NLP_MCP_AGENTS/.conda/lib/python3.10/asyncio/tasks.py:720] created at /Users/yashdeepprasad/Desktop/NLP_MCP_AGENTS/.conda/lib/python3.10/asyncio/tasks.py:636> took 0.114 seconds
+2025-12-05 03:51:34,816.816 74659 SearchExecutionAgent:9e0dd473-9d9c-46ba-a82a-ef6f356d401d INFO [call_tool():433] Executing tool search of server google-search
+INFO:SearchExecutionAgent:9e0dd473-9d9c-46ba-a82a-ef6f356d401d:Executing tool search of server google-search
+2025-12-05 03:51:34,817.817 74659 SearchExecutionAgent:9e0dd473-9d9c-46ba-a82a-ef6f356d401d INFO [call_tool():435] With arguments: {'query': '"16 goals" "2024-25" "season" "player"'}
+INFO:SearchExecutionAgent:9e0dd473-9d9c-46ba-a82a-ef6f356d401d:With arguments: {'query': '"16 goals" "2024-25" "season" "player"'}
+2025-12-05 03:51:34,817.817 74659 MCPClient INFO [execute_tool():205] Executing search...
+INFO:MCPClient:Executing search...
+[12/05/25 03:51:34] INFO     Processing request of type CallToolRequest                                                                                           server.py:624
+[12/05/25 03:51:38] INFO     HTTP Request: GET                                                                                                                  _client.py:1740
+                             https://serpapi.com/search.json?api_key=060d834007b2075b765a593609ea1cce509429205d915b5a79c541a45fd9b6b9&q=%2216+goals%22+%222024-                
+                             25%22+%22season%22+%22player%22&location=&engine=google&num=10&start=0 "HTTP/1.1 200 OK"                                                          
+[12/05/25 03:51:39] INFO     HTTP Request: GET                                                                                                                  _client.py:1740
+                             https://serpapi.com/search.json?api_key=060d834007b2075b765a593609ea1cce509429205d915b5a79c541a45fd9b6b9&q=%2216+goals%22+%222024-                
+                             25%22+%22season%22+%22player%22&location=&engine=google&num=10&start=10 "HTTP/1.1 200 OK"                                                         
+2025-12-05 03:51:41,884.884 74659 SearchExecutionAgent:9e0dd473-9d9c-46ba-a82a-ef6f356d401d INFO [call_tool():433] Executing tool search of server google-search
+INFO:SearchExecutionAgent:9e0dd473-9d9c-46ba-a82a-ef6f356d401d:Executing tool search of server google-search
+2025-12-05 03:51:41,885.885 74659 SearchExecutionAgent:9e0dd473-9d9c-46ba-a82a-ef6f356d401d INFO [call_tool():435] With arguments: {'query': '"James Maddison" "2024-25" "goals"'}
+INFO:SearchExecutionAgent:9e0dd473-9d9c-46ba-a82a-ef6f356d401d:With arguments: {'query': '"James Maddison" "2024-25" "goals"'}
+2025-12-05 03:51:41,885.885 74659 MCPClient INFO [execute_tool():205] Executing search...
+INFO:MCPClient:Executing search...
+[12/05/25 03:51:41] INFO     Processing request of type CallToolRequest                                                                                           server.py:624
+[12/05/25 03:51:43] INFO     HTTP Request: GET                                                                                                                  _client.py:1740
+                             https://serpapi.com/search.json?api_key=060d834007b2075b765a593609ea1cce509429205d915b5a79c541a45fd9b6b9&q=%22James+Maddison%22+%2                
+                             22024-25%22+%22goals%22&location=&engine=google&num=10&start=0 "HTTP/1.1 200 OK"                                                                  
+[12/05/25 03:51:47] INFO     HTTP Request: GET                                                                                                                  _client.py:1740
+                             https://serpapi.com/search.json?api_key=060d834007b2075b765a593609ea1cce509429205d915b5a79c541a45fd9b6b9&q=%22James+Maddison%22+%2                
+                             22024-25%22+%22goals%22&location=&engine=google&num=10&start=10 "HTTP/1.1 200 OK"                                                                 
+2025-12-05 03:51:48,533.533 74659 SearchExecutionAgent:9e0dd473-9d9c-46ba-a82a-ef6f356d401d INFO [call_tool():433] Executing tool search of server google-search
+INFO:SearchExecutionAgent:9e0dd473-9d9c-46ba-a82a-ef6f356d401d:Executing tool search of server google-search
+2025-12-05 03:51:48,533.533 74659 SearchExecutionAgent:9e0dd473-9d9c-46ba-a82a-ef6f356d401d INFO [call_tool():435] With arguments: {'query': '"Harry Kane" "2024-25" "goals"'}
+INFO:SearchExecutionAgent:9e0dd473-9d9c-46ba-a82a-ef6f356d401d:With arguments: {'query': '"Harry Kane" "2024-25" "goals"'}
+2025-12-05 03:51:48,533.533 74659 MCPClient INFO [execute_tool():205] Executing search...
+INFO:MCPClient:Executing search...
+[12/05/25 03:51:48] INFO     Processing request of type CallToolRequest                                                                                           server.py:624
+[12/05/25 03:51:50] INFO     HTTP Request: GET                                                                                                                  _client.py:1740
+                             https://serpapi.com/search.json?api_key=060d834007b2075b765a593609ea1cce509429205d915b5a79c541a45fd9b6b9&q=%22Harry+Kane%22+%22202                
+                             4-25%22+%22goals%22&location=&engine=google&num=10&start=0 "HTTP/1.1 200 OK"                                                                      
+[12/05/25 03:51:51] INFO     HTTP Request: GET                                                                                                                  _client.py:1740
+                             https://serpapi.com/search.json?api_key=060d834007b2075b765a593609ea1cce509429205d915b5a79c541a45fd9b6b9&q=%22Harry+Kane%22+%22202                
+                             4-25%22+%22goals%22&location=&engine=google&num=10&start=10 "HTTP/1.1 200 OK"                                                                     
+2025-12-05 03:51:53,026.026 74659 SearchExecutionAgent:9e0dd473-9d9c-46ba-a82a-ef6f356d401d INFO [call_tool():433] Executing tool search of server google-search
+INFO:SearchExecutionAgent:9e0dd473-9d9c-46ba-a82a-ef6f356d401d:Executing tool search of server google-search
+2025-12-05 03:51:53,026.026 74659 SearchExecutionAgent:9e0dd473-9d9c-46ba-a82a-ef6f356d401d INFO [call_tool():435] With arguments: {'query': '"Marcus Rashford" "2024-25" "goals"'}
+INFO:SearchExecutionAgent:9e0dd473-9d9c-46ba-a82a-ef6f356d401d:With arguments: {'query': '"Marcus Rashford" "2024-25" "goals"'}
+2025-12-05 03:51:53,026.026 74659 MCPClient INFO [execute_tool():205] Executing search...
+INFO:MCPClient:Executing search...
+[12/05/25 03:51:53] INFO     Processing request of type CallToolRequest                                                                                           server.py:624
+[12/05/25 03:51:55] INFO     HTTP Request: GET                                                                                                                  _client.py:1740
+                             https://serpapi.com/search.json?api_key=060d834007b2075b765a593609ea1cce509429205d915b5a79c541a45fd9b6b9&q=%22Marcus+Rashford%22+%                
+                             222024-25%22+%22goals%22&location=&engine=google&num=10&start=0 "HTTP/1.1 200 OK"                                                                 
+[12/05/25 03:51:58] INFO     HTTP Request: GET                                                                                                                  _client.py:1740
+                             https://serpapi.com/search.json?api_key=060d834007b2075b765a593609ea1cce509429205d915b5a79c541a45fd9b6b9&q=%22Marcus+Rashford%22+%                
+                             222024-25%22+%22goals%22&location=&engine=google&num=10&start=10 "HTTP/1.1 200 OK"                                                                
+
+------------------------------------------------------------
+[COMPLETE] SearchExecutionAgent -> Orchestrator
+[RESULT] I'm sorry, but I couldn't find a satisfactory answer within the allowed number of iterations.
+------------------------------------------------------------
+ 
+
+======================================================================
+[WEB SEARCH ORCHESTRATOR] Search complete
+Queries: 3 | Pages fetched: 0
+======================================================================
+ 
+2025-12-05 03:52:07,683.683 74659 Benchmark INFO [run():273] Resetting task test/web_search/info_search_task_0001.json
+INFO:Benchmark:Resetting task test/web_search/info_search_task_0001.json
+2025-12-05 03:52:07,684.684 74659 Benchmark INFO [run():276] Finished resetting task test/web_search/info_search_task_0001.json
+INFO:Benchmark:Finished resetting task test/web_search/info_search_task_0001.json
+2025-12-05 03:52:07,684.684 74659 Benchmark INFO [run():218] Running task: test/web_search/info_search_task_0002.json
+INFO:Benchmark:Running task: test/web_search/info_search_task_0002.json
+
+ 
+================================================================== 
+Task Description: 
+------------------------------------------------------------------ 
+I'm looking for someone based on the clues below: - Played for the SAC (NBA) in the 2021-22 season - Averaged 18.6 points per game in the 2024-25 season - Is a Christian - Reached the Finals in the 2024-25 season. 
+------------------------------------------------------------------ 
+
+======================================================================
+[WEB SEARCH ORCHESTRATOR] Starting search
+Query: I'm looking for someone based on the clues below: - Played for the SAC (NBA) in the 2021-22 season - Averaged 18.6 points per game in the 2024-25 season - Is a Christian - Reached the Finals in the 2024-25 season.
+Model: GPTOSS120B_OR
+======================================================================
+ 
+WARNING:asyncio:Executing <Task pending name='Task-6' coro=<IsolatedAsyncioTestCase._asyncioLoopRunner() running at /Users/yashdeepprasad/Desktop/NLP_MCP_AGENTS/.conda/lib/python3.10/unittest/async_case.py:101> wait_for=<_GatheringFuture pending cb=[Task.task_wakeup()] created at /Users/yashdeepprasad/Desktop/NLP_MCP_AGENTS/.conda/lib/python3.10/asyncio/tasks.py:665> created at /Users/yashdeepprasad/Desktop/NLP_MCP_AGENTS/.conda/lib/python3.10/unittest/async_case.py:117> took 7.079 seconds
+2025-12-05 03:52:12,396.396 74659 WebSearchOrchestrator INFO [_handle_search_web():360] [TOOL] search_web(query="18.6 points per game" 2024-25 season..., type=web)
+INFO:WebSearchOrchestrator:[TOOL] search_web(query="18.6 points per game" 2024-25 season..., type=web)
+
+============================================================
+[HANDOFF] Orchestrator -> SearchExecutionAgent
+[ACTION] search({'query': '"18.6 points per game" 2024-25 season', 'search_type': 'web'})
+============================================================
+ 
+2025-12-05 03:52:14,236.236 74659 SearchExecutionAgent:9e0dd473-9d9c-46ba-a82a-ef6f356d401d INFO [call_tool():433] Executing tool search of server google-search
+INFO:SearchExecutionAgent:9e0dd473-9d9c-46ba-a82a-ef6f356d401d:Executing tool search of server google-search
+2025-12-05 03:52:14,236.236 74659 SearchExecutionAgent:9e0dd473-9d9c-46ba-a82a-ef6f356d401d INFO [call_tool():435] With arguments: {'query': '"18.6 points per game" 2024-25 season'}
+INFO:SearchExecutionAgent:9e0dd473-9d9c-46ba-a82a-ef6f356d401d:With arguments: {'query': '"18.6 points per game" 2024-25 season'}
+2025-12-05 03:52:14,236.236 74659 MCPClient INFO [execute_tool():205] Executing search...
+INFO:MCPClient:Executing search...
+[12/05/25 03:52:14] INFO     Processing request of type CallToolRequest                                                                                           server.py:624
+[12/05/25 03:52:15] INFO     HTTP Request: GET                                                                                                                  _client.py:1740
+                             https://serpapi.com/search.json?api_key=060d834007b2075b765a593609ea1cce509429205d915b5a79c541a45fd9b6b9&q=%2218.6+points+per+game                
+                             %22+2024-25+season&location=&engine=google&num=10&start=0 "HTTP/1.1 200 OK"                                                                       
+[12/05/25 03:52:16] INFO     HTTP Request: GET                                                                                                                  _client.py:1740
+                             https://serpapi.com/search.json?api_key=060d834007b2075b765a593609ea1cce509429205d915b5a79c541a45fd9b6b9&q=%2218.6+points+per+game                
+                             %22+2024-25+season&location=&engine=google&num=10&start=10 "HTTP/1.1 200 OK"                                                                      
+
+------------------------------------------------------------
+[COMPLETE] SearchExecutionAgent -> Orchestrator
+[RESULT] {"organic_results": [{"title": "Tyrese Haliburton scored 18.6 points per game in 2024-25.", "link": "https://www.statmuse.com/nba/ask/how-many-points-per-game-did-tyrese-haliburton-average-last-season...
+------------------------------------------------------------
+ 
+
+======================================================================
+[WEB SEARCH ORCHESTRATOR] Search complete
+Queries: 0 | Pages fetched: 0
+======================================================================
+ 
+2025-12-05 03:52:40,862.862 74659 Benchmark INFO [run():273] Resetting task test/web_search/info_search_task_0002.json
+INFO:Benchmark:Resetting task test/web_search/info_search_task_0002.json
+2025-12-05 03:52:40,862.862 74659 Benchmark INFO [run():276] Finished resetting task test/web_search/info_search_task_0002.json
+INFO:Benchmark:Finished resetting task test/web_search/info_search_task_0002.json
+2025-12-05 03:52:40,862.862 74659 Benchmark INFO [run():218] Running task: test/web_search/info_search_task_0003.json
+INFO:Benchmark:Running task: test/web_search/info_search_task_0003.json
+
+ 
+================================================================== 
+Task Description: 
+------------------------------------------------------------------ 
+I'm looking for a paper based on the clues below: - Accepted by CVPR 2025 - The last author works at Salesforce - The second to last author works at NUS - The second author has studied at NTU - The paper has 6 authors - The paper uses the ELO rating system. You need to find the full title of the paper. 
+------------------------------------------------------------------ 
+
+======================================================================
+[WEB SEARCH ORCHESTRATOR] Starting search
+Query: I'm looking for a paper based on the clues below: - Accepted by CVPR 2025 - The last author works at Salesforce - The second to last author works at NUS - The second author has studied at NTU - The paper has 6 authors - The paper uses the ELO rating system. You need to find the full title of the paper.
+Model: GPTOSS120B_OR
+======================================================================
+ 
+WARNING:asyncio:Executing <Task pending name='Task-6' coro=<IsolatedAsyncioTestCase._asyncioLoopRunner() running at /Users/yashdeepprasad/Desktop/NLP_MCP_AGENTS/.conda/lib/python3.10/unittest/async_case.py:101> wait_for=<_GatheringFuture pending cb=[Task.task_wakeup()] created at /Users/yashdeepprasad/Desktop/NLP_MCP_AGENTS/.conda/lib/python3.10/asyncio/tasks.py:665> created at /Users/yashdeepprasad/Desktop/NLP_MCP_AGENTS/.conda/lib/python3.10/unittest/async_case.py:117> took 3.452 seconds
+2025-12-05 03:52:42,096.096 74659 WebSearchOrchestrator INFO [_handle_formulate_query():333] [TOOL] formulate_query(topic=CVPR 2025 accepted paper Salesforce last author NU...)
+INFO:WebSearchOrchestrator:[TOOL] formulate_query(topic=CVPR 2025 accepted paper Salesforce last author NU...)
+
+============================================================
+[HANDOFF] Orchestrator -> QueryFormulationAgent
+[ACTION] formulate_query({'topic': 'CVPR 2025 accepted paper Salesforce last author NUS second to last author ELO rating syst...)
+============================================================
+ 
+
+------------------------------------------------------------
+[COMPLETE] QueryFormulationAgent -> Orchestrator
+[RESULT] {"queries": ["CVPR 2025 \"ELO rating\" \"Salesforce\" \"National University of Singapore\" \"six authors\"", "CVPR 2025 \"Elo rating system\" \"author\" \"Salesforce\" \"NUS\" \"NTU\"", "site:cvpr2025...
+------------------------------------------------------------
+ 
+2025-12-05 03:52:49,000.000 74659 WebSearchOrchestrator INFO [_handle_search_web():360] [TOOL] search_web(query=CVPR 2025 "ELO rating" "Salesforce" "NUS"..., type=web)
+INFO:WebSearchOrchestrator:[TOOL] search_web(query=CVPR 2025 "ELO rating" "Salesforce" "NUS"..., type=web)
+
+============================================================
+[HANDOFF] Orchestrator -> SearchExecutionAgent
+[ACTION] search({'query': 'CVPR 2025 "ELO rating" "Salesforce" "NUS"', 'search_type': 'web'})
+============================================================
+ 
+2025-12-05 03:52:52,738.738 74659 SearchExecutionAgent:9e0dd473-9d9c-46ba-a82a-ef6f356d401d INFO [call_tool():433] Executing tool search of server google-search
+INFO:SearchExecutionAgent:9e0dd473-9d9c-46ba-a82a-ef6f356d401d:Executing tool search of server google-search
+2025-12-05 03:52:52,738.738 74659 SearchExecutionAgent:9e0dd473-9d9c-46ba-a82a-ef6f356d401d INFO [call_tool():435] With arguments: {'query': 'CVPR 2025 "ELO rating" "Salesforce" "NUS"'}
+INFO:SearchExecutionAgent:9e0dd473-9d9c-46ba-a82a-ef6f356d401d:With arguments: {'query': 'CVPR 2025 "ELO rating" "Salesforce" "NUS"'}
+2025-12-05 03:52:52,738.738 74659 MCPClient INFO [execute_tool():205] Executing search...
+INFO:MCPClient:Executing search...
+[12/05/25 03:52:52] INFO     Processing request of type CallToolRequest                                                                                           server.py:624
+[12/05/25 03:52:54] INFO     HTTP Request: GET                                                                                                                  _client.py:1740
+                             https://serpapi.com/search.json?api_key=060d834007b2075b765a593609ea1cce509429205d915b5a79c541a45fd9b6b9&q=CVPR+2025+%22ELO+rating                
+                             %22+%22Salesforce%22+%22NUS%22&location=&engine=google&num=10&start=0 "HTTP/1.1 200 OK"                                                           
+[12/05/25 03:52:55] INFO     HTTP Request: GET                                                                                                                  _client.py:1740
+                             https://serpapi.com/search.json?api_key=060d834007b2075b765a593609ea1cce509429205d915b5a79c541a45fd9b6b9&q=CVPR+2025+%22ELO+rating                
+                             %22+%22Salesforce%22+%22NUS%22&location=&engine=google&num=10&start=10 "HTTP/1.1 200 OK"                                                          
+
+------------------------------------------------------------
+[COMPLETE] SearchExecutionAgent -> Orchestrator
+[RESULT] {"organic_results": [{"title": "Benchmarking Large Language Models with Real-World ...", "link": "https://arxiv.org/html/2508.14704v1", "snippet": "... Salesforce - The second to last author works at ...
+------------------------------------------------------------
+ 
+2025-12-05 03:53:48,550.550 74659 WebSearchOrchestrator INFO [_handle_fetch_content():378] [TOOL] fetch_content(url=https://arxiv.org/pdf/2508.14704.pdf...)
+INFO:WebSearchOrchestrator:[TOOL] fetch_content(url=https://arxiv.org/pdf/2508.14704.pdf...)
+
+============================================================
+[HANDOFF] Orchestrator -> ContentFetchAgent
+[ACTION] fetch({'url': 'https://arxiv.org/pdf/2508.14704.pdf', 'purpose': 'Get author list and abstract to verify c...)
+============================================================
+ 
+2025-12-05 03:53:52,492.492 74659 ContentFetchAgent:20223915-d3ef-441c-8660-9b46e353d562 INFO [call_tool():433] Executing tool fetch of server fetch
+INFO:ContentFetchAgent:20223915-d3ef-441c-8660-9b46e353d562:Executing tool fetch of server fetch
+2025-12-05 03:53:52,493.493 74659 ContentFetchAgent:20223915-d3ef-441c-8660-9b46e353d562 INFO [call_tool():435] With arguments: {'url': 'https://arxiv.org/pdf/2508.14704.pdf', 'max_length': 5000}
+INFO:ContentFetchAgent:20223915-d3ef-441c-8660-9b46e353d562:With arguments: {'url': 'https://arxiv.org/pdf/2508.14704.pdf', 'max_length': 5000}
+2025-12-05 03:53:52,493.493 74659 MCPClient INFO [execute_tool():205] Executing fetch...
+INFO:MCPClient:Executing fetch...
+2025-12-05 03:53:55,506.506 74659 ContentFetchAgent:20223915-d3ef-441c-8660-9b46e353d562 INFO [call_tool():433] Executing tool fetch of server fetch
+INFO:ContentFetchAgent:20223915-d3ef-441c-8660-9b46e353d562:Executing tool fetch of server fetch
+2025-12-05 03:53:55,506.506 74659 ContentFetchAgent:20223915-d3ef-441c-8660-9b46e353d562 INFO [call_tool():435] With arguments: {'url': 'https://arxiv.org/pdf/2508.14704.pdf', 'start_index': 5000, 'max_length': 5000}
+INFO:ContentFetchAgent:20223915-d3ef-441c-8660-9b46e353d562:With arguments: {'url': 'https://arxiv.org/pdf/2508.14704.pdf', 'start_index': 5000, 'max_length': 5000}
+2025-12-05 03:53:55,506.506 74659 MCPClient INFO [execute_tool():205] Executing fetch...
+INFO:MCPClient:Executing fetch...
+2025-12-05 03:54:01,692.692 74659 ContentFetchAgent:20223915-d3ef-441c-8660-9b46e353d562 INFO [call_tool():433] Executing tool fetch of server fetch
+INFO:ContentFetchAgent:20223915-d3ef-441c-8660-9b46e353d562:Executing tool fetch of server fetch
+2025-12-05 03:54:01,692.692 74659 ContentFetchAgent:20223915-d3ef-441c-8660-9b46e353d562 INFO [call_tool():435] With arguments: {'url': 'https://arxiv.org/pdf/2508.14704.pdf', 'max_length': 2000}
+INFO:ContentFetchAgent:20223915-d3ef-441c-8660-9b46e353d562:With arguments: {'url': 'https://arxiv.org/pdf/2508.14704.pdf', 'max_length': 2000}
+2025-12-05 03:54:01,692.692 74659 MCPClient INFO [execute_tool():205] Executing fetch...
+INFO:MCPClient:Executing fetch...
+2025-12-05 03:54:04,758.758 74659 ContentFetchAgent:20223915-d3ef-441c-8660-9b46e353d562 INFO [call_tool():433] Executing tool fetch of server fetch
+INFO:ContentFetchAgent:20223915-d3ef-441c-8660-9b46e353d562:Executing tool fetch of server fetch
+2025-12-05 03:54:04,758.758 74659 ContentFetchAgent:20223915-d3ef-441c-8660-9b46e353d562 INFO [call_tool():435] With arguments: {'url': 'https://arxiv.org/pdf/2508.14704.pdf', 'max_length': 5000}
+INFO:ContentFetchAgent:20223915-d3ef-441c-8660-9b46e353d562:With arguments: {'url': 'https://arxiv.org/pdf/2508.14704.pdf', 'max_length': 5000}
+2025-12-05 03:54:04,759.759 74659 MCPClient INFO [execute_tool():205] Executing fetch...
+INFO:MCPClient:Executing fetch...
+
+------------------------------------------------------------
+[COMPLETE] ContentFetchAgent -> Orchestrator
+[RESULT] I'm sorry, but I couldn't find a satisfactory answer within the allowed number of iterations.
+------------------------------------------------------------
+ 
+2025-12-05 03:54:05,943.943 74659 WebSearchOrchestrator INFO [_handle_fetch_content():378] [TOOL] fetch_content(url=https://arxiv.org/abs/2508.14704...)
+INFO:WebSearchOrchestrator:[TOOL] fetch_content(url=https://arxiv.org/abs/2508.14704...)
+
+============================================================
+[HANDOFF] Orchestrator -> ContentFetchAgent
+[ACTION] fetch({'url': 'https://arxiv.org/abs/2508.14704', 'purpose': 'Get paper details'})
+============================================================
+ 
+2025-12-05 03:54:09,129.129 74659 ContentFetchAgent:20223915-d3ef-441c-8660-9b46e353d562 INFO [call_tool():433] Executing tool fetch of server fetch
+INFO:ContentFetchAgent:20223915-d3ef-441c-8660-9b46e353d562:Executing tool fetch of server fetch
+2025-12-05 03:54:09,129.129 74659 ContentFetchAgent:20223915-d3ef-441c-8660-9b46e353d562 INFO [call_tool():435] With arguments: {'url': 'https://arxiv.org/abs/2508.14704', 'max_length': 20000, 'raw': False}
+INFO:ContentFetchAgent:20223915-d3ef-441c-8660-9b46e353d562:With arguments: {'url': 'https://arxiv.org/abs/2508.14704', 'max_length': 20000, 'raw': False}
+2025-12-05 03:54:09,129.129 74659 MCPClient INFO [execute_tool():205] Executing fetch...
+INFO:MCPClient:Executing fetch...
+2025-12-05 03:54:14,293.293 74659 ContentFetchAgent:20223915-d3ef-441c-8660-9b46e353d562 INFO [call_tool():433] Executing tool fetch of server fetch
+INFO:ContentFetchAgent:20223915-d3ef-441c-8660-9b46e353d562:Executing tool fetch of server fetch
+2025-12-05 03:54:14,293.293 74659 ContentFetchAgent:20223915-d3ef-441c-8660-9b46e353d562 INFO [call_tool():435] With arguments: {'url': 'https://arxiv.org/abs/2508.14704', 'max_length': 20000, 'raw': True}
+INFO:ContentFetchAgent:20223915-d3ef-441c-8660-9b46e353d562:With arguments: {'url': 'https://arxiv.org/abs/2508.14704', 'max_length': 20000, 'raw': True}
+2025-12-05 03:54:14,293.293 74659 MCPClient INFO [execute_tool():205] Executing fetch...
+INFO:MCPClient:Executing fetch...
+
+------------------------------------------------------------
+[COMPLETE] ContentFetchAgent -> Orchestrator
+[RESULT] {"url": "https://arxiv.org/abs/2508.14704", "title": "MCP-Universe: Benchmarking Large Language Models with Real-World Model Context Protocol Servers", "main_content": "The Model Context Protocol has ...
+------------------------------------------------------------
+ 
+2025-12-05 03:54:36,720.720 74659 WebSearchOrchestrator INFO [_handle_search_web():360] [TOOL] search_web(query="Elo rating" "CVPR 2025" "Salesforce"..., type=web)
+INFO:WebSearchOrchestrator:[TOOL] search_web(query="Elo rating" "CVPR 2025" "Salesforce"..., type=web)
+
+============================================================
+[HANDOFF] Orchestrator -> SearchExecutionAgent
+[ACTION] search({'query': '"Elo rating" "CVPR 2025" "Salesforce"', 'search_type': 'web'})
+============================================================
+ 
+2025-12-05 03:54:39,708.708 74659 SearchExecutionAgent:9e0dd473-9d9c-46ba-a82a-ef6f356d401d INFO [call_tool():433] Executing tool search of server google-search
+INFO:SearchExecutionAgent:9e0dd473-9d9c-46ba-a82a-ef6f356d401d:Executing tool search of server google-search
+2025-12-05 03:54:39,708.708 74659 SearchExecutionAgent:9e0dd473-9d9c-46ba-a82a-ef6f356d401d INFO [call_tool():435] With arguments: {'query': '"Elo rating" "CVPR 2025" "Salesforce"'}
+INFO:SearchExecutionAgent:9e0dd473-9d9c-46ba-a82a-ef6f356d401d:With arguments: {'query': '"Elo rating" "CVPR 2025" "Salesforce"'}
+2025-12-05 03:54:39,708.708 74659 MCPClient INFO [execute_tool():205] Executing search...
+INFO:MCPClient:Executing search...
+[12/05/25 03:54:39] INFO     Processing request of type CallToolRequest                                                        server.py:624
+[12/05/25 03:54:41] INFO     HTTP Request: GET                                                                               _client.py:1740
+                             https://serpapi.com/search.json?api_key=060d834007b2075b765a593609ea1cce509429205d915b5a79c541a                
+                             45fd9b6b9&q=%22Elo+rating%22+%22CVPR+2025%22+%22Salesforce%22&location=&engine=google&num=10&st                
+                             art=0 "HTTP/1.1 200 OK"                                                                                        
+[12/05/25 03:54:42] INFO     HTTP Request: GET                                                                               _client.py:1740
+                             https://serpapi.com/search.json?api_key=060d834007b2075b765a593609ea1cce509429205d915b5a79c541a                
+                             45fd9b6b9&q=%22Elo+rating%22+%22CVPR+2025%22+%22Salesforce%22&location=&engine=google&num=10&st                
+                             art=10 "HTTP/1.1 200 OK"                                                                                       
+
+------------------------------------------------------------
+[COMPLETE] SearchExecutionAgent -> Orchestrator
+[RESULT] {"organic_results": [{"title": "Benchmarking Large Language Models with Real-World ...", "link": "https://arxiv.org/html/2508.14704v1", "snippet": "Example 3: I'm looking for a paper based on the clue...
+------------------------------------------------------------
+ 
+2025-12-05 03:55:02,487.487 74659 WebSearchOrchestrator INFO [_handle_fetch_content():378] [TOOL] fetch_content(url=https://arxiv.org/pdf/2508.14704.pdf...)
+INFO:WebSearchOrchestrator:[TOOL] fetch_content(url=https://arxiv.org/pdf/2508.14704.pdf...)
+
+============================================================
+[HANDOFF] Orchestrator -> ContentFetchAgent
+[ACTION] fetch({'url': 'https://arxiv.org/pdf/2508.14704.pdf', 'purpose': 'Extract author list and check affiliatio...)
+============================================================
+ 
+2025-12-05 03:55:05,379.379 74659 ContentFetchAgent:20223915-d3ef-441c-8660-9b46e353d562 INFO [call_tool():433] Executing tool fetch of server fetch
+INFO:ContentFetchAgent:20223915-d3ef-441c-8660-9b46e353d562:Executing tool fetch of server fetch
+2025-12-05 03:55:05,379.379 74659 ContentFetchAgent:20223915-d3ef-441c-8660-9b46e353d562 INFO [call_tool():435] With arguments: {'url': 'https://arxiv.org/pdf/2508.14704.pdf', 'max_length': 20000}
+INFO:ContentFetchAgent:20223915-d3ef-441c-8660-9b46e353d562:With arguments: {'url': 'https://arxiv.org/pdf/2508.14704.pdf', 'max_length': 20000}
+2025-12-05 03:55:05,379.379 74659 MCPClient INFO [execute_tool():205] Executing fetch...
+INFO:MCPClient:Executing fetch...
+2025-12-05 03:55:46,631.631 74659 ContentFetchAgent:20223915-d3ef-441c-8660-9b46e353d562 INFO [call_tool():433] Executing tool fetch of server fetch
+INFO:ContentFetchAgent:20223915-d3ef-441c-8660-9b46e353d562:Executing tool fetch of server fetch
+2025-12-05 03:55:46,632.632 74659 ContentFetchAgent:20223915-d3ef-441c-8660-9b46e353d562 INFO [call_tool():435] With arguments: {'url': 'https://arxiv.org/abs/2508.14704', 'max_length': 20000}
+INFO:ContentFetchAgent:20223915-d3ef-441c-8660-9b46e353d562:With arguments: {'url': 'https://arxiv.org/abs/2508.14704', 'max_length': 20000}
+2025-12-05 03:55:46,633.633 74659 MCPClient INFO [execute_tool():205] Executing fetch...
+INFO:MCPClient:Executing fetch...
+2025-12-05 03:55:48,384.384 74659 ContentFetchAgent:20223915-d3ef-441c-8660-9b46e353d562 INFO [call_tool():433] Executing tool fetch of server fetch
+INFO:ContentFetchAgent:20223915-d3ef-441c-8660-9b46e353d562:Executing tool fetch of server fetch
+2025-12-05 03:55:48,384.384 74659 ContentFetchAgent:20223915-d3ef-441c-8660-9b46e353d562 INFO [call_tool():435] With arguments: {'url': 'https://arxiv.org/abs/2508.14704', 'max_length': 20000, 'start_index': 20000}
+INFO:ContentFetchAgent:20223915-d3ef-441c-8660-9b46e353d562:With arguments: {'url': 'https://arxiv.org/abs/2508.14704', 'max_length': 20000, 'start_index': 20000}
+2025-12-05 03:55:48,385.385 74659 MCPClient INFO [execute_tool():205] Executing fetch...
+INFO:MCPClient:Executing fetch...
+
+------------------------------------------------------------
+[COMPLETE] ContentFetchAgent -> Orchestrator
+[RESULT] I'm sorry, but I couldn't find a satisfactory answer within the allowed number of iterations.
+------------------------------------------------------------
+ 
+2025-12-05 03:55:50,142.142 74659 WebSearchOrchestrator INFO [_handle_fetch_content():378] [TOOL] fetch_content(url=https://arxiv.org/abs/2508.14704...)
+INFO:WebSearchOrchestrator:[TOOL] fetch_content(url=https://arxiv.org/abs/2508.14704...)
+
+============================================================
+[HANDOFF] Orchestrator -> ContentFetchAgent
+[ACTION] fetch({'url': 'https://arxiv.org/abs/2508.14704', 'purpose': 'Extract author list and affiliations'})
+============================================================
+ 
+2025-12-05 03:55:59,071.071 74659 ContentFetchAgent:20223915-d3ef-441c-8660-9b46e353d562 INFO [call_tool():433] Executing tool fetch of server fetch
+INFO:ContentFetchAgent:20223915-d3ef-441c-8660-9b46e353d562:Executing tool fetch of server fetch
+2025-12-05 03:55:59,071.071 74659 ContentFetchAgent:20223915-d3ef-441c-8660-9b46e353d562 INFO [call_tool():435] With arguments: {'url': 'https://arxiv.org/abs/2508.14704', 'max_length': 200000, 'raw': False}
+INFO:ContentFetchAgent:20223915-d3ef-441c-8660-9b46e353d562:With arguments: {'url': 'https://arxiv.org/abs/2508.14704', 'max_length': 200000, 'raw': False}
+2025-12-05 03:55:59,071.071 74659 MCPClient INFO [execute_tool():205] Executing fetch...
+INFO:MCPClient:Executing fetch...
+2025-12-05 03:56:02,478.478 74659 ContentFetchAgent:20223915-d3ef-441c-8660-9b46e353d562 INFO [call_tool():433] Executing tool fetch of server fetch
+INFO:ContentFetchAgent:20223915-d3ef-441c-8660-9b46e353d562:Executing tool fetch of server fetch
+2025-12-05 03:56:02,478.478 74659 ContentFetchAgent:20223915-d3ef-441c-8660-9b46e353d562 INFO [call_tool():435] With arguments: {'url': 'https://arxiv.org/abs/2508.14704', 'max_length': 200000, 'raw': True}
+INFO:ContentFetchAgent:20223915-d3ef-441c-8660-9b46e353d562:With arguments: {'url': 'https://arxiv.org/abs/2508.14704', 'max_length': 200000, 'raw': True}
+2025-12-05 03:56:02,478.478 74659 MCPClient INFO [execute_tool():205] Executing fetch...
+INFO:MCPClient:Executing fetch...
+2025-12-05 03:56:06,171.171 74659 ContentFetchAgent:20223915-d3ef-441c-8660-9b46e353d562 INFO [call_tool():433] Executing tool fetch of server fetch
+INFO:ContentFetchAgent:20223915-d3ef-441c-8660-9b46e353d562:Executing tool fetch of server fetch
+2025-12-05 03:56:06,171.171 74659 ContentFetchAgent:20223915-d3ef-441c-8660-9b46e353d562 INFO [call_tool():435] With arguments: {'url': 'https://arxiv.org/pdf/2508.14704.pdf', 'max_length': 200000, 'raw': False}
+INFO:ContentFetchAgent:20223915-d3ef-441c-8660-9b46e353d562:With arguments: {'url': 'https://arxiv.org/pdf/2508.14704.pdf', 'max_length': 200000, 'raw': False}
+2025-12-05 03:56:06,171.171 74659 MCPClient INFO [execute_tool():205] Executing fetch...
+INFO:MCPClient:Executing fetch...
+
+------------------------------------------------------------
+[COMPLETE] ContentFetchAgent -> Orchestrator
+[RESULT] I'm sorry, but I couldn't find a satisfactory answer within the allowed number of iterations.
+------------------------------------------------------------
+ 
+2025-12-05 03:56:07,694.694 74659 WebSearchOrchestrator INFO [_handle_fetch_content():378] [TOOL] fetch_content(url=https://openreview.net/pdf?id=ffYd6uJpJE...)
+INFO:WebSearchOrchestrator:[TOOL] fetch_content(url=https://openreview.net/pdf?id=ffYd6uJpJE...)
+
+============================================================
+[HANDOFF] Orchestrator -> ContentFetchAgent
+[ACTION] fetch({'url': 'https://openreview.net/pdf?id=ffYd6uJpJE', 'purpose': 'Get author list and affiliations'})
+============================================================
+ 
+2025-12-05 03:56:10,489.489 74659 ContentFetchAgent:20223915-d3ef-441c-8660-9b46e353d562 INFO [call_tool():433] Executing tool fetch of server fetch
+INFO:ContentFetchAgent:20223915-d3ef-441c-8660-9b46e353d562:Executing tool fetch of server fetch
+2025-12-05 03:56:10,490.490 74659 ContentFetchAgent:20223915-d3ef-441c-8660-9b46e353d562 INFO [call_tool():435] With arguments: {'url': 'https://openreview.net/pdf?id=ffYd6uJpJE', 'max_length': 5000}
+INFO:ContentFetchAgent:20223915-d3ef-441c-8660-9b46e353d562:With arguments: {'url': 'https://openreview.net/pdf?id=ffYd6uJpJE', 'max_length': 5000}
+2025-12-05 03:56:10,490.490 74659 MCPClient INFO [execute_tool():205] Executing fetch...
+INFO:MCPClient:Executing fetch...
+2025-12-05 03:56:13,520.520 74659 ContentFetchAgent:20223915-d3ef-441c-8660-9b46e353d562 INFO [call_tool():433] Executing tool fetch of server fetch
+INFO:ContentFetchAgent:20223915-d3ef-441c-8660-9b46e353d562:Executing tool fetch of server fetch
+2025-12-05 03:56:13,520.520 74659 ContentFetchAgent:20223915-d3ef-441c-8660-9b46e353d562 INFO [call_tool():435] With arguments: {'url': 'https://openreview.net/forum?id=ffYd6uJpJE', 'max_length': 5000}
+INFO:ContentFetchAgent:20223915-d3ef-441c-8660-9b46e353d562:With arguments: {'url': 'https://openreview.net/forum?id=ffYd6uJpJE', 'max_length': 5000}
+2025-12-05 03:56:13,520.520 74659 MCPClient INFO [execute_tool():205] Executing fetch...
+INFO:MCPClient:Executing fetch...
+2025-12-05 03:56:15,445.445 74659 ContentFetchAgent:20223915-d3ef-441c-8660-9b46e353d562 INFO [call_tool():433] Executing tool fetch of server fetch
+INFO:ContentFetchAgent:20223915-d3ef-441c-8660-9b46e353d562:Executing tool fetch of server fetch
+2025-12-05 03:56:15,446.446 74659 ContentFetchAgent:20223915-d3ef-441c-8660-9b46e353d562 INFO [call_tool():435] With arguments: {'url': 'https://openreview.net/forum?id=ffYd6uJpJE', 'max_length': 20000}
+INFO:ContentFetchAgent:20223915-d3ef-441c-8660-9b46e353d562:With arguments: {'url': 'https://openreview.net/forum?id=ffYd6uJpJE', 'max_length': 20000}
+2025-12-05 03:56:15,446.446 74659 MCPClient INFO [execute_tool():205] Executing fetch...
+INFO:MCPClient:Executing fetch...
+
+------------------------------------------------------------
+[COMPLETE] ContentFetchAgent -> Orchestrator
+[RESULT] I'm sorry, but I couldn't find a satisfactory answer within the allowed number of iterations.
+------------------------------------------------------------
+ 
+2025-12-05 03:56:33,008.008 74659 WebSearchOrchestrator INFO [_handle_search_web():360] [TOOL] search_web(query="VideoAutoArena" "CVPR 2025"..., type=web)
+INFO:WebSearchOrchestrator:[TOOL] search_web(query="VideoAutoArena" "CVPR 2025"..., type=web)
+
+============================================================
+[HANDOFF] Orchestrator -> SearchExecutionAgent
+[ACTION] search({'query': '"VideoAutoArena" "CVPR 2025"', 'search_type': 'web'})
+============================================================
+ 
+2025-12-05 03:56:36,160.160 74659 SearchExecutionAgent:9e0dd473-9d9c-46ba-a82a-ef6f356d401d INFO [call_tool():433] Executing tool search of server google-search
+INFO:SearchExecutionAgent:9e0dd473-9d9c-46ba-a82a-ef6f356d401d:Executing tool search of server google-search
+2025-12-05 03:56:36,160.160 74659 SearchExecutionAgent:9e0dd473-9d9c-46ba-a82a-ef6f356d401d INFO [call_tool():435] With arguments: {'query': '"VideoAutoArena" "CVPR 2025"'}
+INFO:SearchExecutionAgent:9e0dd473-9d9c-46ba-a82a-ef6f356d401d:With arguments: {'query': '"VideoAutoArena" "CVPR 2025"'}
+2025-12-05 03:56:36,160.160 74659 MCPClient INFO [execute_tool():205] Executing search...
+INFO:MCPClient:Executing search...
+[12/05/25 03:56:36] INFO     Processing request of type CallToolRequest                                                        server.py:624
+[12/05/25 03:56:39] INFO     HTTP Request: GET                                                                               _client.py:1740
+                             https://serpapi.com/search.json?api_key=060d834007b2075b765a593609ea1cce509429205d915b5a79c541a                
+                             45fd9b6b9&q=%22VideoAutoArena%22+%22CVPR+2025%22&location=&engine=google&num=10&start=0                        
+                             "HTTP/1.1 200 OK"                                                                                              
+[12/05/25 03:56:41] INFO     HTTP Request: GET                                                                               _client.py:1740
+                             https://serpapi.com/search.json?api_key=060d834007b2075b765a593609ea1cce509429205d915b5a79c541a                
+                             45fd9b6b9&q=%22VideoAutoArena%22+%22CVPR+2025%22&location=&engine=google&num=10&start=10                       
+                             "HTTP/1.1 200 OK"                                                                                              

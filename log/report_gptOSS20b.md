@@ -1,0 +1,4141 @@
+## Benchmark Config
+
+**Benchmark description:** Test agent for google search tasks.
+
+**Agent:** HarmonyReAct-agent
+
+**LLM:** openrouter: GPTOSS20B_OR
+
+## Benchmark Summary
+| Name | Passed | Not Passed | Score | LLM Calls |
+| ---  | ------ | ---------- | ----- | --------- |
+|**test/web_search/info_search_task_0001.json**:|                                    0 |                                    1 |                                    0.00 |                                    55 |
+|**test/web_search/info_search_task_0002.json**:|                                    0 |                                    1 |                                    0.00 |                                    35 |
+|**test/web_search/info_search_task_0003.json**:|                                    0 |                                    1 |                                    0.00 |                                    30 |
+|**test/web_search/info_search_task_0004.json**:|                                    0 |                                    1 |                                    0.00 |                                    553 |
+|**test/web_search/info_search_task_0048.json**:|                                    0 |                                    1 |                                    0.00 |                                    425 |
+|**test/web_search/info_search_task_0049.json**:|                                    0 |                                    1 |                                    0.00 |                                    58 |
+|**test/web_search/info_search_task_0050.json**:|                                    0 |                                    1 |                                    0.00 |                                    25 |
+## Appendix (Benchmark Details)
+### Task
+- config: test/web_search/info_search_task_0001.json
+- parent_id: f335dc29-5ec9-495d-91a7-1668df18efb4
+- LLM Call Count: 55
+- Total Execution Time: 4662.60s
+- Average Response Time: 61.35s
+- Total Records: 76
+- Agent Response:
+  - llm_prompt: 55
+
+- Trace Structure:
+  - Parent Trace: f335dc29-5ec9-495d-91a7-1668df18efb4
+    - Child: 8dfcc0f2-316a-425f-a4cb-edb28c151dc8 (span: 1, time: 7.71s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 00:51:30
+    - Child: 621bdc9c-c20a-42d6-bfd6-93fddda9455c (span: 2, time: 2.89s, type: tool)
+      - Tool: search
+      - Records: 1
+      - Timestamp: 2025-12-05 00:51:33
+    - Child: 2b46de72-ea6b-45b8-ad86-1c2626879e45 (span: 3, time: 10.91s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 00:51:44
+    - Child: 56eca487-11a0-4037-8d06-831e1278983f (span: 4, time: 4.35s, type: tool)
+      - Tool: search
+      - Records: 1
+      - Timestamp: 2025-12-05 00:51:48
+    - Child: 398c27d7-3765-4280-840c-94aa470f4359 (span: 5, time: 1.58s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 00:51:50
+    - Child: 69582301-3ec7-48a8-8216-7ffa1d38c865 (span: 6, time: 1.13s, type: tool)
+      - Tool: fetch
+      - Records: 1
+      - Timestamp: 2025-12-05 00:51:51
+    - Child: d54aee3a-221e-415f-8e3b-3aa6ab830637 (span: 7, time: 76.03s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 00:53:07
+    - Child: af877ce1-b1c6-4e6d-8064-c17fa5ce5234 (span: 9, time: 2.41s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 00:54:04
+    - Child: bcd87b36-d690-450a-b0b2-412b35ce560f (span: 10, time: 1.26s, type: tool)
+      - Tool: fetch
+      - Records: 1
+      - Timestamp: 2025-12-05 00:54:05
+    - Child: 6ffa7c9c-dd0a-436d-bb72-5d55784ac9ba (span: 11, time: 0.91s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 00:54:06
+    - Child: 78d53e04-70a7-445b-ab94-5715268fd421 (span: 12, time: 13.07s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 00:54:19
+    - Child: eb25579b-9648-458b-904f-f20819bde77b (span: 13, time: 6.34s, type: tool)
+      - Tool: search
+      - Records: 1
+      - Timestamp: 2025-12-05 00:54:25
+    - Child: 0b4a8bb7-dccd-483c-94a5-202efa7fd3be (span: 14, time: 3.03s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 00:54:28
+    - Child: 6b52d6b1-3844-44bd-8424-9e6d91a2b41e (span: 8, time: 100.79s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 00:54:37
+    - Child: 30fc5f81-d61f-4048-9e78-6e4416a0a90b (span: 16, time: 4.81s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 00:55:38
+    - Child: bb97dd6b-b668-47dc-aa1f-e18b02404d39 (span: 17, time: 2.94s, type: tool)
+      - Tool: search
+      - Records: 1
+      - Timestamp: 2025-12-05 00:55:41
+    - Child: a076fa83-84cc-4bae-939e-79659395ce0a (span: 18, time: 4.35s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 00:55:45
+    - Child: 6f165b6c-def4-4483-8432-d0cfca91e5a8 (span: 19, time: 4.69s, type: tool)
+      - Tool: search
+      - Records: 1
+      - Timestamp: 2025-12-05 00:55:50
+    - Child: 62b86f4a-bb45-4baa-877e-35b7d5e13653 (span: 15, time: 91.80s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 00:56:00
+    - Child: 229681f5-39da-4cb1-80f6-ec0f31000683 (span: 21, time: 0.74s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 00:56:56
+    - Child: fb65920b-faee-4051-91c1-e5f097fd282b (span: 22, time: 2.25s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 00:56:58
+    - Child: f871271e-6ebf-4fd6-87cf-508ad3334070 (span: 23, time: 8.39s, type: tool)
+      - Tool: search
+      - Records: 1
+      - Timestamp: 2025-12-05 00:57:07
+    - Child: 6e9e8c98-817a-4cdf-9f94-93ceda2051d0 (span: 24, time: 0.79s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 00:57:07
+    - Child: bbbb6ddc-e7b1-463b-ad18-9979be8545a9 (span: 26, time: 1.59s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 00:58:14
+    - Child: 0e94cc50-c94f-4d2c-a798-30f88b6debdc (span: 27, time: 2.71s, type: tool)
+      - Tool: fetch
+      - Records: 1
+      - Timestamp: 2025-12-05 00:58:17
+    - Child: b78a29c0-bb66-44de-a92c-4e6135e7f9c6 (span: 28, time: 3.53s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 00:58:20
+    - Child: d2d11a92-3e3f-43eb-a66c-aee7b01db701 (span: 29, time: 3.71s, type: tool)
+      - Tool: fetch
+      - Records: 1
+      - Timestamp: 2025-12-05 00:58:24
+    - Child: 7d3059f8-80cb-4905-b351-98523239cd17 (span: 30, time: 2.77s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 00:58:27
+    - Child: 071190e2-70f9-41c9-a1e8-a0002251250c (span: 31, time: 0.94s, type: tool)
+      - Tool: fetch
+      - Records: 1
+      - Timestamp: 2025-12-05 00:58:28
+    - Child: 9deb26ec-7f22-4332-b052-806eeb8a8e1a (span: 20, time: 166.73s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 00:58:37
+    - Child: d04e8bfe-57f3-4ee3-9f43-4e0e4c5a738c (span: 33, time: 0.90s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 00:59:34
+    - Child: 919da562-3501-4b9f-81ad-5d2b30740775 (span: 34, time: 5.56s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 00:59:39
+    - Child: 4d866e3a-c2a0-479c-ab2c-b673093d2c47 (span: 35, time: 8.85s, type: tool)
+      - Tool: search
+      - Records: 1
+      - Timestamp: 2025-12-05 00:59:48
+    - Child: b100d0d3-7633-4c94-bd28-304a24f3631e (span: 36, time: 2.73s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 00:59:51
+    - Child: 5cce1a4b-0977-40ad-b4ad-8547635f0e7b (span: 37, time: 1.77s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 00:59:52
+    - Child: dd6d6f3f-4e51-4598-a074-dbdd5aa75695 (span: 38, time: 7.05s, type: tool)
+      - Tool: search
+      - Records: 1
+      - Timestamp: 2025-12-05 01:00:00
+    - Child: f792bcf8-6995-47e4-947f-4fedac2a6619 (span: 25, time: 202.95s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:00:30
+    - Child: ec7e6927-ff4e-45d9-a2cb-3b0731d422d3 (span: 40, time: 3.93s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:01:08
+    - Child: 180412d4-cd63-4098-a815-3fa775607cd2 (span: 41, time: 0.57s, type: tool)
+      - Tool: fetch
+      - Records: 1
+      - Timestamp: 2025-12-05 01:01:09
+    - Child: fbd01b2a-87eb-4d91-aed3-83d753c2ce48 (span: 32, time: 191.29s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:01:39
+    - Child: d10e426c-b579-4eed-a48f-84738209a0aa (span: 43, time: 2.79s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:02:17
+    - Child: 12453e87-8d80-49b0-b55f-01c3c1f3d818 (span: 44, time: 5.59s, type: tool)
+      - Tool: search
+      - Records: 1
+      - Timestamp: 2025-12-05 01:02:22
+    - Child: d24398d9-2b89-47fb-bb9e-619d2f8acd2d (span: 42, time: 126.54s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:03:16
+    - Child: 6805a116-a93d-40f1-83b5-fc996f7476a1 (span: 39, time: 221.69s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:03:41
+    - Child: 6a4c65f1-2d17-40d2-a8c8-b2d805336239 (span: 47, time: 1.55s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:04:34
+    - Child: 4090ca1b-3e35-44de-98da-30ba8b0565d4 (span: 48, time: 3.27s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:04:37
+    - Child: b0d3376f-de21-4cca-8157-c4bd0664f118 (span: 49, time: 11.30s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:04:49
+    - Child: f6293da2-5d1b-42cf-8d5b-bce16acdbf75 (span: 50, time: 0.84s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:04:49
+    - Child: 241cacde-2691-48f9-a76a-b81163eba265 (span: 45, time: 168.01s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:05:11
+    - Child: 79b5395c-f2d5-440e-b5bf-efd740e76b98 (span: 52, time: 1.60s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:05:56
+    - Child: fce4b396-c2b4-4627-8cca-888f6c9ae916 (span: 53, time: 1.03s, type: tool)
+      - Tool: fetch
+      - Records: 1
+      - Timestamp: 2025-12-05 01:05:57
+    - Child: 9069ce87-3d42-46e8-8fcb-c40ad3ad3279 (span: 54, time: 2.02s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:05:59
+    - Child: cb75ab3b-3657-4e80-9b65-d10f93187244 (span: 55, time: 0.89s, type: tool)
+      - Tool: fetch
+      - Records: 1
+      - Timestamp: 2025-12-05 01:06:00
+    - Child: 4c307605-f7ae-41a8-b021-4d75acb01eb5 (span: 51, time: 197.96s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:08:07
+    - Child: cf05a413-ca2b-47a0-81f4-1d494e073aac (span: 46, time: 310.22s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:08:38
+    - Child: 879003f3-315d-4469-9f7a-23e76e0cd77e (span: 56, time: 191.68s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:09:12
+    - Child: 546c5afe-f595-449f-8c5c-4afaf021c0c4 (span: 59, time: 1.47s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:09:16
+    - Child: e300ef76-ae8b-4b35-a5d7-d252f300346c (span: 60, time: 1.17s, type: tool)
+      - Tool: fetch
+      - Records: 1
+      - Timestamp: 2025-12-05 01:09:18
+    - Child: 0455ae5b-53ac-44c8-9bcb-e1ca6c1bcb51 (span: 61, time: 1.30s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:09:19
+    - Child: cc17dedc-dc78-47ef-a535-b1a092f71f65 (span: 63, time: 2.72s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:10:27
+    - Child: b231b943-ed05-4927-8d17-6d7f11355d4a (span: 64, time: 0.31s, type: tool)
+      - Tool: fetch
+      - Records: 1
+      - Timestamp: 2025-12-05 01:10:27
+    - Child: 73658228-4238-4f29-a173-ebaf780c514e (span: 65, time: 2.54s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:10:30
+    - Child: d564948b-0cd3-410d-a6d4-be0cefe8e39c (span: 66, time: 6.46s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:10:36
+    - Child: fb58c9cb-a4e5-4940-a0cc-a8b4eed84389 (span: 57, time: 231.65s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:10:57
+    - Child: ef90b87b-27a6-4dd4-9e38-00e035dd4576 (span: 68, time: 1.09s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:11:42
+    - Child: 1b5d098e-0532-44b0-8aab-bb82791874be (span: 69, time: 1.00s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:11:43
+    - Child: 19e4859d-e402-49f0-bba5-f3f585102d10 (span: 70, time: 0.86s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:11:44
+    - Child: 567efa55-a32c-4ccc-938d-64031dd79660 (span: 71, time: 0.89s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:11:45
+    - Child: 3fddc749-aba4-4ee1-98cc-1ef0ecaf6f84 (span: 72, time: 0.81s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:11:46
+    - Child: f7e6a8df-57eb-4e55-9c5e-026a40a4c8d8 (span: 58, time: 230.94s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:12:01
+    - Child: a1a1aee3-5ca1-4f9f-8b8f-562ee09b166f (span: 62, time: 172.65s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:12:12
+    - Child: aa629173-d898-4e2c-8758-6b02c36f03c5 (span: 74, time: 1.13s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:12:52
+    - Child: 46e66ff5-9a4d-4b48-b524-c8b9d5db20f3 (span: 75, time: 1.96s, type: tool)
+      - Tool: fetch
+      - Records: 1
+      - Timestamp: 2025-12-05 01:12:54
+    - Child: f335dc29-5ec9-495d-91a7-1668df18efb4 (span: 1, time: 1291.57s, type: agent)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:12:54
+    - Child: 04fe93ba-8743-489b-bb36-0c71a8220d97 (span: 67, time: 269.37s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:15:05
+    - Child: 140b9ef2-3a53-4dac-b025-912a1918379e (span: 73, time: 234.97s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:15:41
+- Evaluation Results: 
+
+  - Eval id: 1
+    - Evaluation Description: 
+
+    - Reason: output is not equal to ground-truth
+
+    - Passed? <span color="red">False<span>
+
+### Task
+- config: test/web_search/info_search_task_0002.json
+- parent_id: 54e6653a-25c7-47b9-b709-154261dd1300
+- LLM Call Count: 35
+- Total Execution Time: 884.63s
+- Average Response Time: 17.35s
+- Total Records: 51
+- Agent Response:
+  - llm_prompt: 35
+
+- Trace Structure:
+  - Parent Trace: 54e6653a-25c7-47b9-b709-154261dd1300
+    - Child: 167404d8-bede-4b4c-954c-c3e7d6f6c7a3 (span: 1, time: 18.04s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:13:15
+    - Child: 776cb82d-5610-4bfb-b23a-b30fdf03bfe3 (span: 2, time: 32.72s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:13:48
+    - Child: 836ff8b2-3542-488c-b222-587594a67fb5 (span: 3, time: 11.21s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:13:59
+    - Child: 8b90e9f7-0f0d-467c-910a-29b7cba2fe91 (span: 4, time: 3.58s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:14:03
+    - Child: 4114ff43-8c50-4300-99f3-f556e5fb360b (span: 5, time: 3.09s, type: tool)
+      - Tool: search
+      - Records: 1
+      - Timestamp: 2025-12-05 01:14:06
+    - Child: 6bc31cac-c7a8-4f4d-a2b9-4ba29f29611d (span: 6, time: 0.67s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:14:07
+    - Child: 0a82e8c6-8574-48c3-bc4b-94dcc8cb4681 (span: 7, time: 0.71s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:14:07
+    - Child: 8b82f902-58fd-44e5-ae48-742cabf9ce0f (span: 8, time: 1.64s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:14:09
+    - Child: 6388879c-daed-44d0-9f3a-7b36888c05b8 (span: 9, time: 7.11s, type: tool)
+      - Tool: fetch
+      - Records: 1
+      - Timestamp: 2025-12-05 01:14:16
+    - Child: 14d9686b-4dc8-49f6-bcfb-2710c750c285 (span: 10, time: 0.89s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:14:17
+    - Child: 6ac29082-fa56-4da1-9e77-3b6d3798afab (span: 11, time: 6.85s, type: tool)
+      - Tool: fetch
+      - Records: 1
+      - Timestamp: 2025-12-05 01:14:24
+    - Child: 08745d08-83db-495d-8786-11ce2cec336d (span: 12, time: 0.84s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:14:25
+    - Child: 692f5b08-e498-41c2-b017-0ea99075f1aa (span: 13, time: 6.97s, type: tool)
+      - Tool: fetch
+      - Records: 1
+      - Timestamp: 2025-12-05 01:14:32
+    - Child: 0f7f1220-d23c-4618-8368-400c1e3d4177 (span: 14, time: 2.15s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:14:34
+    - Child: 9bfac990-91ae-498c-9ebc-cdae546fa98e (span: 15, time: 1.68s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:14:35
+    - Child: c007e778-409f-4a47-8d76-9a5575b8d704 (span: 16, time: 7.21s, type: tool)
+      - Tool: fetch
+      - Records: 1
+      - Timestamp: 2025-12-05 01:14:43
+    - Child: e6fbe7b0-4875-4e7d-b8be-3ed5f330d4ab (span: 17, time: 2.54s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:14:45
+    - Child: dd2b8daf-48cb-40d5-9ef9-65abd04ff5fe (span: 18, time: 0.73s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:14:46
+    - Child: 8c4506eb-3db5-4378-bf39-14b5060e5f23 (span: 19, time: 1.60s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:14:48
+    - Child: ae07dd37-1478-42d9-98e7-3621915b99fc (span: 20, time: 7.65s, type: tool)
+      - Tool: fetch
+      - Records: 1
+      - Timestamp: 2025-12-05 01:14:55
+    - Child: 51bca1e6-388b-4f54-8509-f3454c939e99 (span: 21, time: 0.99s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:14:56
+    - Child: f4b78116-6f39-4e10-aa55-515a0cf85964 (span: 23, time: 70.57s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:17:12
+    - Child: 9b730edb-3a1d-4b5b-b05d-31fe598c1483 (span: 24, time: 27.69s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:17:34
+    - Child: 2e7913ce-67a1-4613-b55d-7e4dfaa6bf48 (span: 25, time: 1.00s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:17:35
+    - Child: d00f2c05-8858-4d04-9ff3-67ab0c67aa4f (span: 26, time: 7.65s, type: tool)
+      - Tool: fetch
+      - Records: 1
+      - Timestamp: 2025-12-05 01:17:43
+    - Child: 5bf5dcb6-8920-4ea1-b685-f7aaf91cd1ad (span: 22, time: 169.77s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:17:46
+    - Child: 79cec9eb-43e8-482f-8e5b-576d2b00191f (span: 27, time: 49.21s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:18:32
+    - Child: f2464c04-b005-4f3f-952e-894a002161a6 (span: 28, time: 2.05s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:18:34
+    - Child: 44c33aa0-5005-4602-990a-6c2e0505638b (span: 29, time: 3.29s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:18:37
+    - Child: 231da18e-e04c-42a8-90df-d5d03b60a6f9 (span: 30, time: 4.97s, type: tool)
+      - Tool: search
+      - Records: 1
+      - Timestamp: 2025-12-05 01:18:42
+    - Child: 0816ee69-436c-49b0-b8d5-af3ce9c49ea8 (span: 31, time: 0.74s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:18:43
+    - Child: ba92f125-afce-45cb-a549-0fde3d2a70f1 (span: 32, time: 0.68s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:18:44
+    - Child: bff40a48-fe0a-4041-95a0-3ae821467d91 (span: 33, time: 0.67s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:18:44
+    - Child: ae333544-3ee6-494f-a0ed-c4c9ee8c0d8b (span: 34, time: 2.85s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:18:47
+    - Child: b12fccea-a7db-4ce1-bd26-63008cb2e2f4 (span: 35, time: 1.35s, type: tool)
+      - Tool: fetch
+      - Records: 1
+      - Timestamp: 2025-12-05 01:18:48
+    - Child: 71e4b399-ea19-4a64-89ce-b62b6e1e1862 (span: 36, time: 1.36s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:18:50
+    - Child: 369bf38b-9db0-47fe-8b6a-4f22f67815d8 (span: 37, time: 1.14s, type: tool)
+      - Tool: fetch
+      - Records: 1
+      - Timestamp: 2025-12-05 01:18:51
+    - Child: 2f0d5d22-381d-434b-808a-39c615ae5096 (span: 38, time: 2.52s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:18:54
+    - Child: 528e6a46-eb79-4b15-8afe-639dbaec41b6 (span: 39, time: 3.82s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:18:57
+    - Child: 46f7677e-72ee-4808-b51d-d3cfee6c699d (span: 40, time: 3.33s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:19:01
+    - Child: a65f12c7-163b-49f5-8d6e-dec321768193 (span: 41, time: 1.02s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:19:02
+    - Child: b69f0cf0-a45f-4e76-a9aa-60e4032f56f1 (span: 42, time: 1.16s, type: tool)
+      - Tool: fetch
+      - Records: 1
+      - Timestamp: 2025-12-05 01:19:03
+    - Child: 89fa78a2-876e-485b-99fc-823874461610 (span: 43, time: 7.51s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:19:10
+    - Child: 61db1305-4caf-4bcf-8590-d2e75d42e9ae (span: 44, time: 5.85s, type: tool)
+      - Tool: search
+      - Records: 1
+      - Timestamp: 2025-12-05 01:19:16
+    - Child: cfc951ba-afb4-44c0-9ff3-047b5443ab5f (span: 45, time: 1.23s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:19:18
+    - Child: b81c6987-a16f-4f9b-9b9a-11e63edc6c57 (span: 46, time: 0.99s, type: tool)
+      - Tool: fetch
+      - Records: 1
+      - Timestamp: 2025-12-05 01:19:19
+    - Child: 7eb1ce8c-96ed-45b1-883a-58b2b630b28d (span: 47, time: 1.02s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:19:20
+    - Child: f707609b-fc21-4600-82d8-9d7574ae713b (span: 48, time: 0.76s, type: tool)
+      - Tool: fetch
+      - Records: 1
+      - Timestamp: 2025-12-05 01:19:20
+    - Child: 739cb7e5-cd7b-4fb1-bf94-7dcafe114b9b (span: 49, time: 3.40s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:19:24
+    - Child: 6220f31e-be3e-4bc7-8803-f247772c1543 (span: 50, time: 0.78s, type: tool)
+      - Tool: fetch
+      - Records: 1
+      - Timestamp: 2025-12-05 01:19:25
+    - Child: 54e6653a-25c7-47b9-b709-154261dd1300 (span: 1, time: 387.41s, type: agent)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:19:25
+- Evaluation Results: 
+
+  - Eval id: 1
+    - Evaluation Description: 
+
+    - Reason: output is not equal to ground-truth
+
+    - Passed? <span color="red">False<span>
+
+### Task
+- config: test/web_search/info_search_task_0003.json
+- parent_id: 8a6dfb29-9fdb-4379-8db7-a876898b3617
+- LLM Call Count: 30
+- Total Execution Time: 1497.72s
+- Average Response Time: 35.66s
+- Total Records: 42
+- Agent Response:
+  - llm_prompt: 30
+
+- Trace Structure:
+  - Parent Trace: 8a6dfb29-9fdb-4379-8db7-a876898b3617
+    - Child: a9b9ff15-c93a-446f-a199-4c5242eb648b (span: 1, time: 1.16s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:19:29
+    - Child: b3cea533-c9ba-4705-afdc-911c9aeda6ad (span: 2, time: 4.52s, type: tool)
+      - Tool: search
+      - Records: 1
+      - Timestamp: 2025-12-05 01:19:34
+    - Child: 8e235728-3f2f-41c2-abbf-6500f01ff45a (span: 3, time: 4.37s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:19:38
+    - Child: aed642d6-459b-465f-b890-e06b20dc3271 (span: 5, time: 0.68s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:20:44
+    - Child: c603a3b3-266f-48dd-b5dc-b7b1ab3f9c96 (span: 6, time: 1.00s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:20:45
+    - Child: c0797f51-6940-4164-bf56-8974745073ca (span: 7, time: 0.37s, type: tool)
+      - Tool: fetch
+      - Records: 1
+      - Timestamp: 2025-12-05 01:20:45
+    - Child: 4f680c72-7271-4eea-b486-70eacc0f46ed (span: 4, time: 98.58s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:21:17
+    - Child: 9670a6fa-6882-4348-a506-0b73c9b7754a (span: 9, time: 2.08s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:21:52
+    - Child: 78f1e62a-4ba7-4e8d-b3a6-bf41e78a409c (span: 10, time: 0.24s, type: tool)
+      - Tool: fetch
+      - Records: 1
+      - Timestamp: 2025-12-05 01:21:53
+    - Child: 8803a685-3901-4fef-91f2-593bdefea7f1 (span: 11, time: 1.00s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:21:54
+    - Child: 25f054eb-3b8c-4d20-9936-86e693e0b2d0 (span: 12, time: 0.22s, type: tool)
+      - Tool: fetch
+      - Records: 1
+      - Timestamp: 2025-12-05 01:21:54
+    - Child: 9eb5fad3-bd2e-452d-8791-2452b8d2aa56 (span: 13, time: 0.70s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:21:55
+    - Child: d277c830-4ca7-4426-a343-4e2a4512a171 (span: 14, time: 0.64s, type: tool)
+      - Tool: fetch
+      - Records: 1
+      - Timestamp: 2025-12-05 01:21:55
+    - Child: e8a8a7ed-38af-45bc-a0a9-992df14154cb (span: 16, time: 2.05s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:23:02
+    - Child: 42d830b6-87fa-4345-886d-d7803c608ffe (span: 17, time: 8.18s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:23:10
+    - Child: c5a7606d-5a0b-409b-9a2e-cf6bee6f4aa6 (span: 18, time: 0.76s, type: tool)
+      - Tool: fetch
+      - Records: 1
+      - Timestamp: 2025-12-05 01:23:11
+    - Child: e7039982-fc6c-4dcf-8356-a0516d184745 (span: 8, time: 210.15s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:24:15
+    - Child: b09bfac8-de2e-4a84-876c-17f4c4d45e9b (span: 15, time: 194.98s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:25:10
+    - Child: 265c5bf4-1496-4a0d-bf35-2014123c4837 (span: 21, time: 1.05s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:25:22
+    - Child: d2dac61e-fb71-4399-8361-7c3eac4080cc (span: 22, time: 5.06s, type: tool)
+      - Tool: search
+      - Records: 1
+      - Timestamp: 2025-12-05 01:25:27
+    - Child: 2530b5bd-33b8-4189-8d19-717479d2974f (span: 23, time: 1.10s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:25:28
+    - Child: c482856f-3ba4-4908-a988-17131ccfa893 (span: 24, time: 2.67s, type: tool)
+      - Tool: search
+      - Records: 1
+      - Timestamp: 2025-12-05 01:25:31
+    - Child: f0eb659a-35e2-4c5e-99df-b7fd9f6dcfd1 (span: 25, time: 0.66s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:25:32
+    - Child: 87686652-4814-4b54-86b7-49878ad80a25 (span: 20, time: 81.71s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:25:38
+    - Child: 171af214-cace-428d-8cfc-cb8ddab48330 (span: 19, time: 151.41s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:25:43
+    - Child: 27f2323d-0dca-407b-962e-a0f39d997505 (span: 26, time: 51.74s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:26:24
+    - Child: ec6f3129-c962-4b38-8fca-676a282d5be8 (span: 27, time: 0.24s, type: tool)
+      - Tool: fetch
+      - Records: 1
+      - Timestamp: 2025-12-05 01:26:24
+    - Child: 983d1a86-66a8-45a5-b6ca-64fc0ca4680b (span: 29, time: 3.31s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:27:32
+    - Child: c25a4bff-1cb7-4d75-83ec-12a836adb135 (span: 30, time: 2.26s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:27:34
+    - Child: 95434673-529d-49e7-a22f-733f745eac25 (span: 31, time: 3.84s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:27:38
+    - Child: f75d3b27-db9a-49a2-a1f2-0312b4d95aca (span: 32, time: 2.80s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:27:41
+    - Child: 811049a1-ac7b-4943-9e23-078098022e9f (span: 33, time: 10.35s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:27:51
+    - Child: 5a3cae23-f1c0-481b-80d1-e8b436a6d962 (span: 34, time: 1.61s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:27:53
+    - Child: 5beb4f73-fa22-4668-8e89-f2299791f73a (span: 35, time: 6.10s, type: tool)
+      - Tool: search
+      - Records: 1
+      - Timestamp: 2025-12-05 01:27:59
+    - Child: 8fe99a3e-9dcb-4128-aea1-834ecae4a048 (span: 36, time: 3.84s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:28:03
+    - Child: e5fd12b9-b1ca-43b5-b981-b7e1fa995217 (span: 37, time: 0.66s, type: tool)
+      - Tool: fetch
+      - Records: 1
+      - Timestamp: 2025-12-05 01:28:04
+    - Child: 38d18dd1-a73e-499a-9fbb-b736a8c77062 (span: 38, time: 0.72s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:28:04
+    - Child: 65015353-6ab0-4c4d-aae3-b08399ddf83d (span: 39, time: 0.78s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:28:05
+    - Child: 558aa391-790d-4a59-a31a-0887a532d146 (span: 40, time: 1.24s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:28:06
+    - Child: a36b441e-86ad-4ce9-bd08-2dc55caa27c2 (span: 41, time: 1.34s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:28:08
+    - Child: 8a6dfb29-9fdb-4379-8db7-a876898b3617 (span: 1, time: 519.76s, type: agent)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:28:08
+    - Child: 069ebf07-3963-4aa5-8839-d2bf74c43bb7 (span: 28, time: 111.79s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:28:16
+- Evaluation Results: 
+
+  - Eval id: 1
+    - Evaluation Description: 
+
+    - Reason: output is not equal to ground-truth
+
+    - Passed? <span color="red">False<span>
+
+### Task
+- config: test/web_search/info_search_task_0004.json
+- parent_id: a61c9d76-8af1-4f69-a1c7-c07e0a38ba49
+- LLM Call Count: 553
+- Total Execution Time: 2275.18s
+- Average Response Time: 4.02s
+- Total Records: 566
+- Agent Response:
+  - llm_prompt: 553
+
+- Trace Structure:
+  - Parent Trace: a61c9d76-8af1-4f69-a1c7-c07e0a38ba49
+    - Child: 119d3832-e87a-4a0e-b676-72caa8cdbfdb (span: 1, time: 0.86s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:28:11
+    - Child: 9afc433a-6a08-44c5-a41b-149cc4ba2157 (span: 2, time: 0.67s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:28:12
+    - Child: aaed39d8-dcca-4264-8954-872ba026c51e (span: 3, time: 0.62s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:28:12
+    - Child: 2bb68f2a-dca5-4034-953d-65193b7d9bec (span: 4, time: 0.67s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:28:13
+    - Child: 55dd07ff-72e7-4b18-aec8-7cd3f7086d53 (span: 5, time: 0.56s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:28:14
+    - Child: 50cc1b37-edab-4fee-a6c6-0a5325b64525 (span: 6, time: 0.54s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:28:14
+    - Child: 875e509f-9177-451f-a097-58c9bcfc2a60 (span: 7, time: 0.55s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:28:15
+    - Child: 2cee2ddc-2790-4890-a5d3-a914d088d0b9 (span: 8, time: 0.56s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:28:15
+    - Child: dd3a454e-916c-455c-ab42-b02e1e60993e (span: 9, time: 0.57s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:28:16
+    - Child: 76139f01-3578-4e36-8ea4-20ad8d73f88e (span: 10, time: 0.61s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:28:16
+    - Child: 75b280ee-363e-4bdb-8ee6-634a00030d73 (span: 11, time: 0.56s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:28:17
+    - Child: 9f7047be-4d48-4af5-864b-0319889d3d87 (span: 12, time: 1.22s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:28:18
+    - Child: af336816-4555-46ad-ac6a-c4814a1065c6 (span: 13, time: 0.55s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:28:19
+    - Child: e3d7c4d0-1336-439f-ab0c-bab4d36aa4f4 (span: 14, time: 0.53s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:28:19
+    - Child: 47093bee-b4a1-45b9-b408-326b0c251e56 (span: 15, time: 0.54s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:28:20
+    - Child: 8cd93621-4d54-459b-9e4a-4aa0ef729e12 (span: 16, time: 0.80s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:28:21
+    - Child: 90d5bb29-b758-461a-a309-f91527e5695e (span: 17, time: 0.57s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:28:21
+    - Child: 8d054901-8a4d-47f9-a41a-d8605447dda2 (span: 18, time: 0.59s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:28:22
+    - Child: 2f020e62-6e97-495e-a492-fa85028799a3 (span: 19, time: 0.55s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:28:22
+    - Child: 725c6065-f84d-453f-8f92-d81236d5b217 (span: 20, time: 0.64s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:28:23
+    - Child: 81ab17bf-898c-42c3-b375-9da36050adca (span: 21, time: 0.60s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:28:24
+    - Child: d2e7c384-1516-4a9d-bd62-89f9357ddc52 (span: 22, time: 0.56s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:28:24
+    - Child: 9db8e415-d164-40bc-8c03-77089a7ca341 (span: 23, time: 0.55s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:28:25
+    - Child: 846285dc-d17f-478c-8940-0bba35fc9f46 (span: 24, time: 0.55s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:28:25
+    - Child: 122a6b06-e268-493c-ab30-00d4492b321d (span: 25, time: 0.53s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:28:26
+    - Child: f435899b-c581-41a4-a344-cc5f019af6a5 (span: 26, time: 0.54s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:28:26
+    - Child: bfb7838b-c964-4554-8ea2-c31d1abe2434 (span: 27, time: 0.74s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:28:27
+    - Child: 2ef81c64-e447-42bb-9bf4-4fa775b3ea18 (span: 28, time: 0.58s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:28:28
+    - Child: 3e8ca1a0-f336-450c-8c45-1fc61295d1e1 (span: 29, time: 0.57s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:28:28
+    - Child: 87a3e05f-63a5-4686-baa5-494fc0a9934a (span: 30, time: 0.57s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:28:29
+    - Child: 0366369b-4dfe-471c-8162-87ff0e2252d4 (span: 31, time: 0.68s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:28:29
+    - Child: fda159c9-19c7-4080-b0ba-24eb6f660bc2 (span: 32, time: 0.61s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:28:30
+    - Child: 228b082e-3600-451f-bd1a-d4ff84a66ac4 (span: 33, time: 0.53s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:28:31
+    - Child: 8f6e4e79-6c4b-4347-9ad2-83b0afc789ab (span: 34, time: 0.54s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:28:31
+    - Child: f9b585d2-431c-42a7-8447-32268b03a339 (span: 35, time: 0.81s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:28:32
+    - Child: 8ca84eb2-e7b0-4726-be3b-19affc1cc29c (span: 36, time: 0.56s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:28:33
+    - Child: f8154775-1824-41d3-8877-32c129356fab (span: 37, time: 0.57s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:28:33
+    - Child: e207f87c-9ba5-47c5-88b3-0c5efefca532 (span: 38, time: 0.58s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:28:34
+    - Child: 8c72e9c2-a917-4a14-8550-5e6deaa35310 (span: 39, time: 0.57s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:28:34
+    - Child: 5872951a-6641-4314-b8e2-2b4b16879dfd (span: 40, time: 0.58s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:28:35
+    - Child: cd286fc3-f6d6-4e5d-b5a6-bed68323c60f (span: 41, time: 0.54s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:28:35
+    - Child: e0d99f8f-d0c8-485f-a944-280d378236c3 (span: 42, time: 0.59s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:28:36
+    - Child: f60bda1a-8581-489a-8dbf-855d84f7a146 (span: 43, time: 0.58s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:28:37
+    - Child: 686a31ef-7b2e-4f2f-9b3f-dfed884acbf9 (span: 44, time: 0.71s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:28:37
+    - Child: 21161037-9043-4d6f-b398-4099dd936e04 (span: 45, time: 0.61s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:28:38
+    - Child: 42d6cf18-897e-4e06-b391-c2e03f9f2cd8 (span: 46, time: 0.60s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:28:38
+    - Child: a9e52761-07a4-46a4-9dca-966175eb4c42 (span: 47, time: 0.58s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:28:39
+    - Child: 7a2fea43-6a2d-4a41-8686-bce67e472305 (span: 48, time: 0.56s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:28:40
+    - Child: 94f3a748-0f2d-4a38-9d1a-471c9d2e5cb5 (span: 49, time: 0.61s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:28:40
+    - Child: 93e0dd05-dfb1-4983-94d1-fdf4e09b74d1 (span: 50, time: 0.56s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:28:41
+    - Child: fe786f70-d405-457c-ad0d-7fce7ba4a513 (span: 51, time: 0.56s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:28:41
+    - Child: 85c4a278-d353-4782-b421-0a02cb83f906 (span: 52, time: 0.59s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:28:42
+    - Child: 24179cb6-1cc7-4778-ac8c-7836e846720a (span: 53, time: 0.65s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:28:43
+    - Child: 0a5370dd-5cc4-49ba-a49a-11055da10e83 (span: 54, time: 2.08s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:28:45
+    - Child: 87d86038-16ff-449a-a53c-f30b102d0436 (span: 55, time: 0.58s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:28:45
+    - Child: 180f7a7c-a80a-4ffc-be10-e1a4dfafc3da (span: 56, time: 0.56s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:28:46
+    - Child: dd97e9ce-69c2-407f-b517-fbcd2283f4ff (span: 57, time: 0.71s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:28:47
+    - Child: 034a6141-debb-4236-b32a-acec2c483a49 (span: 58, time: 0.67s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:28:47
+    - Child: d931baa9-5041-4821-92c3-a6f8e84d48ff (span: 59, time: 0.55s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:28:48
+    - Child: f2b22752-ef5c-47b3-b93c-e5455bf0cf1e (span: 60, time: 0.59s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:28:48
+    - Child: 13440845-bb8e-411a-9391-4f7a2ce59446 (span: 61, time: 0.55s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:28:49
+    - Child: 72dadd3e-f441-4689-aa48-41a11073cdd5 (span: 62, time: 0.65s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:28:50
+    - Child: 54cc032a-fd8d-4c11-ae33-cf26214373f4 (span: 63, time: 0.60s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:28:50
+    - Child: 47e802d6-869c-4dae-97d7-378fe4279d71 (span: 64, time: 0.69s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:28:51
+    - Child: 2b9f4a96-1be9-4bae-bdf4-33f97d9aa644 (span: 65, time: 0.54s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:28:51
+    - Child: b82f1141-c679-4fd4-a992-c9e131b78da2 (span: 66, time: 0.53s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:28:52
+    - Child: 1509ba55-f1f6-4b49-b5e3-5df322cf61dd (span: 67, time: 0.57s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:28:53
+    - Child: 09f017eb-37a9-40dc-bcaa-9a699160cada (span: 68, time: 0.61s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:28:53
+    - Child: 89acfc07-f7a8-4609-8e15-9cd0118c73a7 (span: 69, time: 0.56s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:28:54
+    - Child: 683e27af-1ba6-42fd-ab94-901eb196f228 (span: 70, time: 0.55s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:28:54
+    - Child: 0b25889e-228a-4749-95d3-aa42308a2534 (span: 71, time: 0.52s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:28:55
+    - Child: 3d3540ac-da98-47bf-a65b-52f7550f1865 (span: 72, time: 0.57s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:28:55
+    - Child: 35ed4659-a267-4459-89ca-a65026f5a885 (span: 73, time: 0.58s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:28:56
+    - Child: c40f5749-da17-4ea6-a894-94c197a41506 (span: 74, time: 0.57s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:28:57
+    - Child: c7c567eb-b65f-4a55-9ad9-49fc1744cf45 (span: 75, time: 0.59s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:28:57
+    - Child: bfb16a99-6ffa-4cee-8385-45a3ab210917 (span: 76, time: 0.49s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:28:58
+    - Child: 46b75f88-be37-4b2e-8dc8-33859eb9c373 (span: 77, time: 0.73s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:28:58
+    - Child: 93bb23d9-782d-42cb-9a0b-73f7fbcbb738 (span: 78, time: 0.56s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:28:59
+    - Child: 54f87c04-ed15-45fb-9586-aa2be4952ca0 (span: 79, time: 0.56s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:28:59
+    - Child: 0fb461c7-48e8-4dc0-a454-fc97a128d70f (span: 80, time: 0.56s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:29:00
+    - Child: 72344d93-d27c-4f3b-bf45-d6ae6bc69a58 (span: 81, time: 0.54s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:29:01
+    - Child: 17277640-3ae2-4322-a386-82731eef5cdc (span: 82, time: 0.57s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:29:01
+    - Child: 777c8909-ca3b-4acc-a410-8531682928c7 (span: 83, time: 0.53s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:29:02
+    - Child: 174b75d8-36e5-44be-a33f-bdaf3a0dd128 (span: 84, time: 0.82s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:29:03
+    - Child: 223cf9a7-2ba9-4052-bd50-5204ef4c804f (span: 85, time: 0.60s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:29:03
+    - Child: 7fd07420-d179-42bd-aa33-02c7889cfd57 (span: 86, time: 0.55s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:29:04
+    - Child: 6a3a40ab-34b1-4d5b-aef0-3178b12faba8 (span: 87, time: 0.60s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:29:04
+    - Child: 14c8efe4-f29c-44ff-9a51-9fd2246c0349 (span: 88, time: 0.59s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:29:05
+    - Child: 52cec34a-4fdc-42bc-b5aa-a0850cd8027a (span: 89, time: 1.20s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:29:06
+    - Child: 6f354eab-2584-4f1c-866f-0a37f8d196bb (span: 90, time: 0.58s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:29:07
+    - Child: e8723b42-cc28-48ea-bb96-a0ba14409d09 (span: 91, time: 0.55s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:29:07
+    - Child: e8aea4c1-fb9a-4576-802e-fe59e69c68e7 (span: 92, time: 0.52s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:29:08
+    - Child: 577b6ea6-50db-4664-981d-14cd5f2bf0b7 (span: 93, time: 0.55s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:29:08
+    - Child: a50b2227-8b52-4b12-9224-29009d59920e (span: 94, time: 0.59s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:29:09
+    - Child: c195fcea-9327-492f-8d13-eb3dba5f0747 (span: 95, time: 0.55s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:29:09
+    - Child: 6baf0555-c9f8-47ce-acf1-9cac767adbd8 (span: 96, time: 0.54s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:29:10
+    - Child: 2ad377f3-15ab-49fe-bece-5f15d04aba3d (span: 97, time: 0.56s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:29:11
+    - Child: 20137e8d-4df7-4a64-bbaa-838ae14a767a (span: 98, time: 0.69s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:29:11
+    - Child: 58c193be-4a87-46fc-9d67-e43d9f0eed44 (span: 99, time: 0.66s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:29:12
+    - Child: 83e1d98f-68b9-4013-ab9f-d94832b606d5 (span: 100, time: 0.57s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:29:12
+    - Child: 327b4fa8-2d9a-43f2-ae91-9220c3d02104 (span: 101, time: 0.57s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:29:13
+    - Child: 9d1e904c-9b18-4bf9-a0e7-8b09715d5fb8 (span: 102, time: 0.56s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:29:14
+    - Child: 93329640-3d10-438e-99f5-1edb5ffdf449 (span: 103, time: 0.63s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:29:14
+    - Child: 464b24f2-e466-46d3-86a7-75eddd0918d4 (span: 104, time: 0.78s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:29:15
+    - Child: b6ec45c6-d1cd-4d2c-a5cb-b7ae7fabcb76 (span: 105, time: 0.53s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:29:16
+    - Child: 3967f860-8a16-43e7-9ab6-b084f5026a3a (span: 106, time: 0.65s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:29:16
+    - Child: 04e38020-e51a-4169-872f-ed0e856dd57e (span: 107, time: 0.60s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:29:17
+    - Child: 86250366-e1f9-47d8-92d7-d174fee458a0 (span: 108, time: 0.56s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:29:17
+    - Child: 92303dca-7141-4b95-a7cb-8d2b4ca6c8f7 (span: 109, time: 0.61s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:29:18
+    - Child: be51fa20-fcab-4ec6-af42-6e272e2ff990 (span: 110, time: 0.56s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:29:19
+    - Child: a202b6ca-dbe6-4539-b979-f875e1b2a3ad (span: 111, time: 0.54s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:29:19
+    - Child: 0678e28b-091f-4c65-a5b9-ff937edf22d2 (span: 112, time: 0.55s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:29:20
+    - Child: 22cd48ae-677f-4be0-8e07-94462a2b2bf7 (span: 113, time: 0.77s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:29:20
+    - Child: 55699048-7321-442b-b190-41d3494f7689 (span: 114, time: 0.54s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:29:21
+    - Child: 572bcdaa-ecb8-4c24-8721-70cebab17c0d (span: 115, time: 0.54s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:29:22
+    - Child: ed98e970-1866-434b-9c95-4b1e8109dde3 (span: 116, time: 0.53s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:29:22
+    - Child: fcec3ce8-a0b9-4a89-b3c2-bafe3a610b8c (span: 117, time: 0.55s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:29:23
+    - Child: c4e0ddae-df7e-4147-88c0-9fb32bdd7bba (span: 118, time: 0.57s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:29:23
+    - Child: a61d0f3f-22f2-4934-b73a-d1c5242207dc (span: 119, time: 0.60s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:29:24
+    - Child: d8b65958-16f2-4a2b-95f3-74f7a4388fbb (span: 120, time: 0.79s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:29:25
+    - Child: 9c81dcd3-f706-4045-8a7e-25287294b5a8 (span: 121, time: 0.55s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:29:25
+    - Child: d329d1de-b76c-4f46-96ef-2f0432144d09 (span: 122, time: 0.58s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:29:26
+    - Child: 1d2d5918-ca61-40c4-b19a-69d484e44f36 (span: 123, time: 0.97s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:29:27
+    - Child: 169576a9-41bd-417a-aca3-42cc9cded119 (span: 124, time: 0.58s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:29:27
+    - Child: 16a47b99-475d-48e0-bf4a-bcf3d0a00c72 (span: 125, time: 0.61s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:29:28
+    - Child: 33b8f307-2cf4-4994-85ed-5438a174cb64 (span: 126, time: 0.57s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:29:28
+    - Child: f1b38a00-6084-44c4-a337-89787242c77d (span: 127, time: 0.53s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:29:29
+    - Child: 2e578829-313a-499b-a2a9-9b0a80deee64 (span: 128, time: 0.57s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:29:30
+    - Child: 577f3c62-ca33-435f-9051-2468530049c0 (span: 129, time: 0.60s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:29:30
+    - Child: 4ed9c36f-2415-435f-8acd-cc4ee8077a93 (span: 130, time: 0.59s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:29:31
+    - Child: 67db2ae8-38be-467f-9c99-d41b65b552b5 (span: 131, time: 0.58s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:29:31
+    - Child: 22f51c0c-6ccf-47fa-aaca-eb4440e53a9f (span: 132, time: 0.52s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:29:32
+    - Child: 62a64b1f-842b-4969-883d-09319ef008a0 (span: 133, time: 0.63s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:29:32
+    - Child: e1d7cd65-c8ab-4423-b570-2638554b59a4 (span: 134, time: 0.58s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:29:33
+    - Child: f4b8f222-da58-425a-a6cf-ec00527b6215 (span: 135, time: 0.60s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:29:34
+    - Child: c1689943-c8a3-4836-bd0b-ef42a7340fc9 (span: 136, time: 0.59s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:29:34
+    - Child: 0a266cf2-8dc5-434a-a40a-291f9fdcf7bd (span: 137, time: 0.57s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:29:35
+    - Child: 7a359e70-ab87-443d-9989-18c079482ad4 (span: 138, time: 0.54s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:29:35
+    - Child: 869888d5-017e-46e7-802b-6bb3b781bb97 (span: 139, time: 0.60s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:29:36
+    - Child: 31d76b2e-2b11-4e59-951a-142c492e7636 (span: 140, time: 0.49s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:29:36
+    - Child: d90d5c04-6ddf-4957-8b16-26aca94e74b1 (span: 141, time: 0.56s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:29:37
+    - Child: d7eaa5de-d02d-4096-a9c4-00d9c910985b (span: 142, time: 0.48s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:29:38
+    - Child: 071e3d46-69de-4417-bf24-3569fa7f822e (span: 143, time: 0.57s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:29:38
+    - Child: 4daa6dca-5a5e-4fd4-899b-0e4658b7bc6b (span: 144, time: 0.56s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:29:39
+    - Child: 0bba1cad-662d-4216-b5dd-648dbc21ef22 (span: 145, time: 0.61s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:29:39
+    - Child: a068c47e-305b-4057-8e30-52ffdca0cd8a (span: 146, time: 0.54s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:29:40
+    - Child: 89ddb03b-1a20-427a-a9ba-ed82e2624d8c (span: 147, time: 0.55s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:29:40
+    - Child: a40d5f70-eea5-4199-b06f-553e3c455009 (span: 148, time: 0.54s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:29:41
+    - Child: d499b429-7a73-4012-b8ea-528896e72366 (span: 149, time: 0.59s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:29:42
+    - Child: 0d9fc028-6e38-4b7f-806a-65a2e0a9bf42 (span: 150, time: 0.53s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:29:42
+    - Child: 90c2db60-135e-4931-8e68-8dd06f0919dc (span: 151, time: 0.55s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:29:43
+    - Child: 3f969c16-b35e-4857-8efa-24ec9a552656 (span: 152, time: 0.55s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:29:43
+    - Child: dcdcd6f6-d8eb-4c10-9751-0456650cdf0a (span: 153, time: 0.55s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:29:44
+    - Child: 90967504-1ac4-4483-86bb-945675145615 (span: 154, time: 0.65s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:29:44
+    - Child: 68f26803-85c8-4a14-b459-b10063c87730 (span: 155, time: 0.56s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:29:45
+    - Child: cefeacae-4752-42df-9d9a-4ad56337fee4 (span: 156, time: 0.57s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:29:45
+    - Child: bcc9572e-528c-40a3-802c-299305caf287 (span: 157, time: 0.58s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:29:46
+    - Child: 10eb82e5-e207-4b33-9915-3bd2aeb21f16 (span: 158, time: 0.54s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:29:47
+    - Child: 02ca7f33-7b7e-4e4b-a7a1-151ac83f864f (span: 159, time: 0.59s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:29:47
+    - Child: 0d6796bc-dd0c-4fc4-aa5f-1f532b449670 (span: 160, time: 0.52s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:29:48
+    - Child: 57cef8a5-6681-43f2-8f92-e8c9090690cc (span: 161, time: 0.55s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:29:48
+    - Child: 7a416901-5443-4374-a9ba-abd18f92cc1d (span: 162, time: 0.51s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:29:49
+    - Child: dda7ff14-3420-410c-9671-404bfe4d5816 (span: 163, time: 0.58s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:29:49
+    - Child: d891b9bc-73a7-4ce0-8613-32ba20d9d44c (span: 164, time: 1.05s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:29:50
+    - Child: 613aea05-086e-4271-9689-3acd2a4ebf24 (span: 165, time: 0.59s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:29:51
+    - Child: 18d73fa4-f4a4-4afe-a390-f367b628b3d5 (span: 166, time: 0.57s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:29:52
+    - Child: 2aafba4d-a39a-4b21-9767-e19cadcf9b6c (span: 167, time: 0.56s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:29:52
+    - Child: 36ecf02f-eaea-4f38-89e4-1c66446bbb5f (span: 168, time: 0.59s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:29:53
+    - Child: 62591f90-c972-41c6-8691-5f173fc6918d (span: 169, time: 0.57s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:29:53
+    - Child: bd0af580-0f66-4b28-9372-64360d9e6a6e (span: 170, time: 0.53s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:29:54
+    - Child: 92605ebc-da37-4e50-8511-7f23a33537f2 (span: 171, time: 0.54s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:29:54
+    - Child: 943b26b6-8f47-4184-adea-ba5b12cb310e (span: 172, time: 0.57s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:29:55
+    - Child: ce8515b2-6b5e-4848-9341-28037df8743a (span: 173, time: 0.55s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:29:56
+    - Child: 77039984-af87-4b5a-a811-a2466c89d207 (span: 174, time: 0.60s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:29:56
+    - Child: 0d1c3d92-9976-4590-8212-65a5ddcca95b (span: 175, time: 0.59s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:29:57
+    - Child: a86b3107-9d94-40f7-b581-9f41b0b6402d (span: 176, time: 0.57s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:29:57
+    - Child: dd8d9bf5-3f99-45db-a158-0d0c5ef7b4e3 (span: 177, time: 0.57s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:29:58
+    - Child: 1d42b056-46b4-4a7c-9a79-55300c12234f (span: 178, time: 0.54s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:29:58
+    - Child: 4f18431f-ca25-4c5e-a480-6c22b7fb54e7 (span: 179, time: 0.57s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:29:59
+    - Child: 6b8dce7a-b652-4b74-a341-e3df047ff7d8 (span: 180, time: 0.57s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:30:00
+    - Child: 7412484b-dac8-4440-8ce5-914a43c443b6 (span: 181, time: 0.56s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:30:00
+    - Child: 7dc6bbb9-506a-4731-81e7-43712b30276f (span: 182, time: 0.71s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:30:01
+    - Child: 28ee2617-53b6-42d9-8f41-bc144d876dc9 (span: 183, time: 0.52s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:30:01
+    - Child: 0d479f75-d091-4d6b-a1f3-9d28553f2310 (span: 184, time: 0.53s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:30:02
+    - Child: 8a3b2e61-626c-48ef-8e61-64b7bd215137 (span: 185, time: 0.54s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:30:02
+    - Child: debea388-79cc-4744-a46c-0a313f739b15 (span: 186, time: 0.54s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:30:03
+    - Child: b81e0e69-27d5-49a3-8796-6d2d2e7f400c (span: 187, time: 0.56s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:30:04
+    - Child: 629c8b5a-522b-4986-8d02-8ce865dcfc7a (span: 188, time: 0.57s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:30:04
+    - Child: ddc97b6e-2ea9-4e9a-baa1-aad5534a029f (span: 189, time: 0.61s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:30:05
+    - Child: e3d1af9c-2e3a-483d-b507-1955679b60b0 (span: 190, time: 0.74s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:30:05
+    - Child: 6692d4f1-cf65-4523-8403-a219935fa41c (span: 191, time: 0.57s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:30:06
+    - Child: b633a958-14e8-49d6-afff-3b01544ebb77 (span: 192, time: 0.88s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:30:07
+    - Child: a6e1ed3b-2825-4b14-90a4-bf9eae27ca33 (span: 193, time: 0.59s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:30:08
+    - Child: 7f1631a2-9e8c-4934-b0db-bf5efb973f60 (span: 194, time: 0.52s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:30:08
+    - Child: 18af994e-b727-4060-a93f-ca41e23c4548 (span: 195, time: 0.64s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:30:09
+    - Child: 9ef86b66-ac68-4910-8c3d-d51b7891e54b (span: 196, time: 0.57s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:30:09
+    - Child: e01e3295-1c10-45d4-bab5-eef71a2ba5d7 (span: 197, time: 0.54s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:30:10
+    - Child: 4b7ee29b-1395-47f1-9b68-691ce2547ecf (span: 198, time: 0.55s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:30:10
+    - Child: a0bc4c49-0a00-453d-a7f9-08631c3ec6f7 (span: 199, time: 0.53s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:30:11
+    - Child: 5c03ba68-0991-43e1-aa11-330ad8909b82 (span: 200, time: 0.55s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:30:11
+    - Child: 4b7b0cb0-d701-482c-9f31-1f0b1b157de7 (span: 201, time: 1.00s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:30:12
+    - Child: ddbf10b8-5ce3-436a-b7b0-2a3cf5d0ba53 (span: 202, time: 0.55s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:30:13
+    - Child: 729e41c1-c9e6-40bd-9218-f9cb55c5c567 (span: 203, time: 0.61s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:30:14
+    - Child: 7f42c561-cf13-4c86-9417-63eb123214f3 (span: 204, time: 1.00s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:30:15
+    - Child: 6db3f83e-ed88-44f2-8020-7a6c7885900d (span: 205, time: 0.55s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:30:15
+    - Child: d1cb05a9-eca6-4e15-9401-bfdc0df6a559 (span: 206, time: 0.58s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:30:16
+    - Child: 88accc81-db4f-4960-a0c0-5271b2befccc (span: 207, time: 0.57s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:30:16
+    - Child: ecb3878e-b747-464a-97bd-4d5a50bce70c (span: 208, time: 0.59s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:30:17
+    - Child: a27e4621-21c4-4131-929f-3f2b85047025 (span: 209, time: 0.60s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:30:18
+    - Child: c197f439-62ad-471d-b732-5f98c158a707 (span: 210, time: 0.56s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:30:18
+    - Child: 69563d1a-5438-4536-afc8-616a6a950d20 (span: 211, time: 0.76s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:30:19
+    - Child: 70894717-5c65-4f8a-8e82-3cfcf8c79ca0 (span: 212, time: 0.52s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:30:19
+    - Child: 41509596-3358-43bd-b2ff-b3cc2eacba67 (span: 213, time: 0.62s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:30:20
+    - Child: 4274df2e-192a-4237-ab60-c83d1a96e862 (span: 214, time: 0.53s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:30:21
+    - Child: 72859573-f2e8-4855-af44-7f926bc3a82b (span: 215, time: 0.57s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:30:21
+    - Child: 8bac616e-3d2a-484d-8355-9068444bd1b6 (span: 216, time: 0.57s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:30:22
+    - Child: bf5eec44-8d5f-4c00-9379-deaeab35c073 (span: 217, time: 0.54s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:30:22
+    - Child: 576e0eec-c03f-4d63-9cc1-ff9431d8fa7b (span: 218, time: 0.57s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:30:23
+    - Child: dc66d91c-31b6-4030-bbda-1c7fe149ff92 (span: 219, time: 0.63s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:30:23
+    - Child: b3ca1db8-4ace-403d-8634-e8eaa9352c83 (span: 220, time: 0.56s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:30:24
+    - Child: 11d210e5-a227-4077-9212-9d3a62b1248a (span: 221, time: 0.63s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:30:25
+    - Child: 39e404b1-5410-4188-9328-47a181961100 (span: 222, time: 0.56s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:30:25
+    - Child: 9c785d81-2c99-4d43-bbbe-475eb0b90216 (span: 223, time: 0.62s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:30:26
+    - Child: 3e351d0f-ca3e-4b29-b810-b7e633aaf56b (span: 224, time: 0.60s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:30:26
+    - Child: 1862868e-23c3-4489-ae27-2e5fe0ee03bc (span: 225, time: 0.60s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:30:27
+    - Child: a8237448-cd67-43d3-9cfa-acbf2a4edf1f (span: 226, time: 0.58s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:30:28
+    - Child: dda49bab-7bc9-4a81-8721-9bd0e8bebb82 (span: 227, time: 0.56s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:30:28
+    - Child: 2f5a0d27-26f2-4889-8b16-cd4058cca3f3 (span: 228, time: 0.56s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:30:29
+    - Child: 1a487ed4-6f72-4030-8ed3-b00660f1b6f0 (span: 229, time: 0.55s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:30:29
+    - Child: 730b853c-19e2-4227-bf92-c7ce030b17d7 (span: 230, time: 0.53s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:30:30
+    - Child: 9edcc70e-47f4-45d8-a362-b1074921a650 (span: 231, time: 0.54s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:30:30
+    - Child: 114408e5-92a9-4755-abba-0e3b84ca428a (span: 232, time: 0.53s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:30:31
+    - Child: 89884768-10ea-4ceb-a5d5-b6e3690c8599 (span: 233, time: 0.53s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:30:31
+    - Child: 334cee30-f45c-49f9-93ff-038c393dde2a (span: 234, time: 0.54s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:30:32
+    - Child: 2afc6741-b855-484b-8f62-df85bb113d02 (span: 235, time: 0.56s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:30:33
+    - Child: 3547f7ab-1998-4fd8-9c0c-cd8a7bf142ef (span: 236, time: 0.61s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:30:33
+    - Child: b96e7d5a-23c6-4760-89df-c958f3457073 (span: 237, time: 0.59s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:30:34
+    - Child: 5645bb45-4922-4424-82d6-391423fb2952 (span: 238, time: 0.64s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:30:34
+    - Child: 26f259c3-1cab-4de6-ae45-dbee8fe0d2a3 (span: 239, time: 0.62s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:30:35
+    - Child: a0fc3dc4-32c5-42ec-b800-fef9906d7ae7 (span: 240, time: 0.73s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:30:36
+    - Child: 075fba38-57ea-44c1-83cd-f1616c16831c (span: 241, time: 0.76s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:30:37
+    - Child: d2c54d80-871c-4acd-85a8-3c3d56c0b461 (span: 242, time: 0.65s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:30:37
+    - Child: 07b22f5f-3d54-4445-9010-cf1fc7ecc24f (span: 243, time: 1.31s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:30:39
+    - Child: 1d499223-c596-4b5d-9465-bbeb6781d3d7 (span: 244, time: 0.55s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:30:39
+    - Child: ce629859-a858-46cb-84fb-edfe16f7a067 (span: 245, time: 0.86s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:30:40
+    - Child: 5c37fc1c-1f6b-4fff-8937-cd67fe532b97 (span: 246, time: 0.60s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:30:41
+    - Child: 86ef951c-49e0-4966-934d-f6689241f37c (span: 247, time: 0.70s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:30:41
+    - Child: 432844da-9fbe-402a-a613-763a11c1efd5 (span: 248, time: 1.21s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:30:42
+    - Child: 753caad8-6c62-46cb-94be-7d50b95bb139 (span: 249, time: 0.72s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:30:43
+    - Child: 25ecccdd-7032-4343-af92-a4df9bc918e4 (span: 250, time: 0.56s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:30:44
+    - Child: 4bf030a8-a980-4ff4-93a6-332dd149128d (span: 251, time: 0.63s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:30:44
+    - Child: 81057ff5-6548-4008-83a9-82e740ac707a (span: 252, time: 0.57s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:30:45
+    - Child: 747b4f93-2bc3-48e2-bb7f-7200b7149ef4 (span: 253, time: 0.58s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:30:46
+    - Child: d5376b0c-c1d8-4319-a7ab-5f38d3379728 (span: 254, time: 1.07s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:30:47
+    - Child: 47c08b7b-ab5f-4446-b5fe-cdea579da4a4 (span: 255, time: 0.63s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:30:47
+    - Child: 55b833dc-8a5b-40a9-9fc4-fb4cef721635 (span: 256, time: 0.64s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:30:48
+    - Child: 1715834f-0fc3-4d2a-8ab7-5c5bc1574e18 (span: 257, time: 0.58s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:30:48
+    - Child: e71cb555-ce6d-448b-944c-f400e0a1d0c4 (span: 258, time: 0.55s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:30:49
+    - Child: a611309c-706d-4124-8b78-9a79f9d7505f (span: 259, time: 0.57s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:30:50
+    - Child: d17f7859-4f0f-4c89-866b-dab26dcc2358 (span: 260, time: 0.60s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:30:50
+    - Child: 6feee7e3-56d8-4d53-97ba-3e3682b19013 (span: 261, time: 0.57s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:30:51
+    - Child: 12457c70-619a-4ee4-9489-0a859eb9c1ee (span: 262, time: 0.54s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:30:51
+    - Child: fc5b3bd4-92d3-481f-aca8-2d238b8ed8de (span: 263, time: 0.65s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:30:52
+    - Child: bce943e2-8930-4d7b-99d6-2cbf70dc9621 (span: 264, time: 0.57s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:30:53
+    - Child: 86bfaffe-b10d-401f-aad3-aeb5e0cc2999 (span: 265, time: 0.65s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:30:53
+    - Child: 273b115e-3543-4941-bbac-b47baee0201e (span: 266, time: 0.54s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:30:54
+    - Child: 7562d097-a321-4c1f-a3fa-a3502720c5e6 (span: 267, time: 0.55s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:30:54
+    - Child: 40260a04-ad83-4742-8665-dfbad69ca814 (span: 268, time: 0.54s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:30:55
+    - Child: acaf3736-a1c7-49ad-aec3-8f286dcd194a (span: 269, time: 0.56s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:30:55
+    - Child: 11a6d85e-b8f4-4f92-be24-80b591ed369f (span: 270, time: 0.56s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:30:56
+    - Child: ccb78c9a-c950-4687-b35c-9e8d505719e8 (span: 271, time: 0.68s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:30:57
+    - Child: 8cbb0db9-2581-4eff-a228-3b994fd8810a (span: 272, time: 0.55s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:30:57
+    - Child: 90548c75-638b-4f2e-86bb-a748e3f1c101 (span: 273, time: 0.57s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:30:58
+    - Child: 1d1eb5fb-aa34-4efa-8ab0-9aa3eb674f31 (span: 274, time: 0.59s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:30:58
+    - Child: 0c626334-fe6e-4657-b6cf-353d090947a1 (span: 275, time: 0.54s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:30:59
+    - Child: d9eae4e8-0d75-46ad-917a-72d1fd58281b (span: 276, time: 0.86s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:31:00
+    - Child: 162ea629-24c6-4ff9-a1a9-109c14bcc655 (span: 277, time: 0.55s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:31:00
+    - Child: e54b061d-17bf-4d78-9bbf-cfca1a9f242e (span: 278, time: 0.58s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:31:01
+    - Child: 9e6f1f61-c456-45bb-90ae-36623eb31aee (span: 279, time: 0.74s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:31:02
+    - Child: b67286fc-dbfc-4849-bfbd-85b0a0898528 (span: 280, time: 0.53s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:31:02
+    - Child: 2738aad0-683a-4a97-9de5-6195560a6f59 (span: 281, time: 0.53s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:31:03
+    - Child: b8f0f608-086f-4ccc-88be-23229c4b11e5 (span: 282, time: 0.54s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:31:03
+    - Child: 3eef4772-d6e0-467a-8128-48c7a67cddbf (span: 283, time: 0.60s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:31:04
+    - Child: 64e12c52-8fdc-4ce9-81c4-1ca80f4e68ca (span: 284, time: 0.55s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:31:04
+    - Child: fa8a6564-d959-4086-947c-0751d8040a9c (span: 285, time: 0.66s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:31:05
+    - Child: ea778f87-5220-476d-9ab8-a5cbcb2b437f (span: 286, time: 0.68s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:31:06
+    - Child: ca1919ad-b331-4c8a-a330-9253119890ae (span: 287, time: 0.56s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:31:06
+    - Child: 3c103b01-fa3c-492d-ad39-a051bbe11a1e (span: 288, time: 0.51s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:31:07
+    - Child: c45eeb67-47ee-43d1-baae-dbc99a498f8f (span: 289, time: 0.54s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:31:07
+    - Child: 65d54a8b-7a4b-47dd-ba4a-04a8d19cb0cd (span: 290, time: 0.58s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:31:08
+    - Child: 27f16377-9fdb-4745-ab50-d83e4ab5c1ff (span: 291, time: 0.55s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:31:08
+    - Child: 7dd995f8-9706-4a58-b17b-a6b5ef855887 (span: 292, time: 0.53s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:31:09
+    - Child: a8f90c12-aba0-41be-a5bf-2ec017c5c6f8 (span: 293, time: 0.56s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:31:10
+    - Child: f348d13a-5732-4daa-8572-5eb352b62a3a (span: 294, time: 0.50s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:31:10
+    - Child: f6f201d0-a799-4676-a1ab-585752e0b041 (span: 295, time: 0.56s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:31:11
+    - Child: a5f350e5-f613-48d2-ae18-ba02da7f2acc (span: 296, time: 0.57s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:31:11
+    - Child: 70befd53-3b16-4be2-b343-906ebd6db8ea (span: 297, time: 0.69s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:31:12
+    - Child: 010a3241-0666-4fc7-b8f9-318312fb881e (span: 298, time: 0.55s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:31:12
+    - Child: b5ac30b7-3290-4b2b-8cc6-7c1d5a80020b (span: 299, time: 0.59s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:31:13
+    - Child: 7e59fda4-511a-46c0-ab37-45fa14ff3a7f (span: 300, time: 0.55s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:31:14
+    - Child: d906a68d-8da3-4c7d-8d56-5645b90cff7b (span: 301, time: 1.09s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:31:15
+    - Child: a7a49b39-e211-4c7c-9e35-a18d78fc1131 (span: 302, time: 0.49s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:31:15
+    - Child: 901ba9b4-1e4a-4206-9a0d-1188d25b55f3 (span: 303, time: 0.54s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:31:16
+    - Child: a11dc133-a23c-42a6-8172-3b4dc2a1256f (span: 304, time: 0.58s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:31:16
+    - Child: d47ad637-d43b-4195-9008-15e0a33480ca (span: 305, time: 0.57s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:31:17
+    - Child: 71188781-c4aa-4324-9ba6-4af44ef08759 (span: 306, time: 0.55s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:31:17
+    - Child: d81874e4-be9b-44fa-b4b9-c1e041b3b9e9 (span: 307, time: 0.60s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:31:18
+    - Child: 9c39c820-af00-482b-8b4c-417d361ff400 (span: 308, time: 0.52s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:31:19
+    - Child: 166a21b8-5e20-466e-8b52-4070c89bc338 (span: 309, time: 0.55s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:31:19
+    - Child: 455c4868-f5ad-4f1c-ba36-094be3fc9f09 (span: 310, time: 0.81s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:31:20
+    - Child: 81921d4a-ad83-4157-8371-5aed6673806f (span: 311, time: 0.53s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:31:20
+    - Child: e91cebb6-9ab2-4124-8114-a0ff1ec549cd (span: 312, time: 0.55s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:31:21
+    - Child: 08158c09-5c58-4a70-9cc3-26652b166b4b (span: 313, time: 0.58s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:31:22
+    - Child: a15adef9-9e1e-42e0-af15-f0b638a798c7 (span: 314, time: 0.56s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:31:22
+    - Child: fc0cd22f-8ede-4424-b35c-b9e3f18c3378 (span: 315, time: 0.61s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:31:23
+    - Child: f938ce18-94a5-4d10-8cb4-a84e0676118a (span: 316, time: 0.55s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:31:23
+    - Child: f200384e-8607-40f7-bda4-c77715d85122 (span: 317, time: 0.65s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:31:24
+    - Child: 852ee6ec-fd75-4281-ba5d-73f2564eb58c (span: 318, time: 0.55s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:31:25
+    - Child: 1e888282-ce04-4b1b-a706-5476dead6ba6 (span: 319, time: 0.53s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:31:25
+    - Child: 64aae700-e57a-40d6-9e5f-76277874f8ad (span: 320, time: 0.56s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:31:26
+    - Child: c76ce6c4-a35d-4a22-b9a5-df6034aeb047 (span: 321, time: 0.72s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:31:26
+    - Child: 6dca3532-0063-4659-a844-a0f09d556a0e (span: 322, time: 0.56s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:31:27
+    - Child: 3222f462-d9e4-4217-a527-d94de00a07fc (span: 323, time: 0.53s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:31:27
+    - Child: 206b0502-3d11-43ae-9778-377fca4e551a (span: 324, time: 0.74s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:31:28
+    - Child: f3513a50-8cc8-4af9-a763-f6a44e449742 (span: 325, time: 1.76s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:31:30
+    - Child: 867c1ce1-2625-4509-aff7-ba39541ed904 (span: 326, time: 0.54s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:31:31
+    - Child: 9256d0df-e4b9-4127-83bf-61b866f98aee (span: 327, time: 0.55s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:31:31
+    - Child: 3c15892c-e63d-40db-9041-35f9572a7949 (span: 328, time: 0.58s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:31:32
+    - Child: 5d4130fc-ee50-4847-b028-3b6a28561ee0 (span: 329, time: 0.55s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:31:32
+    - Child: bffd461b-0b06-4eba-a9c8-7303991e886c (span: 330, time: 0.54s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:31:33
+    - Child: 3a737e73-8566-4afa-960b-9ac197f9f2d6 (span: 331, time: 0.57s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:31:33
+    - Child: ed8ae5e6-b8bb-44d9-9c3d-c4875cb01f80 (span: 332, time: 0.57s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:31:34
+    - Child: 325eddbe-4878-47d4-8e8f-ef19d88e3ef3 (span: 333, time: 0.64s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:31:35
+    - Child: 774efa83-adb4-4a45-aba1-bef5e7b6cd2a (span: 334, time: 0.57s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:31:35
+    - Child: dd57bb52-3033-4af0-b6dc-ecea8d2eb169 (span: 335, time: 0.61s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:31:36
+    - Child: ac0edb70-6e95-428f-9c85-23fb6a2759a9 (span: 336, time: 0.58s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:31:36
+    - Child: 0289d224-2215-4280-b2bc-2dd524225870 (span: 337, time: 0.59s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:31:37
+    - Child: 5761d269-6273-4af0-b5b9-ea80f57f1912 (span: 338, time: 0.53s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:31:37
+    - Child: 858701e5-def7-4639-abdc-db109c9eb2ef (span: 339, time: 0.58s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:31:38
+    - Child: d4904ee5-698d-4c14-8a6f-4dccdb944f83 (span: 340, time: 0.64s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:31:39
+    - Child: d70bdd65-7213-47eb-b059-fe8ee2627171 (span: 341, time: 0.57s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:31:39
+    - Child: 4401644c-a10a-4661-b912-935b44d50e1f (span: 342, time: 0.54s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:31:40
+    - Child: 4500dee4-f3db-40dc-aa08-f1305e383178 (span: 343, time: 1.02s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:31:41
+    - Child: 5fceb83a-5667-48a7-8ba5-18fae633c752 (span: 344, time: 0.54s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:31:41
+    - Child: 3abfd702-085d-47d4-a5e4-037450dab981 (span: 345, time: 0.62s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:31:42
+    - Child: 62902c8b-a376-4440-8482-f541ccfc7ce8 (span: 346, time: 0.54s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:31:43
+    - Child: 889dba04-7698-40dd-935f-10bc748ebb6f (span: 347, time: 0.55s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:31:43
+    - Child: 5cd3e892-cc39-4152-8d90-ac16a380373a (span: 348, time: 0.60s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:31:44
+    - Child: 3c164460-ecab-4ef5-b670-ca98a9d9e392 (span: 349, time: 0.58s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:31:44
+    - Child: 0c74c1b0-e3d9-452d-a634-76c5c561e809 (span: 350, time: 0.53s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:31:45
+    - Child: cf96198e-d696-46eb-8ad8-0380e262c9a9 (span: 351, time: 0.51s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:31:45
+    - Child: 61b5df42-81ca-4d1b-8477-d3f767185db1 (span: 352, time: 0.92s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:31:46
+    - Child: 5fd95e0e-e76a-40df-b2eb-7192a377e567 (span: 353, time: 0.57s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:31:47
+    - Child: a808e1c3-d952-4286-94de-0123a97bad00 (span: 354, time: 0.69s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:31:47
+    - Child: 2d7b1232-a9d4-4d54-8d04-5371d7d7eac2 (span: 355, time: 0.54s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:31:48
+    - Child: 03e126ea-887d-40fc-b5c4-ad755a5ce725 (span: 356, time: 0.56s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:31:49
+    - Child: f8c7616f-5d0f-4a94-ae68-9caca7bd25ac (span: 357, time: 0.59s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:31:49
+    - Child: e0ff8e1a-0fce-4645-a171-6535aeb47a59 (span: 358, time: 0.60s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:31:50
+    - Child: c9329abc-ace6-4778-8a45-8aca2dd50759 (span: 359, time: 0.54s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:31:50
+    - Child: 8be0a63a-18a1-4228-8198-25548eabe91d (span: 360, time: 0.53s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:31:51
+    - Child: 46456d06-32fd-4ef6-b405-6baf80666e98 (span: 361, time: 0.94s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:31:52
+    - Child: a9661bc3-e952-4b62-8509-edebd9d0cf28 (span: 362, time: 0.60s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:31:52
+    - Child: 2e895e18-6edd-4fb1-8c9d-7528ac5f69b2 (span: 363, time: 0.56s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:31:53
+    - Child: a9eb320d-e594-4e22-b03e-41b24e3ee211 (span: 364, time: 0.89s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:31:54
+    - Child: ed96ead4-ec91-478d-97c4-d4e1a1f1b815 (span: 365, time: 0.59s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:31:54
+    - Child: 92fb1cb9-b38b-4373-ade5-f3b6be042101 (span: 366, time: 0.56s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:31:55
+    - Child: 9b164a79-c959-4cc7-a225-fad6ab0655a0 (span: 367, time: 0.56s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:31:56
+    - Child: 2ba7de4e-0300-4414-a749-95d106def706 (span: 368, time: 0.56s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:31:56
+    - Child: 26d278f8-32ea-477a-a5bd-2798d8e833f5 (span: 369, time: 0.56s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:31:57
+    - Child: 146c5368-64d5-4d10-9bf2-a3d00e162e19 (span: 370, time: 0.58s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:31:57
+    - Child: 9a9d8ef6-caa3-4497-8745-5db58142b62c (span: 371, time: 0.58s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:31:58
+    - Child: 10b15123-a5c4-4605-9ee2-9438d00e7d6b (span: 372, time: 0.54s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:31:58
+    - Child: c65299f4-8577-41d8-bb09-2d199f809cc8 (span: 373, time: 0.50s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:31:59
+    - Child: b24887fd-6a20-464e-b3b8-a5b1575e8979 (span: 374, time: 0.59s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:32:00
+    - Child: 193ce13c-c091-4ded-bbb5-fedb6103f90c (span: 375, time: 0.74s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:32:00
+    - Child: 1a0e6900-954f-4148-bcce-8650bc107f14 (span: 376, time: 0.55s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:32:01
+    - Child: ebe0921b-4cfa-46db-b53d-dfa363039508 (span: 377, time: 0.55s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:32:01
+    - Child: 41a23245-3f13-4150-80de-ac54a227801b (span: 378, time: 0.58s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:32:02
+    - Child: a0c160b6-e474-419c-a2e9-ec1bcad04c4b (span: 379, time: 0.67s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:32:03
+    - Child: cd555599-3bf7-4fd9-a545-e6f902003d5b (span: 380, time: 0.60s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:32:03
+    - Child: 097c47a7-e695-4a7b-96ef-dcfd455ff053 (span: 381, time: 0.58s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:32:04
+    - Child: 08bff913-4a84-401a-90ba-8763c6a76c66 (span: 382, time: 0.61s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:32:04
+    - Child: 70dcba4a-cb7b-4a89-b041-f8b5364d84ca (span: 383, time: 1.53s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:32:06
+    - Child: 44dfe8f0-e5d5-4f06-9119-e70e7cdc94d5 (span: 384, time: 0.55s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:32:07
+    - Child: c4bcf12a-23ba-4a88-a353-6bbebb93f71c (span: 385, time: 0.56s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:32:07
+    - Child: fd0518a8-2d25-40df-b1a2-e554f0b6e0eb (span: 386, time: 0.57s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:32:08
+    - Child: c6bdc5ff-a714-4f6b-960c-5f95e90cc414 (span: 387, time: 0.53s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:32:08
+    - Child: 07e67a79-905f-49b8-a85b-c76358b6b3b7 (span: 388, time: 0.56s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:32:09
+    - Child: 12be546c-56eb-4ac8-b5e4-048fc381c54b (span: 389, time: 0.55s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:32:09
+    - Child: dc69d339-04e7-436c-a21d-bd11b81a5ae2 (span: 390, time: 0.52s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:32:10
+    - Child: f75c81ce-05c9-4df2-8fe0-8b306d55bdcd (span: 391, time: 0.67s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:32:11
+    - Child: 7e23528c-6a93-40a4-9b7b-cee067f4cdf6 (span: 392, time: 0.59s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:32:11
+    - Child: d585a97f-0fa7-40fa-b270-0bb9b7641b37 (span: 393, time: 0.56s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:32:12
+    - Child: dbac9cc4-6aea-4be3-a552-d05942395597 (span: 394, time: 0.53s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:32:12
+    - Child: 3deb787f-768d-48ae-896a-19b7925eafff (span: 395, time: 0.54s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:32:13
+    - Child: 3777276a-82d5-4a8e-b88f-1c2c7bcd4355 (span: 396, time: 0.51s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:32:13
+    - Child: 6ffa0384-8498-451b-a413-db90ff559da8 (span: 397, time: 0.57s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:32:14
+    - Child: 4d70d857-2225-4916-b768-d180fbfb59da (span: 398, time: 0.54s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:32:14
+    - Child: 8f543924-4c55-4de9-9ebd-bb97ea7451e3 (span: 399, time: 0.55s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:32:15
+    - Child: 69462386-76a2-4e88-8a1d-354881324b2c (span: 400, time: 0.53s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:32:15
+    - Child: d6398fba-5d42-4ba4-a295-b67c779071f5 (span: 401, time: 0.58s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:32:16
+    - Child: 5937f82c-ca7e-44f5-8a20-9f556c9ddcff (span: 402, time: 0.53s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:32:17
+    - Child: 6ca287df-8804-413d-bb27-2fce40daa978 (span: 403, time: 0.57s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:32:17
+    - Child: 633a7a74-1968-424b-a2de-2a3b502ab19c (span: 404, time: 0.57s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:32:18
+    - Child: bc01c440-0faa-43b8-8537-de752d66693e (span: 405, time: 0.52s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:32:18
+    - Child: 1019750b-792d-4968-8fce-34b44824acd7 (span: 406, time: 0.56s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:32:19
+    - Child: ad204554-e5be-4032-8ef7-a5c3a2a2b32c (span: 407, time: 0.50s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:32:19
+    - Child: 4f250dc1-a0b2-439f-9ddd-64c5ab4d5479 (span: 408, time: 0.55s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:32:20
+    - Child: f4c3d5e7-1147-4888-ac17-12f0178056f5 (span: 409, time: 0.54s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:32:20
+    - Child: e87de275-80af-4fa4-a963-74c16b575b2f (span: 410, time: 0.58s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:32:21
+    - Child: 595ee0af-a5a1-4160-ae0c-0a045474d28c (span: 411, time: 0.54s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:32:22
+    - Child: 1694cf8c-da26-460e-922c-0069bf445b56 (span: 412, time: 0.61s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:32:22
+    - Child: ebc2ed8b-c5df-4b1a-9555-1e4f4e32c07d (span: 413, time: 0.54s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:32:23
+    - Child: a23ff2d6-c073-4f4f-833b-500a2a9fa631 (span: 414, time: 0.54s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:32:23
+    - Child: 6e4ba38d-d7a4-4c1f-8ce1-257bfe1ec528 (span: 415, time: 0.55s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:32:24
+    - Child: aca75ad9-9776-4771-99dc-6ca1267b1f2f (span: 416, time: 0.52s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:32:24
+    - Child: 81ef910a-2a53-4baf-b891-b10f1b5236bd (span: 417, time: 0.55s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:32:25
+    - Child: cb1c017a-2f11-4cfe-9596-24f542d88966 (span: 418, time: 0.51s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:32:25
+    - Child: f4205358-eae5-4bfb-af74-856f5bf5f480 (span: 419, time: 0.54s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:32:26
+    - Child: f4708f30-997a-42c8-ae8e-6306e38c5904 (span: 420, time: 0.67s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:32:27
+    - Child: 2e145e94-5fda-45d1-92e7-72db7420c79c (span: 421, time: 0.52s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:32:27
+    - Child: 4a741306-31fa-45ab-b333-5d54342f8807 (span: 422, time: 0.56s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:32:28
+    - Child: 8abd7b37-2489-49fb-8a1d-3014b2270125 (span: 423, time: 0.53s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:32:28
+    - Child: bfd5aa43-432a-4cdf-859b-197ddd9fe100 (span: 424, time: 0.59s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:32:29
+    - Child: f55e959a-7621-4c63-abc6-09c2522f68c8 (span: 425, time: 0.61s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:32:29
+    - Child: 31a9a442-e1da-4e52-b7cc-a5a9670f2e3b (span: 426, time: 0.55s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:32:30
+    - Child: acfb95e6-9b4a-4850-88e2-5d74eac976ea (span: 427, time: 0.54s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:32:31
+    - Child: 46d313c3-b770-4a1a-80d0-c94f0c0ec47d (span: 428, time: 0.57s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:32:31
+    - Child: 4279e784-8612-4e50-85f1-ffa2e31c55f2 (span: 429, time: 0.89s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:32:32
+    - Child: 19bc6555-b269-4744-96ea-78ae399524ab (span: 430, time: 0.56s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:32:33
+    - Child: d10f4d0a-54ba-480f-bd94-29cb406669be (span: 431, time: 0.56s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:32:33
+    - Child: 46bbce15-0309-47f8-be4a-679dd765d57b (span: 432, time: 0.56s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:32:34
+    - Child: 84f10010-2996-4f96-b10f-29e4b1b224cd (span: 433, time: 0.55s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:32:34
+    - Child: 613f3736-bcc7-49cf-b88e-c220f0e90a3c (span: 434, time: 0.52s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:32:35
+    - Child: 89cc6084-45aa-4268-b65a-ed24db2a4f2a (span: 435, time: 0.54s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:32:35
+    - Child: 840991d0-c062-4a2e-82bd-e8ca7affecab (span: 436, time: 0.57s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:32:36
+    - Child: 59ab4245-cc03-4b68-bdb8-b3ae386e1e61 (span: 437, time: 0.49s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:32:36
+    - Child: 78775e49-59d9-4195-a23c-1eb6dd1db7ef (span: 438, time: 0.53s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:32:37
+    - Child: 86ad27ce-c916-4032-b690-516e057eade7 (span: 439, time: 0.54s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:32:37
+    - Child: 91edf270-3b34-4c28-80cb-135010ae1b77 (span: 440, time: 0.59s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:32:38
+    - Child: 9d3a7e3c-fbe9-4800-b2cb-15e0c284f9ab (span: 441, time: 0.54s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:32:39
+    - Child: 8098f453-701b-4385-ada5-cb75ac7e9d6d (span: 442, time: 0.56s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:32:39
+    - Child: 4b1d69b6-69cf-49b2-b58d-d3af90dd6620 (span: 443, time: 0.55s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:32:40
+    - Child: 23231810-dd2f-46c2-b791-d0c48c6b785c (span: 444, time: 0.56s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:32:40
+    - Child: 167429d1-6a7f-4b60-8ab4-884adec92053 (span: 445, time: 0.60s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:32:41
+    - Child: 0cabad91-37aa-44b3-a774-5d72d8dd2a07 (span: 446, time: 0.91s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:32:42
+    - Child: c22e22d9-a69f-4aa6-a361-fe286c60da0c (span: 447, time: 0.65s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:32:42
+    - Child: 27326eee-0cc2-4c2c-aed6-83210946bdaa (span: 448, time: 0.49s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:32:43
+    - Child: 4c5b06b7-09b7-493f-9128-5fcf597ffecf (span: 449, time: 0.61s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:32:44
+    - Child: 99aad647-1b0a-4242-85bd-23ea9e4f95c3 (span: 450, time: 0.54s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:32:44
+    - Child: 812b9582-5b42-4375-bf80-59d8e846d484 (span: 451, time: 0.56s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:32:45
+    - Child: 7bb91e8d-c8e3-49c7-8535-62132c2221b5 (span: 452, time: 0.58s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:32:45
+    - Child: d8af57b4-96a0-422b-9524-2126424afe52 (span: 453, time: 0.55s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:32:46
+    - Child: 64524954-eac5-4573-9a55-f4c6f4f17dde (span: 454, time: 0.53s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:32:46
+    - Child: b2971cae-ab72-4c17-9acf-eec1253c4ce6 (span: 455, time: 0.63s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:32:47
+    - Child: e6560099-1007-4a06-9b89-a2d06fcfc212 (span: 456, time: 0.56s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:32:48
+    - Child: e5f1b9ec-2b7d-4b56-8b35-a221f6382be5 (span: 457, time: 0.54s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:32:48
+    - Child: 968107f0-940f-44c9-8b4d-359b895547ff (span: 458, time: 0.51s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:32:49
+    - Child: b0be05ca-3cd0-49a6-9d54-c3f01a9578ce (span: 459, time: 0.56s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:32:49
+    - Child: 6ed1a734-52e7-44d3-8d7f-1b582d23c1f8 (span: 460, time: 0.75s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:32:50
+    - Child: ad494876-caae-4306-b4ea-2753b0294473 (span: 461, time: 0.53s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:32:50
+    - Child: 8b18b0da-20cb-4c5c-8ce1-b540d0b84949 (span: 462, time: 0.56s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:32:51
+    - Child: 8c441b88-4edf-487d-ae78-2a6535763910 (span: 463, time: 0.58s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:32:52
+    - Child: 444f78c0-8134-4dbf-9e3a-c3040230fa02 (span: 464, time: 0.50s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:32:52
+    - Child: 4a035d75-6d86-483b-a039-e6f6aa3296e4 (span: 465, time: 0.55s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:32:53
+    - Child: 61b687fc-abab-451e-a6ac-50544cc5502a (span: 466, time: 0.55s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:32:53
+    - Child: 62942aaf-4a34-4233-b65f-e7bc10070cdf (span: 467, time: 0.59s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:32:54
+    - Child: 142e45f8-fa43-4fcd-88a8-f853f0f6c251 (span: 468, time: 0.52s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:32:54
+    - Child: b32fd305-690b-475d-a480-94517c190742 (span: 469, time: 0.52s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:32:55
+    - Child: 31dce70a-2ba6-4b1f-a1e0-48800d67834b (span: 470, time: 0.57s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:32:55
+    - Child: 4369fdf7-967d-456a-82b3-491645702a1d (span: 471, time: 0.55s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:32:56
+    - Child: e5a423b3-5b31-4a0a-8df4-8687f0d5a384 (span: 472, time: 0.51s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:32:56
+    - Child: 8323a3a3-8a8e-4e52-8a08-be2a84bf08fb (span: 473, time: 0.59s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:32:57
+    - Child: 53e98e19-dec2-406b-94d8-6b14c613829c (span: 474, time: 0.51s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:32:58
+    - Child: c694b49c-3093-486c-8f7a-d52aebd1a835 (span: 475, time: 0.57s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:32:58
+    - Child: 84af86ae-2f1d-4cf8-90ab-db317ebc44c3 (span: 476, time: 0.64s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:32:59
+    - Child: 6c4a4a64-6333-4ac2-8e45-0cfd81addb5b (span: 477, time: 0.58s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:32:59
+    - Child: 16ea1eaf-983a-4880-ba33-1176e6907533 (span: 478, time: 0.56s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:33:00
+    - Child: cc500cb9-736c-47e3-8dec-5ba0be7c333c (span: 479, time: 0.57s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:33:00
+    - Child: ac197538-a46c-4d80-9e39-685967a74bac (span: 480, time: 0.51s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:33:01
+    - Child: 5104a290-14d0-40d1-a80e-8b9b173109d6 (span: 481, time: 0.51s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:33:02
+    - Child: ac310b93-1ce9-4725-82c4-51e05d9ad56c (span: 482, time: 0.54s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:33:02
+    - Child: 0c5da8b6-8dc5-4d61-af74-5bca89f09073 (span: 483, time: 0.53s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:33:03
+    - Child: 1a9030d5-35f0-410f-89e4-c1c0f8c3a117 (span: 484, time: 0.52s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:33:03
+    - Child: 1a659493-1cd4-4a9d-92d6-56d48343b098 (span: 485, time: 0.82s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:33:04
+    - Child: 9e2684cd-b83b-4f20-b323-fe660cf2b1eb (span: 486, time: 0.61s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:33:05
+    - Child: a23b04ba-3079-43f1-a636-71a5ee8366b3 (span: 487, time: 0.56s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:33:05
+    - Child: b2c7fc75-94ea-47ef-9011-9b42496cbef6 (span: 488, time: 0.58s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:33:06
+    - Child: 0ccb375d-273a-4165-8aa7-c593cee94d2d (span: 489, time: 0.54s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:33:06
+    - Child: 167d6761-b375-4e53-aa14-646f3dc6efdf (span: 490, time: 0.53s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:33:07
+    - Child: 2f08bfd1-1c78-4fc3-8420-36894411d95d (span: 491, time: 0.52s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:33:07
+    - Child: 2d46d072-6910-45d2-8884-f8ed6eb48b5e (span: 492, time: 0.54s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:33:08
+    - Child: c847d5de-463a-4153-8225-da706abe5bf4 (span: 493, time: 0.52s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:33:08
+    - Child: 60849b35-baf1-4e4a-ad24-8d7dde8f1062 (span: 494, time: 1.43s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:33:10
+    - Child: 216fdea1-c607-4400-a634-b252e26e22b8 (span: 495, time: 0.61s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:33:10
+    - Child: 1db5f319-53bc-430c-912d-317693e68794 (span: 497, time: 4.84s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:34:20
+    - Child: 30564a61-7669-4540-8f19-b2987bda6d14 (span: 498, time: 3.15s, type: tool)
+      - Tool: search
+      - Records: 1
+      - Timestamp: 2025-12-05 01:34:23
+    - Child: 166803ac-034b-460d-8fa5-fd0f57192fd3 (span: 499, time: 4.21s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:34:28
+    - Child: 56edf81c-4201-40c5-8c9a-3207a96c26dc (span: 500, time: 0.34s, type: tool)
+      - Tool: fetch
+      - Records: 1
+      - Timestamp: 2025-12-05 01:34:28
+    - Child: 5a5500c7-fc00-4f0e-8ff7-d493b7810adb (span: 501, time: 42.62s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:35:11
+    - Child: b3389cfd-7b17-4b3c-a424-e5cf848bbd15 (span: 503, time: 2.75s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:36:18
+    - Child: 0bb3ebbf-dc15-4686-aa45-c1bb73c25c79 (span: 504, time: 1.44s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:36:20
+    - Child: cea758e6-dbee-472a-91b6-3c870c0e4812 (span: 505, time: 0.30s, type: tool)
+      - Tool: fetch
+      - Records: 1
+      - Timestamp: 2025-12-05 01:36:20
+    - Child: f2efe19b-ef0a-43d8-95bc-c9f60024c0f0 (span: 506, time: 6.77s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:36:27
+    - Child: 57c2825d-a717-4ac2-9bd2-d5b41cea35e9 (span: 507, time: 0.72s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:36:28
+    - Child: ed6464f2-3e4a-464f-b67f-ef01134a9e2c (span: 502, time: 80.32s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:36:31
+    - Child: 84f894ce-ce58-48ef-9c34-c474e22319ba (span: 496, time: 235.67s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:37:06
+    - Child: 68610ca6-c098-4d7c-8ae1-6a3b54e3a669 (span: 508, time: 74.65s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:37:42
+    - Child: b26c3a50-5c65-44c5-8ee8-6d3f5ea908e0 (span: 509, time: 61.39s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:38:34
+    - Child: 06429385-72cd-428d-b01b-6c6edb31bfd2 (span: 510, time: 1.10s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:38:39
+    - Child: 8bae32a0-13dc-4f8b-bddf-5ac1e0653e4e (span: 511, time: 1.59s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:38:40
+    - Child: f6358ca0-3a8a-4d65-9697-bc47a9969b83 (span: 512, time: 3.42s, type: tool)
+      - Tool: search
+      - Records: 1
+      - Timestamp: 2025-12-05 01:38:44
+    - Child: 6100bc6a-21b9-4d1a-af27-ce8f5a92b80e (span: 513, time: 0.92s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:38:45
+    - Child: 0036e916-ba28-495c-88c7-d979ed434ae3 (span: 515, time: 1.84s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:39:52
+    - Child: fa454d48-3138-4ca3-8a96-701c5c1e8a58 (span: 516, time: 2.72s, type: tool)
+      - Tool: search
+      - Records: 1
+      - Timestamp: 2025-12-05 01:39:54
+    - Child: 98f8b24d-cfaa-4c4c-9d85-ca92d2938be9 (span: 517, time: 0.76s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:39:55
+    - Child: acee7992-2363-49c0-8b32-27e88a1c118c (span: 518, time: 0.70s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:39:56
+    - Child: 48e5f8ca-bdd3-40e9-90c7-70082cc55df3 (span: 519, time: 2.08s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:39:58
+    - Child: 9e135eea-7040-4241-88dd-04253cbcb215 (span: 520, time: 1.16s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:39:59
+    - Child: a0188972-002b-446d-b5e8-0a04e59007cc (span: 521, time: 2.60s, type: tool)
+      - Tool: search
+      - Records: 1
+      - Timestamp: 2025-12-05 01:40:02
+    - Child: f8195646-bd5e-44d9-9371-f4ea49f4fe57 (span: 522, time: 1.88s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:40:04
+    - Child: 8e8d14ef-661a-4ff9-af3c-adb54518e65a (span: 523, time: 2.58s, type: tool)
+      - Tool: search
+      - Records: 1
+      - Timestamp: 2025-12-05 01:40:06
+    - Child: 64577968-f5b4-4ba7-a795-05db9ebf1dc5 (span: 524, time: 1.32s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:40:08
+    - Child: 2213d6d6-cee6-459c-bfa7-bd67e62d074d (span: 525, time: 0.75s, type: tool)
+      - Tool: fetch
+      - Records: 1
+      - Timestamp: 2025-12-05 01:40:08
+    - Child: 16d2763c-8102-48ba-8b35-ff27ce700393 (span: 514, time: 88.45s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:40:13
+    - Child: ae5ea198-d441-4802-8ae3-75add70b652c (span: 526, time: 5.33s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:40:14
+    - Child: 1bf86b71-d44f-486d-92c8-40d2d11ec719 (span: 527, time: 0.43s, type: tool)
+      - Tool: fetch
+      - Records: 1
+      - Timestamp: 2025-12-05 01:40:14
+    - Child: e1492376-2387-4ca2-80e4-c7f23486f479 (span: 528, time: 91.50s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:41:46
+    - Child: 81bbefbb-6825-4187-96fb-ec219cf0d6aa (span: 530, time: 2.64s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:42:27
+    - Child: 7c0abf93-18e1-4c6b-80e5-183bb7594411 (span: 531, time: 0.72s, type: tool)
+      - Tool: fetch
+      - Records: 1
+      - Timestamp: 2025-12-05 01:42:28
+    - Child: 80130b9f-e68f-436d-b20e-b94a063cccf7 (span: 532, time: 2.50s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:42:30
+    - Child: 63c9ce3d-a2c1-4391-8643-d81d0ea03bbb (span: 533, time: 0.11s, type: tool)
+      - Tool: fetch
+      - Records: 1
+      - Timestamp: 2025-12-05 01:42:30
+    - Child: c17f17c4-dbed-41ca-9984-4c5f665d27e3 (span: 534, time: 1.36s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:42:32
+    - Child: 7ae5b763-2d23-4336-ad0c-c0c49249d9c7 (span: 535, time: 0.10s, type: tool)
+      - Tool: fetch
+      - Records: 1
+      - Timestamp: 2025-12-05 01:42:32
+    - Child: 471dcf52-fc0f-4981-8d08-5b09334475af (span: 536, time: 1.46s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:42:33
+    - Child: 7ae9dd35-89a4-44c7-8815-becab640d92f (span: 537, time: 12.96s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:42:46
+    - Child: b9bfc91f-abfa-4299-a45b-2d6febb2fabf (span: 538, time: 1.66s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:42:48
+    - Child: a9652b8d-5bd2-470f-bcf9-53e5f0146fa1 (span: 539, time: 1.16s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:42:49
+    - Child: 982cb342-ac0e-48a9-a678-03557ba927c2 (span: 540, time: 8.37s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:42:57
+    - Child: 5f5fe24f-a073-4612-8f83-01493583bbee (span: 541, time: 0.68s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:42:58
+    - Child: 1fb81546-60e5-4680-a793-04881651053a (span: 542, time: 1.25s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:42:59
+    - Child: b94a6031-8f49-4faa-9783-db91052cbf15 (span: 543, time: 1.60s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:43:01
+    - Child: 823184ca-47cd-4f63-a624-dbc7bba87ab5 (span: 544, time: 0.66s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:43:01
+    - Child: 5b10b081-390f-47c4-b6a1-baafbd62924d (span: 545, time: 0.64s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:43:02
+    - Child: 0a781b9c-176c-4d22-97ef-3bce4c949d6c (span: 546, time: 1.28s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:43:03
+    - Child: 919ac269-d2dd-4334-9826-e72f084d57db (span: 547, time: 8.09s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:43:12
+    - Child: 9e42c7cb-f6db-439c-a1c4-cee1a1997ec6 (span: 548, time: 3.37s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:43:15
+    - Child: a87fb08b-2174-430a-9121-b69366fc6ef1 (span: 549, time: 0.85s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:43:16
+    - Child: 453b4bd5-4918-4907-a708-6e633e5f6e73 (span: 550, time: 1.70s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:43:17
+    - Child: a2d0dd36-cfee-47cc-a2a4-3f85171141bd (span: 551, time: 3.03s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:43:20
+    - Child: 3a54172a-d994-4101-ba61-0679c186caa5 (span: 552, time: 1.18s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:43:22
+    - Child: 5beb3878-db7f-41ba-a4ce-5ac9a5ebe175 (span: 553, time: 0.65s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:43:22
+    - Child: 99da4107-73fa-4da7-a63c-32f7e14d24ae (span: 554, time: 1.38s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:43:24
+    - Child: de94ce95-731d-4a2a-96f0-3022ecf73f9d (span: 529, time: 128.89s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:43:28
+    - Child: 78525a44-ed55-4729-945e-eb01dcc8d995 (span: 555, time: 15.63s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:43:39
+    - Child: 9b7cf1e6-5035-4352-b83c-1785a0463bd6 (span: 556, time: 23.52s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:44:03
+    - Child: 53db4372-f4c2-48b4-b24e-5f32a0bb5de1 (span: 557, time: 0.68s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:44:04
+    - Child: 65f08a76-24b7-4a27-87ad-9d5ab5157cf5 (span: 558, time: 0.66s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:44:04
+    - Child: 1e2e4068-97a1-4c19-9b47-f66e53ffe4e5 (span: 559, time: 0.63s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:44:05
+    - Child: b077c952-d908-470e-ba9b-dce23f98e504 (span: 560, time: 18.34s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:44:23
+    - Child: 338c2171-3a93-4119-a027-0b0654c514b6 (span: 561, time: 0.60s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:44:24
+    - Child: 07c2221f-e2e6-4ed2-8cb1-75f9497ec095 (span: 562, time: 0.60s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:44:24
+    - Child: 51272806-5068-43d1-b386-4e4bae73288a (span: 563, time: 0.76s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:44:25
+    - Child: ab0975af-20ef-4077-8e82-680f6b552f13 (span: 564, time: 0.63s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:44:26
+    - Child: 7bd5e5d0-ea62-4b3b-b23d-907a71e31be6 (span: 565, time: 10.12s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:44:36
+    - Child: a61c9d76-8af1-4f69-a1c7-c07e0a38ba49 (span: 1, time: 985.83s, type: agent)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:44:36
+- Evaluation Results: 
+
+  - Eval id: 1
+    - Evaluation Description: 
+
+    - Reason: output is not equal to ground-truth
+
+    - Passed? <span color="red">False<span>
+
+### Task
+- config: test/web_search/info_search_task_0048.json
+- parent_id: 2d9981ba-3dd8-499b-a4f0-03b3189c557b
+- LLM Call Count: 425
+- Total Execution Time: 1798.86s
+- Average Response Time: 4.06s
+- Total Records: 443
+- Agent Response:
+  - llm_prompt: 425
+
+- Trace Structure:
+  - Parent Trace: 2d9981ba-3dd8-499b-a4f0-03b3189c557b
+    - Child: bde2b2fe-ce2e-40ef-a957-8db6c469dda2 (span: 1, time: 0.77s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:44:40
+    - Child: ba65e77c-8926-45ae-b899-c854d6b22be5 (span: 2, time: 1.12s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:44:41
+    - Child: 9196a2d2-0ba9-45ff-ad1d-fa9ab80b4f1b (span: 3, time: 1.13s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:44:42
+    - Child: 22974ba2-4616-4b77-9045-fbbbb9e9c402 (span: 4, time: 0.91s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:44:43
+    - Child: fc803474-2420-4ff3-bd44-791a4fbeebc2 (span: 5, time: 0.76s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:44:44
+    - Child: fe261905-30ab-4c53-9c1a-82d9760a278c (span: 6, time: 1.19s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:44:45
+    - Child: b74f54e6-f513-4e6f-9fb4-5c0d692e896a (span: 7, time: 0.77s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:44:46
+    - Child: 810ea5a7-df1f-4fdc-b922-6c5f5c7cc2a3 (span: 8, time: 0.86s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:44:47
+    - Child: 95480226-096f-4c25-97fb-3bdd4b74cf45 (span: 9, time: 1.55s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:44:48
+    - Child: 8b920ac2-a98b-4f5e-b185-5a65dc336858 (span: 10, time: 0.90s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:44:49
+    - Child: add48017-2d49-4e4e-b240-6962659c6376 (span: 11, time: 1.03s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:44:50
+    - Child: f21bab3f-22cb-44f6-98f5-ab2d8749f2a9 (span: 12, time: 0.78s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:44:51
+    - Child: 9f3d20de-73fe-48ea-b297-dea53f3672f8 (span: 13, time: 0.87s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:44:52
+    - Child: fdd0362b-539b-4589-ad28-75d4fbea319e (span: 14, time: 0.95s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:44:53
+    - Child: d579dea5-29b2-4574-96d9-1d75aa432b7e (span: 15, time: 0.76s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:44:54
+    - Child: 9c31937a-06d4-4b7f-b9f2-fdc841bdc641 (span: 16, time: 0.69s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:44:54
+    - Child: f68647bd-01fb-4536-a7d8-a636b7679f42 (span: 17, time: 0.95s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:44:55
+    - Child: c5dcc3b7-b533-4d11-a89b-960b1b61693a (span: 18, time: 1.33s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:44:57
+    - Child: 7b4e7dee-d4b5-4b33-94c3-7d9774b3f1de (span: 19, time: 0.66s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:44:57
+    - Child: dd5083e8-d1d1-4a1d-8da0-0f121e4898a0 (span: 20, time: 0.76s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:44:58
+    - Child: 64d7217f-9c5a-430b-8c7c-801dd716b77f (span: 21, time: 0.91s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:44:59
+    - Child: 49c1fb04-3ddd-4422-afef-fa7e4599f0e9 (span: 22, time: 1.02s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:45:00
+    - Child: f09d8016-bca7-4933-9cb6-67db0ff24482 (span: 23, time: 0.74s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:45:01
+    - Child: 36510a74-34ec-4e9c-945d-3c82d7f027f4 (span: 24, time: 0.74s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:45:01
+    - Child: 3bbadbbf-9311-4b21-aafe-3c63a5db6390 (span: 25, time: 0.98s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:45:02
+    - Child: e7241809-d18e-408b-ba71-b39c7f8c26f1 (span: 26, time: 0.91s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:45:03
+    - Child: 0ace8518-c853-42ea-a1f3-98f176efb521 (span: 27, time: 0.91s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:45:04
+    - Child: af24f79f-85e3-4b23-a32f-90c3d5a152d7 (span: 28, time: 0.71s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:45:05
+    - Child: 16826b30-fe59-426c-a0f3-470e0e8476b5 (span: 29, time: 0.82s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:45:06
+    - Child: 6508b072-5ceb-4a31-82b9-58a35dbb1385 (span: 30, time: 0.84s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:45:07
+    - Child: 82ba5e89-3d3d-4902-802b-3a066576d558 (span: 31, time: 0.87s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:45:07
+    - Child: ecc5a1a3-bc3e-4a95-9fab-c4cac1669a6a (span: 32, time: 1.44s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:45:09
+    - Child: 7ba594d7-79c2-4734-a068-f1877274bfe3 (span: 33, time: 0.74s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:45:10
+    - Child: 2a39cf95-ae3a-4584-b0aa-764d726c66a8 (span: 34, time: 0.68s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:45:10
+    - Child: 2b1a4deb-bb02-42ea-a877-4b80a3b296b6 (span: 35, time: 1.66s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:45:12
+    - Child: 039291b2-3350-4035-bf21-aee13d448936 (span: 36, time: 0.83s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:45:13
+    - Child: 503ce158-fbae-4282-a771-cb9f67486406 (span: 37, time: 1.05s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:45:14
+    - Child: d92e165f-e5fa-4151-a067-695be20df00e (span: 38, time: 0.87s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:45:15
+    - Child: b904a2d8-7994-428f-a0ea-f66369ab5332 (span: 39, time: 1.25s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:45:16
+    - Child: f077ffc9-1e86-43a1-b5fa-1b5a567532a4 (span: 40, time: 0.68s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:45:17
+    - Child: 3f969f3a-d7b1-486f-aa25-e68ce252281d (span: 41, time: 0.81s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:45:18
+    - Child: 124fbe0f-d8f4-40db-8edd-0ef11a2b230f (span: 42, time: 0.73s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:45:18
+    - Child: ddad21fc-b10f-4ba3-b54b-7caa7305181c (span: 43, time: 0.91s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:45:19
+    - Child: 85b2761f-f256-42df-a5b8-a2e127fd4ad9 (span: 44, time: 0.91s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:45:20
+    - Child: 1c1bc914-9b25-423b-abc0-5b454509dd86 (span: 45, time: 0.81s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:45:21
+    - Child: b690c497-bd95-4664-8ef8-cb892aa812dc (span: 46, time: 1.11s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:45:22
+    - Child: b208d976-e48d-42db-8535-a891a3cf4c3f (span: 47, time: 0.66s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:45:23
+    - Child: 645461af-d89f-4c52-a1bb-8c8b6dc16192 (span: 48, time: 0.69s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:45:23
+    - Child: 991c8907-e2a7-4c4c-b685-e5f600d7e1c7 (span: 49, time: 1.11s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:45:24
+    - Child: 30b39e81-7579-46a9-9053-a59d888390c4 (span: 50, time: 0.69s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:45:25
+    - Child: bf9c4dcd-4ded-4aa3-91ea-439bcd9568cf (span: 51, time: 0.94s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:45:26
+    - Child: a538d197-87f3-488e-8ed5-bbaf56a972ce (span: 52, time: 0.67s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:45:27
+    - Child: 75abd95b-9927-4714-a6c4-764c264af354 (span: 53, time: 1.68s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:45:28
+    - Child: 08743acc-6828-46ab-9ea6-808da7dc8b6a (span: 54, time: 0.70s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:45:29
+    - Child: 16a08cad-6fc9-4d96-9863-39720a738522 (span: 55, time: 1.11s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:45:30
+    - Child: b0aaffd6-0087-4842-bf20-b8d7aa2dd994 (span: 56, time: 0.75s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:45:31
+    - Child: 2cafb848-93ec-4498-9bcc-75e1d8715b1b (span: 57, time: 0.80s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:45:32
+    - Child: 4e0a78c6-122f-4f91-adfc-abd85fabf164 (span: 58, time: 0.79s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:45:33
+    - Child: 729a4f7d-78f1-43e2-8683-e16f775dd1c2 (span: 59, time: 0.73s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:45:33
+    - Child: 9bd1bfa3-e709-45bf-8a8d-17ef9ac92874 (span: 60, time: 0.82s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:45:34
+    - Child: 7f7532a0-fb73-48d6-917f-b5045514506e (span: 61, time: 0.92s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:45:35
+    - Child: 3d305751-2ff9-4a3a-a8a7-ce7b5d54e643 (span: 62, time: 0.81s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:45:36
+    - Child: 5eca7630-3e37-4b57-adde-8819d8eaa032 (span: 63, time: 0.75s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:45:37
+    - Child: 2bf62cad-db17-41fd-824f-6047c6dc8823 (span: 64, time: 0.67s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:45:37
+    - Child: 97db94b9-36a7-409d-a2c2-acdc58a309bc (span: 65, time: 0.93s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:45:38
+    - Child: f7769d4f-9ba4-4177-ac6f-e0f489f8eb59 (span: 66, time: 1.04s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:45:39
+    - Child: 8dc3874d-dfdc-4161-a051-eb76efa86d48 (span: 67, time: 0.89s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:45:40
+    - Child: cacf9ed4-10ab-4751-a0f4-7991fbbabe1c (span: 68, time: 0.82s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:45:41
+    - Child: 984c325f-9c5d-43c8-b2c1-c8356b106214 (span: 69, time: 1.00s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:45:42
+    - Child: e470f3f9-a75a-4d43-aa1d-54a96b50037b (span: 70, time: 0.61s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:45:43
+    - Child: 0828c6b8-52c8-46b2-b006-c45a5ff059d8 (span: 71, time: 0.93s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:45:44
+    - Child: 74dbe042-4612-4d87-9b79-eea41c30e6a0 (span: 72, time: 0.67s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:45:44
+    - Child: a458097c-4855-435f-80a3-9c770e915c0f (span: 73, time: 0.75s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:45:45
+    - Child: 0315ad83-e5d2-4e7f-b21d-a96804fb2366 (span: 74, time: 0.81s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:45:46
+    - Child: c5f9e45f-a1e7-491d-8ad9-39cc8f154da9 (span: 75, time: 0.82s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:45:47
+    - Child: 57749f5a-c55f-42e4-ae9f-a0bda484309f (span: 76, time: 0.79s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:45:47
+    - Child: a1d35d69-0dd4-4e7c-82aa-3177984dc889 (span: 77, time: 0.93s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:45:48
+    - Child: fbd71756-b59b-4428-aaf9-bfcdbdc961dc (span: 78, time: 0.81s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:45:49
+    - Child: 58f472e8-ddd8-46aa-bcd8-b6a89afd43a1 (span: 79, time: 0.81s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:45:50
+    - Child: 5345d436-1501-43df-81ee-7918e92cd1d8 (span: 80, time: 0.75s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:45:51
+    - Child: bdca8e8b-b95f-4c86-ab38-e15ce6d80d14 (span: 81, time: 0.69s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:45:52
+    - Child: 44bd2aa1-5836-4359-b7f5-95b109049cd7 (span: 82, time: 0.89s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:45:52
+    - Child: de0a6bf3-d5e4-4d89-a643-810bd0955b6a (span: 83, time: 0.75s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:45:53
+    - Child: 0aa52904-4f2b-459a-b3a4-202c01f3fe42 (span: 84, time: 0.73s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:45:54
+    - Child: ef4cab6d-b38e-4467-8b38-0c4cd508b670 (span: 85, time: 0.76s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:45:55
+    - Child: 5fccbf1c-57cb-40da-b0af-485124ce59b4 (span: 86, time: 0.84s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:45:56
+    - Child: 04bc14e6-5e60-4a83-8599-c02256d63198 (span: 87, time: 0.72s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:45:56
+    - Child: 862217e4-24ab-4dc9-be5f-92bdd4fee0f7 (span: 88, time: 0.71s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:45:57
+    - Child: a0a01075-882a-4699-a5fe-d47796b49715 (span: 89, time: 0.71s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:45:58
+    - Child: 61e8cd06-9c5b-429e-ba07-d8407f878f26 (span: 90, time: 0.84s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:45:58
+    - Child: 814a9d7c-c304-4b14-a601-c19244af46c5 (span: 91, time: 0.71s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:45:59
+    - Child: 718ea625-c9e5-4055-9360-1bf71024cc57 (span: 92, time: 0.77s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:46:00
+    - Child: 4c620072-d99e-4319-89d5-ca1649d8b3ca (span: 93, time: 0.66s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:46:01
+    - Child: 7d5c68ab-8a88-44e0-9674-e4241cb79c70 (span: 94, time: 1.74s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:46:02
+    - Child: 8809e2a6-b599-4c59-a7a2-18a8a9a996e0 (span: 95, time: 1.16s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:46:04
+    - Child: 4f927c65-7da2-4dea-9057-ad0cb55e4c04 (span: 96, time: 0.78s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:46:04
+    - Child: 821e30df-5dfb-4082-b4b8-31ce9da0fb97 (span: 97, time: 1.20s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:46:06
+    - Child: efa039ff-4e61-4808-a061-a7e9569c2a65 (span: 98, time: 0.69s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:46:06
+    - Child: 24a9872c-3ce1-4198-8382-b2170a75d020 (span: 99, time: 0.84s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:46:07
+    - Child: 09890c29-069c-4ed8-8170-ffeb056c518a (span: 100, time: 0.68s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:46:08
+    - Child: 8d7ea90e-b9ac-447d-8a3c-25e537c9def7 (span: 101, time: 0.75s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:46:09
+    - Child: 594d353b-8eb0-4f32-872e-23425a8e5a27 (span: 102, time: 0.90s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:46:09
+    - Child: 7b7be0ec-2719-4452-a20a-91f215ffe9f7 (span: 103, time: 0.73s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:46:10
+    - Child: c09475bd-3598-4974-adcd-7fe969d42884 (span: 104, time: 1.02s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:46:11
+    - Child: afdb5014-fec8-4beb-a0eb-ab601d2ae29c (span: 105, time: 0.92s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:46:12
+    - Child: 8a0bf772-274e-46ab-8a31-c7fe14a69be0 (span: 106, time: 1.22s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:46:13
+    - Child: 1d579fb5-7199-49ba-b266-904a537900f8 (span: 107, time: 0.88s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:46:14
+    - Child: 9ff9adc6-b6a1-4ce1-91b6-a776342a457e (span: 108, time: 0.76s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:46:15
+    - Child: d8b29946-cf3f-478c-add8-713285d6ef43 (span: 109, time: 0.71s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:46:16
+    - Child: d705fc2d-a88a-4651-aae6-9f753385a643 (span: 110, time: 1.33s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:46:17
+    - Child: ed47b933-dba8-4619-a299-7a4fd4ee89a0 (span: 111, time: 0.77s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:46:18
+    - Child: 60666d57-27a1-4d05-a740-bfbcbf33ad18 (span: 112, time: 1.42s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:46:19
+    - Child: 5c1d5faf-f3d4-444a-bf83-21cd124ed904 (span: 113, time: 0.66s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:46:20
+    - Child: 421f52ac-386b-4253-8d49-5e2df92541ad (span: 114, time: 0.71s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:46:21
+    - Child: 8b680ef9-788b-44e8-aac4-5290a441db42 (span: 115, time: 0.82s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:46:21
+    - Child: b3b0a91e-c116-4233-b2e0-7513f5bc2f91 (span: 116, time: 0.87s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:46:22
+    - Child: 096c5b5c-d88d-45ed-b9ad-7caffae4f043 (span: 117, time: 0.82s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:46:23
+    - Child: 00f0b05f-29c4-4287-b3a9-03cd0b7ccadd (span: 118, time: 0.86s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:46:24
+    - Child: d516e2ec-ff1f-4406-8684-e701826065f3 (span: 119, time: 0.80s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:46:25
+    - Child: d6616939-5d56-45d5-a4df-93d75f0473ab (span: 120, time: 0.73s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:46:26
+    - Child: f81dac60-9995-42d9-8f55-0aad01cf86b7 (span: 121, time: 1.12s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:46:27
+    - Child: e0fa7918-0183-4873-a8df-1de47471d428 (span: 122, time: 0.84s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:46:27
+    - Child: 97dd1d16-723a-4f82-a01a-ff709c4b94fa (span: 123, time: 0.66s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:46:28
+    - Child: 6d965308-e84d-492d-a882-c68c4197c114 (span: 124, time: 0.77s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:46:29
+    - Child: d27405b9-9c65-43b0-a225-762a99c47398 (span: 125, time: 0.80s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:46:30
+    - Child: fba347e6-727a-44f5-823f-199bb66af160 (span: 126, time: 1.02s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:46:31
+    - Child: b76969a5-805e-47f9-95cb-7fb71bae1213 (span: 127, time: 0.70s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:46:31
+    - Child: 52627e46-a45a-4abe-a64a-08213a6276f4 (span: 128, time: 0.85s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:46:32
+    - Child: 1d0046ff-951a-4c96-a453-bd0370ca8765 (span: 129, time: 0.79s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:46:33
+    - Child: 163f11d4-eedc-4f5c-a98a-fdc4e87bb865 (span: 130, time: 0.92s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:46:34
+    - Child: de8e3f22-7885-4810-8599-417b122d2632 (span: 131, time: 0.84s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:46:35
+    - Child: 3785cb23-9968-4964-b4f9-1798702b71e8 (span: 132, time: 0.89s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:46:36
+    - Child: 41294ad4-d838-4dd8-a1dd-f889784212a7 (span: 133, time: 0.92s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:46:37
+    - Child: 97063512-6737-430d-a0f7-8950634d61d1 (span: 134, time: 0.68s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:46:37
+    - Child: d4047f4c-5d2f-42cd-8ec5-3cc2e868217b (span: 135, time: 1.02s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:46:38
+    - Child: 979847ee-fe6f-4853-8e84-00998780978f (span: 136, time: 0.74s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:46:39
+    - Child: 620b7157-b1f8-4701-83f9-7101dbe6f4d3 (span: 137, time: 0.63s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:46:40
+    - Child: c00a2844-687e-4911-972a-8db54a8e42c9 (span: 138, time: 0.73s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:46:40
+    - Child: b4a9fa59-3f15-4377-b48b-51f5a1d6bf34 (span: 139, time: 1.30s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:46:42
+    - Child: 281a3288-41c3-4eea-8e49-7ccc26d029ce (span: 140, time: 0.94s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:46:43
+    - Child: c0515550-fec6-47ad-a3f5-fc78e184fa34 (span: 141, time: 0.69s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:46:43
+    - Child: 71c03716-9219-4863-b6f8-88fdbd117ecd (span: 142, time: 0.78s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:46:44
+    - Child: 66ef1257-aef7-4099-921d-93e6536bb7e0 (span: 143, time: 0.95s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:46:45
+    - Child: 272c7436-4754-4241-bba5-574ec5595f91 (span: 144, time: 0.65s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:46:46
+    - Child: 6e5af65d-5716-42af-8e10-f1eb8bb499e6 (span: 145, time: 0.79s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:46:47
+    - Child: 11784647-b4be-4df9-9ac7-1dc8a5f53216 (span: 146, time: 1.92s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:46:49
+    - Child: e503a12f-7185-4bb3-a774-6b1e66fcfe20 (span: 147, time: 0.73s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:46:49
+    - Child: f0ac82da-4ca7-4948-810b-bda906999f88 (span: 148, time: 0.80s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:46:50
+    - Child: 1019d225-e787-4589-bed8-ca0c063bf58b (span: 149, time: 0.71s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:46:51
+    - Child: 6813d0b9-d4dc-4bfe-ac34-4d9b8aa8a686 (span: 150, time: 0.92s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:46:52
+    - Child: 488f3b3a-4c0a-4eda-bb80-925cd45ebcb7 (span: 151, time: 0.84s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:46:53
+    - Child: adc38b79-fc2f-48b2-9514-eb0c04f6c07b (span: 152, time: 0.79s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:46:53
+    - Child: 9fd8e4ad-5261-44d1-a952-8bef0c9f658f (span: 153, time: 0.82s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:46:54
+    - Child: 5f68db8e-9fa4-4e28-ba37-33538b9bfd28 (span: 154, time: 1.28s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:46:55
+    - Child: cead7a06-de06-47b7-ac19-99a525ce27ae (span: 155, time: 0.98s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:46:56
+    - Child: c195d8e7-f4c3-40e5-b36d-e7bbf3e0462c (span: 156, time: 0.77s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:46:57
+    - Child: ac0da321-7118-4b7e-bc9e-84a4c3300cd3 (span: 157, time: 0.77s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:46:58
+    - Child: 6112038c-723c-432b-a04a-b30940719759 (span: 158, time: 1.10s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:46:59
+    - Child: 8c79a776-5e69-4d0d-ad49-c6a7f438e561 (span: 159, time: 0.70s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:47:00
+    - Child: d967e562-ff61-4f51-9418-b267212b595a (span: 160, time: 0.73s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:47:01
+    - Child: dc48b278-356d-49aa-8bb9-7025d2a94eb1 (span: 161, time: 0.67s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:47:01
+    - Child: 0b923ad0-de2a-4f3f-babe-8f53fbf1f751 (span: 162, time: 0.79s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:47:02
+    - Child: a19a2bc5-6c44-4519-bcfd-9af84fb17210 (span: 163, time: 0.73s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:47:03
+    - Child: 35fa128a-72b8-47bf-ba24-b9a29f97b745 (span: 164, time: 0.66s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:47:03
+    - Child: e2379a4d-32a7-4c80-9aab-db87a85914fb (span: 165, time: 0.83s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:47:04
+    - Child: 46a85082-6a75-436d-9ef4-46bb4df32b56 (span: 166, time: 0.80s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:47:05
+    - Child: a2e8eb08-81f1-4c0f-89d5-46c3971de728 (span: 167, time: 0.91s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:47:06
+    - Child: f134404a-ecc0-46ad-9dd8-8b01d2de94fe (span: 168, time: 0.86s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:47:07
+    - Child: 97b105bf-61e6-43e6-8de0-5fb2e5cbf230 (span: 169, time: 0.92s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:47:08
+    - Child: d52babc9-ab37-414a-b337-c7a2afab57b3 (span: 170, time: 0.65s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:47:08
+    - Child: 9ddd56c5-af68-4015-a80d-0aab92f2b0a2 (span: 171, time: 0.67s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:47:09
+    - Child: 6a2a1f8f-9967-42d5-a938-aa671aa62638 (span: 172, time: 0.80s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:47:10
+    - Child: 78579d46-36eb-4f50-a68f-589fef398708 (span: 173, time: 0.84s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:47:11
+    - Child: a5878e00-eef4-48ae-aea6-9f1f144d749b (span: 174, time: 1.74s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:47:12
+    - Child: 40f4850a-f099-4aec-9278-82f16a6e6b95 (span: 175, time: 0.79s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:47:13
+    - Child: 3f01e28d-5938-4a43-b205-c3e3a82ef398 (span: 176, time: 0.84s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:47:14
+    - Child: f3ec9c71-a75c-4d9a-a203-cb9dd320774a (span: 177, time: 0.89s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:47:15
+    - Child: 2c408fdf-5c9e-42bd-9e57-9aab6c58b722 (span: 178, time: 1.13s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:47:16
+    - Child: f8d06081-5e48-42be-a0e0-f89c149812bf (span: 179, time: 0.81s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:47:17
+    - Child: e018736f-6152-496a-b6e0-f3731cb301b1 (span: 180, time: 0.69s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:47:18
+    - Child: 0f880b35-39de-4380-9998-157596b9861c (span: 181, time: 0.75s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:47:18
+    - Child: b7bcedfd-cecd-4a9c-83a2-bc47c615cc5f (span: 182, time: 0.84s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:47:19
+    - Child: 31ea6f90-e0f2-4abb-81e8-e622324f9df0 (span: 183, time: 0.72s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:47:20
+    - Child: 75796da3-a3ee-4f83-9530-1a15a1cce031 (span: 184, time: 0.88s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:47:21
+    - Child: 7a86f3d8-1cb7-4d66-9c2c-f7d4d23a8e08 (span: 185, time: 0.71s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:47:22
+    - Child: 0013bfea-3ef2-45a3-ac8f-240f25b4bd65 (span: 186, time: 0.77s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:47:22
+    - Child: fd5bbab0-df9c-45d0-9fff-0b1e6b02f92e (span: 187, time: 0.77s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:47:23
+    - Child: c4b5c4cb-fdcb-473f-a593-5a1aea585e83 (span: 188, time: 0.89s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:47:24
+    - Child: dec8a4dc-5f65-4026-844c-eb1170f2a1a5 (span: 189, time: 0.68s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:47:25
+    - Child: 5f58f832-4052-4323-9166-e7e22810e5e4 (span: 190, time: 0.77s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:47:25
+    - Child: e2249f3b-d215-446d-88f1-89bd74e86fe1 (span: 191, time: 0.84s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:47:26
+    - Child: 201f29b8-da88-4491-b238-5098d9f8862b (span: 192, time: 0.69s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:47:27
+    - Child: d833e175-500f-4b75-ae87-dab057576669 (span: 193, time: 0.73s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:47:28
+    - Child: 227a601d-24d2-45a6-92bd-1587f85118eb (span: 194, time: 0.67s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:47:28
+    - Child: 6dcf76ed-947d-49a5-bfeb-13c8527d0a42 (span: 195, time: 0.86s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:47:29
+    - Child: f05e6a93-c492-47ab-8e04-9ad6225872e9 (span: 196, time: 0.82s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:47:30
+    - Child: 9c3bacdf-c340-4940-94b3-6d71979cfb91 (span: 197, time: 0.92s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:47:31
+    - Child: 4ad65fb1-a44b-4ce5-84e7-79dc62276f19 (span: 198, time: 0.92s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:47:32
+    - Child: a08d0946-25de-460d-be74-ad226f6a76da (span: 199, time: 0.72s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:47:33
+    - Child: f92e9773-c878-43bd-979b-e225c9f142c6 (span: 200, time: 0.84s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:47:33
+    - Child: b0c5c177-8f4e-41c1-a40d-ad933157be08 (span: 201, time: 0.71s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:47:34
+    - Child: dd5abc3c-3682-47bc-b5e1-95b6aed67122 (span: 202, time: 0.70s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:47:35
+    - Child: 4ad7af68-c709-401c-b893-2a42d300e86e (span: 203, time: 0.76s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:47:36
+    - Child: 615b56fc-7f8d-48a6-8da2-140e3e2e9aa7 (span: 204, time: 0.87s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:47:36
+    - Child: ae0a6cbd-470b-458b-8781-e09437878018 (span: 205, time: 0.75s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:47:37
+    - Child: 8bb8d7c9-2d5e-4f04-bdc5-5276481e2d9e (span: 206, time: 0.71s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:47:38
+    - Child: cb618209-5f5d-414c-9c9f-fea0ccc8fe4a (span: 207, time: 0.84s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:47:39
+    - Child: e25bba9a-3ca8-48c6-8ecf-710b3d7746db (span: 208, time: 0.93s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:47:40
+    - Child: 44106e02-69f5-4662-827e-c5437849ae24 (span: 209, time: 0.86s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:47:41
+    - Child: f8a17b25-e9ee-434c-a20f-a2fb6ad5f1c2 (span: 210, time: 0.82s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:47:41
+    - Child: 22ff36f8-2d65-4c3e-a3bf-f708fa066129 (span: 211, time: 0.75s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:47:42
+    - Child: 6caf92c8-9c90-42e6-964c-d05b110486d1 (span: 212, time: 1.30s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:47:43
+    - Child: e08228af-bc1c-4708-a69b-37cd17189118 (span: 213, time: 0.70s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:47:44
+    - Child: 2eef812e-46df-4cb1-b77c-a34fe16b836d (span: 214, time: 0.81s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:47:45
+    - Child: 3193c3a6-93df-4a2b-9865-afa3f74fcde0 (span: 215, time: 0.81s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:47:46
+    - Child: de701515-0dad-45f5-a378-ee986653cdc6 (span: 216, time: 0.72s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:47:47
+    - Child: fadf4e85-3429-43d4-a4a2-8681f6cdb599 (span: 217, time: 0.71s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:47:47
+    - Child: a0d51735-29ae-4a80-ad5e-78b7b076fda4 (span: 218, time: 0.82s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:47:48
+    - Child: 743ad27f-35d6-4198-a197-b32b291cfed6 (span: 219, time: 0.72s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:47:49
+    - Child: e16dfc2e-ff6f-4043-be4e-3c64d5e7b5df (span: 220, time: 0.66s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:47:49
+    - Child: 6dc9eae1-6015-44cd-aeb1-841da7be4d07 (span: 221, time: 0.88s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:47:50
+    - Child: da545e9e-2458-4c09-a79a-a502a5cede60 (span: 222, time: 1.02s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:47:51
+    - Child: a40525f8-59ee-46dd-ada4-3b5a3fc0f211 (span: 223, time: 0.81s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:47:52
+    - Child: 07f48c01-cd42-4a78-8c75-563984354e35 (span: 224, time: 0.72s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:47:53
+    - Child: 579d9b9e-dac9-4cb3-8c26-b074284ab9b1 (span: 225, time: 0.64s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:47:53
+    - Child: 40346719-90cf-405c-b9d8-0782e2b94822 (span: 226, time: 0.80s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:47:54
+    - Child: f35b83c6-cd94-4f75-bc71-f8f8f8368c3e (span: 227, time: 0.81s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:47:55
+    - Child: 3a1e07ac-0590-4e2f-946f-736aaeab7d2c (span: 228, time: 1.02s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:47:56
+    - Child: 17045a56-124e-4f49-a231-5796f810882c (span: 229, time: 0.86s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:47:57
+    - Child: 4ce663ed-a9f5-4fef-bb70-1c3763525395 (span: 230, time: 0.71s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:47:58
+    - Child: 82f6bccf-ace0-4eb8-bc68-befb8ec6155e (span: 231, time: 0.79s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:47:58
+    - Child: 33f45295-ffca-464b-b612-0095510cfc27 (span: 232, time: 0.72s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:47:59
+    - Child: 0d5b1b79-3b6f-4c10-b627-8c549adffdc4 (span: 233, time: 0.69s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:48:00
+    - Child: 92268220-d242-4e74-b210-fb000cde65b2 (span: 234, time: 0.71s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:48:01
+    - Child: 8a4ba931-d13a-45cb-836d-cee347c10164 (span: 235, time: 0.84s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:48:01
+    - Child: cb10aed6-98a5-4efe-9be2-48cfa36b5154 (span: 236, time: 0.67s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:48:02
+    - Child: 76ae802f-5ff2-4b23-a16b-f12e908fc7a0 (span: 237, time: 0.82s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:48:03
+    - Child: 8e26dbfd-63d9-42ce-ac5b-e718dcf613a6 (span: 238, time: 0.82s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:48:04
+    - Child: 591e2746-49f6-44dc-b330-a895dff0027c (span: 239, time: 0.85s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:48:05
+    - Child: 84ba0e7d-b51e-4327-b1a8-6b13041c9b29 (span: 240, time: 0.82s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:48:05
+    - Child: cb896a12-e617-4090-9bd0-f96cc40f63bb (span: 241, time: 0.75s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:48:06
+    - Child: bfa2d0ba-2c71-43da-9619-150b167ce835 (span: 242, time: 0.77s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:48:07
+    - Child: 4813a940-5718-43d6-9965-512a83881c14 (span: 243, time: 0.76s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:48:08
+    - Child: c2f481b1-0523-4d48-933f-037e0fbe4795 (span: 244, time: 0.68s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:48:08
+    - Child: adca65ec-40e6-499c-b7c4-69cbc9ea1fba (span: 245, time: 0.86s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:48:09
+    - Child: 78db5455-9c55-4f86-9cd8-099a4edbacd5 (span: 246, time: 0.75s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:48:10
+    - Child: 62d41194-9034-4a6c-817c-0d36423a9485 (span: 247, time: 0.66s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:48:11
+    - Child: 68bbc16f-dc6f-4e6a-9ea9-129592350b14 (span: 248, time: 0.68s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:48:11
+    - Child: 732fcae2-dec7-4806-9061-510555d6db8a (span: 249, time: 0.71s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:48:12
+    - Child: f012e989-31c5-4409-805c-a3f3ac7aa473 (span: 250, time: 0.66s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:48:13
+    - Child: 60536362-7410-4419-956b-da55d99e2f34 (span: 251, time: 0.82s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:48:14
+    - Child: cc35ca93-14c9-4df0-94a8-1f75f427b848 (span: 252, time: 1.07s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:48:15
+    - Child: 7617f3e0-3ce4-4c69-b7b8-31e51fb7cc0d (span: 253, time: 1.32s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:48:16
+    - Child: 560fed65-2dbd-490b-a3dc-74b0129b1b6d (span: 254, time: 0.73s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:48:17
+    - Child: 2a850a2e-8d2c-4688-8a6c-0cf4f340c756 (span: 255, time: 0.83s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:48:18
+    - Child: c176618f-2f5c-4698-8325-de7c2a05942b (span: 256, time: 0.78s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:48:18
+    - Child: 06e90b0c-a783-44ff-8003-624ac5b94100 (span: 257, time: 0.83s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:48:19
+    - Child: f3e27969-307b-4e38-8f53-de1283e7ac43 (span: 258, time: 0.82s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:48:20
+    - Child: 6f8b88b9-bc72-450e-8bbf-b54665e91b49 (span: 259, time: 0.72s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:48:21
+    - Child: 2265bb46-46f5-4c9d-9b95-59d6b2800915 (span: 260, time: 1.03s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:48:22
+    - Child: 0483af44-b424-4553-88db-2de869d6fac2 (span: 261, time: 0.62s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:48:22
+    - Child: bd0b8a69-fa95-4965-94d3-561a67a750d9 (span: 262, time: 0.80s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:48:23
+    - Child: 44b5a1a8-70f0-40cc-9e18-8b4d5c2d66a0 (span: 263, time: 0.76s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:48:24
+    - Child: 3877ed37-bb09-40aa-ba87-b65c44b6713b (span: 264, time: 0.89s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:48:25
+    - Child: e4ddb200-2d37-44d8-b9c1-9be2b68a86d2 (span: 265, time: 0.71s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:48:26
+    - Child: 6bcd992f-b64f-4838-b538-9f0a270e1ccc (span: 266, time: 0.82s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:48:26
+    - Child: 89b1f46d-b127-427f-867c-7992d0c4ed71 (span: 267, time: 0.72s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:48:27
+    - Child: d6c94fbe-9c5d-4a1a-8ddc-639b654940ff (span: 268, time: 0.72s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:48:28
+    - Child: 4ea2d37b-6ac2-426b-998c-77a1ee7938b3 (span: 269, time: 0.71s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:48:28
+    - Child: 2a310a59-cfb1-411b-8b11-17b5057011bc (span: 270, time: 0.77s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:48:29
+    - Child: af3a6ae3-a487-4a8b-8f92-7b135cebf086 (span: 271, time: 0.75s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:48:30
+    - Child: 6d679796-fd29-4ef1-924c-3ac477130862 (span: 272, time: 1.99s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:48:32
+    - Child: 5809bbaa-23cf-4d08-a274-65055ff5d30a (span: 273, time: 0.63s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:48:33
+    - Child: e0959838-f799-4aaa-9ec7-1bb2197cc818 (span: 274, time: 0.94s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:48:34
+    - Child: adab2989-7f42-4280-9371-ad91a301a39b (span: 275, time: 0.68s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:48:34
+    - Child: a936c1c8-4560-46df-9dd1-c0624f0f8d85 (span: 276, time: 0.67s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:48:35
+    - Child: 649977ae-4dc8-4dd6-ade0-adaa86a4a5d7 (span: 277, time: 0.89s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:48:36
+    - Child: b5539e24-da99-468c-a1ba-72a0a1bc20be (span: 278, time: 1.73s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:48:38
+    - Child: cf24c845-4309-4417-8c35-ccc014f43c78 (span: 279, time: 0.82s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:48:38
+    - Child: 5fc142fa-b592-4a0d-bce6-0b11f9e0be05 (span: 280, time: 0.88s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:48:39
+    - Child: 4b7f4151-0733-4b82-9912-0f97c05cd58a (span: 281, time: 0.80s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:48:40
+    - Child: 6092a3e5-e867-40f7-8373-273b40673efa (span: 282, time: 1.02s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:48:41
+    - Child: feec36fb-1a54-43e3-8bac-fb112ffbc265 (span: 283, time: 0.71s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:48:42
+    - Child: cfd706a8-b62c-4c0b-8a89-5287441204f6 (span: 284, time: 1.13s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:48:43
+    - Child: 467b4610-b628-4e29-9a67-f86d8c20817a (span: 285, time: 0.83s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:48:44
+    - Child: 62b25173-686b-42ab-bdbc-c3e9632797e2 (span: 286, time: 0.81s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:48:45
+    - Child: f52aa826-7ae9-4182-ac0c-37bd27327ea1 (span: 287, time: 0.81s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:48:45
+    - Child: 73b91e18-8ca1-4d5e-adc8-715700e32594 (span: 288, time: 0.82s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:48:46
+    - Child: 7e97e508-59d6-480e-8784-3a52785dce4d (span: 289, time: 0.79s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:48:47
+    - Child: 919bd2f2-2909-48d2-ad4b-3978da3484e9 (span: 290, time: 0.75s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:48:48
+    - Child: f188efc6-88aa-4497-81e2-68e116be383d (span: 291, time: 0.70s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:48:48
+    - Child: 17173575-38f7-447b-8fdd-50767359290c (span: 292, time: 0.69s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:48:49
+    - Child: 192f892f-fdea-4765-8fc4-91fad1ee6fb1 (span: 293, time: 0.95s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:48:50
+    - Child: 2a1bc929-fe9a-4f11-8bd8-7e38e1de41dd (span: 294, time: 0.76s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:48:51
+    - Child: 627a537c-dcbb-454d-a768-51c94c5e7580 (span: 295, time: 0.98s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:48:52
+    - Child: cb9f8fee-e5a0-4687-bb1b-f69b5ef9b2ec (span: 296, time: 1.02s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:48:53
+    - Child: 8babdf6e-e500-4141-90e1-265df0599d47 (span: 297, time: 1.02s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:48:54
+    - Child: 52e6930c-2863-4172-b046-cb0921fea281 (span: 298, time: 0.71s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:48:55
+    - Child: 71edeb41-8486-47b1-aac1-15d30ae372e7 (span: 299, time: 0.82s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:48:55
+    - Child: b3361f44-12ad-45bf-baa8-f426817ca4f6 (span: 300, time: 1.02s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:48:56
+    - Child: 94bfeb09-3bf6-4cf2-9c22-3ebb20e46b42 (span: 301, time: 0.79s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:48:57
+    - Child: 13501015-4b18-4353-9761-2f0d5cbfa6f8 (span: 302, time: 0.70s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:48:58
+    - Child: 6c53bac8-8bbf-4231-8adc-78f4e71acae8 (span: 303, time: 0.76s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:48:59
+    - Child: b5d8b41d-4817-4ae4-87c2-193a78528f4b (span: 304, time: 0.69s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:48:59
+    - Child: eb195f89-8403-4a8c-8316-05e9e71c22b5 (span: 305, time: 1.38s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:49:01
+    - Child: ec260d39-af31-4700-8035-a1199edf5a98 (span: 306, time: 0.79s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:49:02
+    - Child: 69ddaa42-9550-4907-a2fb-7a102c803b04 (span: 307, time: 0.87s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:49:02
+    - Child: 3d03bc17-8ec1-44de-9f64-e002baf54d65 (span: 308, time: 1.47s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:49:04
+    - Child: 217e7ce0-2af4-4111-bd73-0d32985bf268 (span: 309, time: 0.84s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:49:05
+    - Child: 21d12c9f-dafc-4328-a143-116021ac0e4c (span: 310, time: 0.66s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:49:05
+    - Child: 45d5983a-8fc4-4d19-b44b-89a1b8814fba (span: 311, time: 0.62s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:49:06
+    - Child: 97c005bb-b860-4530-8682-c46e3e42d067 (span: 312, time: 0.79s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:49:07
+    - Child: 035d5156-489b-4555-9f7a-603fd1194a42 (span: 313, time: 0.89s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:49:08
+    - Child: 7303dd96-ea89-4dea-a60a-b0c99a3ee622 (span: 314, time: 0.70s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:49:08
+    - Child: 38f0fd57-925d-4a22-bccd-6d08bd1e8789 (span: 315, time: 0.78s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:49:09
+    - Child: b09f739a-e3a0-4737-8d0f-9d468650eecb (span: 316, time: 0.76s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:49:10
+    - Child: 85c77cef-e1a5-4914-b971-8e4922c90de2 (span: 317, time: 0.82s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:49:11
+    - Child: 2f72ef70-464a-45a6-9b98-d5f51db1f35a (span: 318, time: 0.81s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:49:12
+    - Child: 2467eade-9465-43cd-b1e3-61c23ed124ae (span: 319, time: 0.71s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:49:12
+    - Child: 9f46e4b3-af97-4d59-a5f5-faa1c9d8e0b2 (span: 320, time: 0.81s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:49:13
+    - Child: b118cfca-16e7-4736-b6ab-49cf98a9cb29 (span: 321, time: 0.82s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:49:14
+    - Child: fcb49f50-524b-4a9f-ac17-8ec142d210eb (span: 322, time: 0.92s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:49:15
+    - Child: c858576a-3394-4b0b-99ff-ffc7546c3877 (span: 323, time: 0.71s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:49:16
+    - Child: 88e1990e-fd14-49b9-bf5e-551a83c15aa7 (span: 324, time: 1.04s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:49:17
+    - Child: 91ce9940-f0c6-4d46-83d8-1341698fec7d (span: 325, time: 0.78s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:49:17
+    - Child: 5acc8de2-b9b6-4f8f-9cb6-c2efbe9d2336 (span: 326, time: 0.94s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:49:18
+    - Child: 3bbc03da-1d6f-4e1d-bc93-ce0b59f9490b (span: 327, time: 0.71s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:49:19
+    - Child: 5136ddda-db03-4bc5-a406-42b2428ad4e0 (span: 328, time: 0.82s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:49:20
+    - Child: 58507665-dd54-415f-8668-8c37345c2830 (span: 329, time: 0.92s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:49:21
+    - Child: b795b0f9-8603-473f-8b78-3fcaeeaa3ecb (span: 330, time: 0.81s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:49:22
+    - Child: 2f48af9b-e0ed-4efa-a275-3ed1c0d6d274 (span: 331, time: 1.53s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:49:23
+    - Child: b6679469-3997-4896-8904-51c6fc983209 (span: 332, time: 0.82s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:49:24
+    - Child: ab9b2b19-6a43-4fd5-ab6d-3e099829fb6f (span: 333, time: 1.02s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:49:25
+    - Child: d1c224e1-33d0-40d2-86db-723de6c60fb1 (span: 334, time: 0.76s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:49:26
+    - Child: 1df4683d-7e8b-40c1-80ab-2c26dcc5ab4d (span: 335, time: 0.72s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:49:27
+    - Child: 3a07bfbd-7e8b-47a6-beba-6979f32f6729 (span: 336, time: 0.76s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:49:27
+    - Child: 47b6da4b-ab48-4fa9-8224-f217a9289696 (span: 337, time: 1.03s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:49:28
+    - Child: dea5509a-f66d-40e2-bba7-47c3c558d8df (span: 338, time: 0.77s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:49:29
+    - Child: 2f872560-ee57-4b6f-8d2b-c7bd6a58dd7a (span: 339, time: 1.14s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:49:30
+    - Child: d637cafb-048f-4dbc-b77d-9d69479f77c0 (span: 340, time: 0.83s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:49:31
+    - Child: 6c1bcb9a-5805-438d-9499-65607686a2ed (span: 341, time: 0.72s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:49:32
+    - Child: f720fde9-4741-47e7-868c-7b731abd4869 (span: 342, time: 0.70s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:49:32
+    - Child: bf48824c-f8ea-4661-b5eb-ce0b3bcf310a (span: 343, time: 1.05s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:49:34
+    - Child: bbfb7485-867c-4c21-80f5-47c688363989 (span: 344, time: 0.80s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:49:34
+    - Child: 33a775aa-c8b2-4f15-8744-222d92596283 (span: 345, time: 0.74s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:49:35
+    - Child: 0bcb1951-4870-4d8a-ac5c-79b3e5d85548 (span: 346, time: 0.79s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:49:36
+    - Child: d859b7db-556b-41b9-b493-c0a6fed61141 (span: 347, time: 0.82s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:49:37
+    - Child: 75abeda4-47d1-4bf7-acb2-f2b74a1707ee (span: 348, time: 0.71s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:49:37
+    - Child: c5142c79-bbc1-4399-8417-38306e622f36 (span: 349, time: 1.25s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:49:39
+    - Child: 0eb0c8a5-200a-4eba-b1aa-dcca4460de31 (span: 350, time: 0.89s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:49:40
+    - Child: 90574a9a-cad1-40ad-9187-9391108d8754 (span: 351, time: 0.76s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:49:40
+    - Child: 6aabc43e-5f19-42f5-95d8-64cab39df882 (span: 352, time: 0.77s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:49:41
+    - Child: edeafc7d-a865-453e-a8ff-2511eff60a8e (span: 353, time: 0.72s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:49:42
+    - Child: 0f385be6-fab4-468b-9308-6f5188b563d8 (span: 354, time: 0.72s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:49:43
+    - Child: 8b2fb40c-7d71-4dad-88ba-f94cdca56c22 (span: 355, time: 0.81s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:49:43
+    - Child: 7b1158c7-b650-4e5b-8fb8-c932aefcac80 (span: 356, time: 0.66s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:49:44
+    - Child: 5deb488d-74fa-43dd-ba29-842613b9426f (span: 357, time: 0.87s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:49:45
+    - Child: ad92b31d-66b1-4796-8550-26adf8037285 (span: 358, time: 0.73s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:49:46
+    - Child: 48bbd9fe-a440-4247-adb9-5d9ea0527ac4 (span: 359, time: 0.92s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:49:47
+    - Child: 2c03402b-f27d-439e-88d0-c65afc88c946 (span: 360, time: 0.71s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:49:47
+    - Child: b7351b16-c783-496d-862d-9a383b997349 (span: 361, time: 0.92s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:49:48
+    - Child: 8f96273f-8c5e-4d2a-814a-dcff49aa9e99 (span: 362, time: 0.81s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:49:49
+    - Child: 0cb63c91-9185-4d83-b19b-83eebab9b73d (span: 363, time: 0.83s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:49:50
+    - Child: 5ac9e15e-b934-4386-98ba-6fa20e7119a5 (span: 364, time: 0.73s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:49:51
+    - Child: 0adf4015-b77e-4e59-a603-9015efff3afe (span: 365, time: 0.67s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:49:51
+    - Child: 1da47afc-7960-4135-adc6-5f7fff0c0f70 (span: 366, time: 0.83s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:49:52
+    - Child: 8f0f4657-7290-4baa-a8d4-a53b3c7b248d (span: 367, time: 0.92s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:49:53
+    - Child: e753b370-500b-48a0-8a22-faa85d01b894 (span: 368, time: 0.71s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:49:54
+    - Child: 6f22c603-757b-4c13-b195-a8a153771ccc (span: 369, time: 0.66s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:49:54
+    - Child: a8319456-d9bf-4aba-9491-9e8b1fda0075 (span: 370, time: 0.77s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:49:55
+    - Child: 01a8d281-2e97-4f05-b8e4-defe59c4fa7e (span: 371, time: 0.76s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:49:56
+    - Child: 322c729b-6607-4f37-bb2f-967ef3399bd8 (span: 372, time: 0.77s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:49:57
+    - Child: 16f69eee-0bf6-4430-875a-8e10d21558b9 (span: 373, time: 0.70s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:49:57
+    - Child: ad6b6b74-4914-40a7-be87-401fd8d36237 (span: 374, time: 0.68s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:49:58
+    - Child: 7c5d2c43-883e-47f1-a496-b1684814c1d3 (span: 375, time: 0.77s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:49:59
+    - Child: fb20d107-508d-4b12-b34b-f47e0ca1abac (span: 376, time: 0.82s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:50:00
+    - Child: b6a78a61-787e-4a77-9c4f-09c99637d61e (span: 377, time: 1.50s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:50:01
+    - Child: 05d47088-de5e-496c-8a74-bc437782d021 (span: 378, time: 0.78s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:50:02
+    - Child: 059111f4-c512-4630-bd8f-7fb3e91ade35 (span: 379, time: 0.85s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:50:03
+    - Child: c1afb7e7-7afa-4176-a028-8e850e299bfd (span: 380, time: 0.64s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:50:03
+    - Child: e3d97865-1086-40cb-b889-4e217582f801 (span: 381, time: 0.84s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:50:04
+    - Child: f4494734-c29c-49b1-a411-2d0f3e996eb5 (span: 382, time: 0.80s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:50:05
+    - Child: 6a09835d-243f-45ec-af7f-11c35041b4cd (span: 383, time: 0.72s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:50:06
+    - Child: 1f8b3033-782b-4359-8d86-e4fa8175c879 (span: 384, time: 1.35s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:50:07
+    - Child: 0e29d02d-7157-4b54-9128-e01eec293496 (span: 385, time: 0.89s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:50:08
+    - Child: dd363d93-742f-4dd3-8e07-fef4614ae9d5 (span: 386, time: 1.29s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:50:09
+    - Child: f827c91f-3d41-49da-863a-f270772aed76 (span: 387, time: 0.64s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:50:10
+    - Child: b270163d-4729-4c78-88d5-6fe41a1ec788 (span: 388, time: 0.84s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:50:11
+    - Child: d817ec25-1760-47c0-b355-7422f2fc14ff (span: 389, time: 0.70s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:50:12
+    - Child: 05e0ea0b-6e34-406a-abf5-218f68ac7224 (span: 390, time: 0.71s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:50:12
+    - Child: 6c6fe9fe-30a1-48a6-b7a1-0e490b5ece14 (span: 391, time: 0.91s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:50:13
+    - Child: d68fc8ea-fdb9-4e7b-a091-8584241b102a (span: 392, time: 1.86s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:50:15
+    - Child: f4dc5482-3f17-4b27-a706-af0598ac1240 (span: 393, time: 0.92s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:50:16
+    - Child: 70ad1466-bf4c-40dd-8fc3-b17838a29774 (span: 394, time: 0.91s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:50:17
+    - Child: 16836fa7-39dc-4b81-968f-1ca164aa5146 (span: 395, time: 0.83s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:50:18
+    - Child: 0207f834-7471-4994-bbb4-5a8df10180a3 (span: 396, time: 2.45s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:50:20
+    - Child: 226855f9-c174-4bf8-a23e-084dba636888 (span: 397, time: 4.73s, type: tool)
+      - Tool: search
+      - Records: 1
+      - Timestamp: 2025-12-05 01:50:25
+    - Child: 515e8c88-997d-4abe-b920-26c4359064ca (span: 398, time: 63.10s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:51:28
+    - Child: f7149d7d-6bb1-4300-9131-15436fffbb65 (span: 399, time: 2.29s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:51:32
+    - Child: b77bc687-8084-46ee-b1e3-feb438880c8d (span: 400, time: 7.91s, type: tool)
+      - Tool: search
+      - Records: 1
+      - Timestamp: 2025-12-05 01:51:40
+    - Child: 2f763c35-06ef-4596-b97b-2a26d4277d21 (span: 402, time: 8.61s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:52:54
+    - Child: dc9ebdb5-1a70-49e3-8bfc-45959ec2d896 (span: 403, time: 2.52s, type: tool)
+      - Tool: search
+      - Records: 1
+      - Timestamp: 2025-12-05 01:52:56
+    - Child: f88047c5-f278-4ab5-951a-fcc0133e3295 (span: 404, time: 1.09s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:52:57
+    - Child: eead6f37-857b-4d32-9149-f9ab9a082756 (span: 405, time: 7.67s, type: tool)
+      - Tool: search
+      - Records: 1
+      - Timestamp: 2025-12-05 01:53:05
+    - Child: 93e3a96b-3689-4b2b-9480-a7e30df806c7 (span: 406, time: 4.15s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:53:09
+    - Child: 26dee495-72a9-4844-bd64-0a6adf6d5316 (span: 407, time: 3.93s, type: tool)
+      - Tool: search
+      - Records: 1
+      - Timestamp: 2025-12-05 01:53:13
+    - Child: e7a95383-e775-469e-ba35-c30e1e6563a6 (span: 408, time: 18.26s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:53:31
+    - Child: a78d4824-3a45-4744-9485-fa5be0d11c6a (span: 409, time: 6.26s, type: tool)
+      - Tool: search
+      - Records: 1
+      - Timestamp: 2025-12-05 01:53:38
+    - Child: 2b62ef4a-63ab-4b78-a418-daaeb312d35c (span: 401, time: 118.90s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:53:39
+    - Child: 7cfe6384-5b4e-4ca9-9beb-ddc530d33d78 (span: 410, time: 10.06s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:53:48
+    - Child: 5b157963-d8ca-4795-a553-bdae6bf9f01c (span: 411, time: 0.93s, type: tool)
+      - Tool: fetch
+      - Records: 1
+      - Timestamp: 2025-12-05 01:53:49
+    - Child: cc550af6-ab7b-4cde-87eb-13cd798db4d5 (span: 412, time: 2.48s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:53:51
+    - Child: 0cfe362e-08e2-46ef-b432-5273fc092311 (span: 413, time: 0.64s, type: tool)
+      - Tool: fetch
+      - Records: 1
+      - Timestamp: 2025-12-05 01:53:52
+    - Child: bb886459-99b7-4fc9-83de-8c3f01cfb4b9 (span: 414, time: 6.59s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:53:59
+    - Child: 03ff292a-931c-45f5-84b9-4b63456e0228 (span: 415, time: 4.08s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:54:03
+    - Child: 5d247148-6f38-4755-9941-327677f07ec7 (span: 416, time: 0.73s, type: tool)
+      - Tool: fetch
+      - Records: 1
+      - Timestamp: 2025-12-05 01:54:03
+    - Child: ff32e40a-1e8e-4d3a-9895-cd469bf4df0c (span: 417, time: 2.27s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:54:06
+    - Child: 2ef1a890-359d-4b09-813f-c3c0dbde6ff5 (span: 418, time: 0.64s, type: tool)
+      - Tool: fetch
+      - Records: 1
+      - Timestamp: 2025-12-05 01:54:06
+    - Child: bb829352-afdb-4be5-97b0-eeda237538c1 (span: 419, time: 31.88s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:54:38
+    - Child: d9a90dc5-159a-49a5-8b0c-5be2b56d6d69 (span: 420, time: 7.68s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:54:46
+    - Child: 790a3a58-86fc-425b-a759-b18aeb6d4fcd (span: 421, time: 3.69s, type: tool)
+      - Tool: search
+      - Records: 1
+      - Timestamp: 2025-12-05 01:54:50
+    - Child: cd0c3e18-3f96-4c64-a777-e1804683052c (span: 422, time: 56.61s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:55:46
+    - Child: 2a29f843-fa14-47c1-8b3c-b8a114ae6a94 (span: 423, time: 6.72s, type: tool)
+      - Tool: search
+      - Records: 1
+      - Timestamp: 2025-12-05 01:55:53
+    - Child: 16523196-d644-4aed-b67c-f417ccada036 (span: 424, time: 52.39s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:56:45
+    - Child: 83ec7eff-e184-4180-84f7-4d0ffb9c846b (span: 425, time: 1.27s, type: tool)
+      - Tool: fetch
+      - Records: 1
+      - Timestamp: 2025-12-05 01:56:47
+    - Child: 20f96ef4-448d-4a92-8147-b43a9b59ef13 (span: 426, time: 0.88s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:56:48
+    - Child: 729234fb-e4c6-4332-bf59-f493866ca15f (span: 427, time: 1.03s, type: tool)
+      - Tool: fetch
+      - Records: 1
+      - Timestamp: 2025-12-05 01:56:49
+    - Child: 19734436-4ba6-40b1-b137-7b63b9d97376 (span: 428, time: 5.45s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:56:54
+    - Child: f9ccdd94-672d-4701-aeff-67ab5c54ab90 (span: 429, time: 1.34s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:56:55
+    - Child: bb5a0f7a-1ef4-4d3a-b847-57865e86e4cc (span: 431, time: 2.62s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:58:03
+    - Child: 6772ad13-8975-494c-b314-fc519ded7ba3 (span: 432, time: 0.85s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:58:04
+    - Child: c2015e85-0984-499f-ba6e-6e425a1bf255 (span: 433, time: 0.80s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:58:05
+    - Child: 24a58edc-41a7-401b-89e0-2f0655cb4a6f (span: 434, time: 1.03s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:58:06
+    - Child: dfd412bc-8359-4bf1-b8d3-52519977a743 (span: 435, time: 25.88s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:58:32
+    - Child: 03f2bc04-f0f9-4a79-8a95-ccac969408d2 (span: 436, time: 0.84s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:58:33
+    - Child: 7151d374-21cd-4514-8b39-34acd3457eaa (span: 430, time: 102.49s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:58:38
+    - Child: 5279c504-66f6-4f5b-adc3-43a5be6910b9 (span: 437, time: 8.72s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:58:41
+    - Child: 5e4a05df-c958-4866-a5e5-eead3f20118f (span: 438, time: 1.25s, type: tool)
+      - Tool: fetch
+      - Records: 1
+      - Timestamp: 2025-12-05 01:58:42
+    - Child: 80046dae-431a-4981-b2b9-60a911b8e6b4 (span: 439, time: 6.45s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:58:49
+    - Child: 80f9af3e-92ac-47d9-a541-12ff2f3c4e05 (span: 440, time: 0.95s, type: tool)
+      - Tool: fetch
+      - Records: 1
+      - Timestamp: 2025-12-05 01:58:50
+    - Child: 80960f7b-d090-40a3-b540-7b097919d3de (span: 441, time: 3.80s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:58:54
+    - Child: e3c04051-d064-4522-9870-de91c6ff4b20 (span: 442, time: 0.95s, type: tool)
+      - Tool: fetch
+      - Records: 1
+      - Timestamp: 2025-12-05 01:58:55
+    - Child: 2d9981ba-3dd8-499b-a4f0-03b3189c557b (span: 1, time: 855.61s, type: agent)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:58:55
+- Evaluation Results: 
+
+  - Eval id: 1
+    - Evaluation Description: 
+
+    - Reason: output is not equal to ground-truth
+
+    - Passed? <span color="red">False<span>
+
+### Task
+- config: test/web_search/info_search_task_0049.json
+- parent_id: dc1bcebe-ddfe-48f2-8afd-3f8b87a97bff
+- LLM Call Count: 58
+- Total Execution Time: 4140.39s
+- Average Response Time: 54.48s
+- Total Records: 76
+- Agent Response:
+  - llm_prompt: 58
+
+- Trace Structure:
+  - Parent Trace: dc1bcebe-ddfe-48f2-8afd-3f8b87a97bff
+    - Child: 5f7d2b3b-6319-4c07-83f6-645a4d297199 (span: 1, time: 1.89s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:58:59
+    - Child: fdb7dca6-195d-4045-bedb-062b96dda557 (span: 2, time: 1.31s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:59:00
+    - Child: c4aa1141-2390-4a04-b08d-e86b34a9444a (span: 3, time: 0.56s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 01:59:01
+    - Child: f22d89bf-9c63-4699-a6dc-398b56ba9f5c (span: 5, time: 0.75s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 02:00:07
+    - Child: e241b413-8ad4-4aaa-b72f-24a689412f68 (span: 6, time: 0.72s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 02:00:07
+    - Child: 181ace48-174e-4d72-b072-1416b82207d9 (span: 7, time: 3.57s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 02:00:11
+    - Child: 240ef389-05f7-4a9f-bb15-1a09563e1a22 (span: 8, time: 4.34s, type: tool)
+      - Tool: search
+      - Records: 1
+      - Timestamp: 2025-12-05 02:00:15
+    - Child: 6bf33c9d-1446-4082-9f5c-9ea1b3710bb0 (span: 9, time: 1.69s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 02:00:17
+    - Child: 034280f3-dcec-4786-88d1-14ccc4b1682c (span: 11, time: 2.94s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 02:01:25
+    - Child: 08aca2f3-6669-4d33-b850-14d8d8f020df (span: 12, time: 4.70s, type: tool)
+      - Tool: search
+      - Records: 1
+      - Timestamp: 2025-12-05 02:01:30
+    - Child: 5926e63e-da1e-4699-8050-534f5cd7a1f4 (span: 13, time: 4.60s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 02:01:34
+    - Child: b56360ca-8960-4fad-a250-1d02970be531 (span: 14, time: 2.23s, type: tool)
+      - Tool: search
+      - Records: 1
+      - Timestamp: 2025-12-05 02:01:37
+    - Child: c6c70274-9d51-482d-b8c9-10e531bd2840 (span: 15, time: 51.24s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 02:02:28
+    - Child: 441b51cb-b62a-45b6-8dc6-031a0722554b (span: 16, time: 0.70s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 02:02:29
+    - Child: 4a14b667-45dc-4a4c-961b-29b095c7dd99 (span: 17, time: 1.31s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 02:02:30
+    - Child: 48426719-f993-4933-a81f-b8076d76b4b9 (span: 18, time: 2.43s, type: tool)
+      - Tool: search
+      - Records: 1
+      - Timestamp: 2025-12-05 02:02:32
+    - Child: 20880d03-8a28-43e5-a83c-78d7054ca608 (span: 19, time: 0.70s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 02:02:33
+    - Child: d8d8a957-6d3b-46f6-8d6a-23130e3c7c97 (span: 20, time: 1.66s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 02:02:35
+    - Child: f5dcc934-5aea-4133-95b7-363d35f1dc79 (span: 21, time: 8.21s, type: tool)
+      - Tool: search
+      - Records: 1
+      - Timestamp: 2025-12-05 02:02:43
+    - Child: cb65e23a-7875-4a9a-8c02-b4b7883eaab4 (span: 24, time: 0.69s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 02:04:54
+    - Child: 9ffebb95-4616-4e01-912c-563e9fc834e7 (span: 25, time: 5.95s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 02:05:00
+    - Child: 28fe8ad3-f789-4eb7-87f0-c9e60100d02a (span: 26, time: 2.73s, type: tool)
+      - Tool: search
+      - Records: 1
+      - Timestamp: 2025-12-05 02:05:02
+    - Child: 37cf9c02-a42a-4f64-8f4b-1704380a69c0 (span: 27, time: 2.97s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 02:05:05
+    - Child: 30c45ad5-c193-4cca-a433-7b8dcb2aca72 (span: 28, time: 2.16s, type: tool)
+      - Tool: fetch
+      - Records: 1
+      - Timestamp: 2025-12-05 02:05:07
+    - Child: ab8b0af6-a64c-4770-bb60-9eb9688dc21f (span: 29, time: 0.87s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 02:05:08
+    - Child: e35169f9-5d9b-4cbf-88a5-5c8af0b82ae0 (span: 30, time: 1.26s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 02:05:10
+    - Child: 74fb16a9-28ae-450a-a686-a66ac4a3fcd0 (span: 4, time: 370.05s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 02:05:11
+    - Child: 558be9b8-edee-4044-9a5a-ff3bf9c1847d (span: 32, time: 0.84s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 02:06:16
+    - Child: eac3447e-e243-4412-877e-16d60b8349ca (span: 33, time: 1.04s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 02:06:17
+    - Child: aa0e9bb4-9bfd-474c-b1ba-7fafe718bcab (span: 34, time: 1.36s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 02:06:18
+    - Child: 1d20116f-6f66-48a1-a66c-ca28b17ccb76 (span: 35, time: 1.95s, type: tool)
+      - Tool: fetch
+      - Records: 1
+      - Timestamp: 2025-12-05 02:06:20
+    - Child: ce5f271b-c3ab-4444-a906-57b16c04bd92 (span: 36, time: 1.10s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 02:06:21
+    - Child: b1712e71-6734-4411-944d-9af63506d029 (span: 37, time: 0.78s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 02:06:22
+    - Child: cea1549e-3750-481f-9836-438a4edf2877 (span: 39, time: 0.96s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 02:07:28
+    - Child: 39b95c43-15f8-4a64-9be9-84e006dfea55 (span: 40, time: 2.47s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 02:07:30
+    - Child: 47a10e11-5fec-442d-a532-d21c00037f35 (span: 23, time: 223.36s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 02:07:31
+    - Child: 4e824575-4f97-4a65-a7de-46a7ab900251 (span: 41, time: 1.18s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 02:07:31
+    - Child: f47d4cd3-86e8-471c-b853-fe993e0eb2ff (span: 42, time: 1.86s, type: tool)
+      - Tool: fetch
+      - Records: 1
+      - Timestamp: 2025-12-05 02:07:33
+    - Child: e69ed333-e7bd-43dd-a4b0-748534384034 (span: 43, time: 0.91s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 02:07:34
+    - Child: 64de78ee-3ec1-4077-b052-0fbd93ce7f83 (span: 44, time: 6.96s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 02:07:41
+    - Child: c354ac39-2c31-4ccb-bba3-9f95386283cd (span: 22, time: 300.11s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 02:07:43
+    - Child: 5ddaaed0-2c3b-4de1-b1d6-ba2154558d8e (span: 10, time: 454.10s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 02:07:51
+    - Child: 4f649ef2-2c4c-4b37-8e8b-ee0d5ec0289e (span: 31, time: 258.25s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 02:09:28
+    - Child: a0498867-248e-440d-a4df-3b2e82570b80 (span: 45, time: 167.98s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 02:10:29
+    - Child: 8ffec93b-bca1-47b1-89cc-13d6430b20a5 (span: 48, time: 2.00s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 02:10:58
+    - Child: 62c4d440-1641-44a7-8eb6-15edc94f30ee (span: 49, time: 4.42s, type: tool)
+      - Tool: search
+      - Records: 1
+      - Timestamp: 2025-12-05 02:11:03
+    - Child: 1750e24f-6ed0-4cbc-8210-e5d4068cfc94 (span: 50, time: 3.05s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 02:11:06
+    - Child: 70a10bef-647b-4281-812d-94b9f90dda64 (span: 51, time: 2.49s, type: tool)
+      - Tool: search
+      - Records: 1
+      - Timestamp: 2025-12-05 02:11:08
+    - Child: 669810c2-5c19-4283-b5e3-89652b9d6c6b (span: 53, time: 0.84s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 02:12:14
+    - Child: 29565be1-db71-41d7-a2b7-1cf7630bfc89 (span: 54, time: 8.71s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 02:12:23
+    - Child: 52ddae34-178e-42f0-bf32-6123a58e0f75 (span: 55, time: 8.73s, type: tool)
+      - Tool: search
+      - Records: 1
+      - Timestamp: 2025-12-05 02:12:31
+    - Child: 0c398833-3bde-42b3-a318-8699608c363e (span: 38, time: 373.71s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 02:12:35
+    - Child: 02727993-91cc-46e1-888b-40f8f002dc67 (span: 56, time: 11.52s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 02:12:43
+    - Child: f7ee919c-da4c-4411-bf73-cd42acd1ac84 (span: 46, time: 237.08s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 02:12:43
+    - Child: e1e8a2fb-c056-4fd4-9a53-3bb8c455285d (span: 57, time: 0.82s, type: tool)
+      - Tool: fetch
+      - Records: 1
+      - Timestamp: 2025-12-05 02:12:44
+    - Child: 3f197f8d-97f0-4e2f-aa08-79cec7a928a8 (span: 58, time: 1.02s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 02:12:45
+    - Child: 5a979a77-1167-4453-a96d-a3a168ee7e29 (span: 59, time: 9.77s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 02:12:55
+    - Child: 0f78ba66-08af-4cd9-9a82-dd0d04a8d06e (span: 60, time: 0.74s, type: tool)
+      - Tool: fetch
+      - Records: 1
+      - Timestamp: 2025-12-05 02:12:55
+    - Child: b6941c50-70c4-4f71-b471-9b533d52b69a (span: 52, time: 165.73s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 02:13:54
+    - Child: 598ef40c-d31e-4313-af15-34d990ea2667 (span: 62, time: 3.45s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 02:14:04
+    - Child: 2bdf6157-3a27-4fee-bd6f-998adb61cc75 (span: 63, time: 0.79s, type: tool)
+      - Tool: fetch
+      - Records: 1
+      - Timestamp: 2025-12-05 02:14:05
+    - Child: a651de53-3130-4800-9d51-c4c78e6bb0d6 (span: 64, time: 1.58s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 02:14:06
+    - Child: 03b8fa7c-fa03-4d53-b879-01197f3309b1 (span: 65, time: 1.08s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 02:14:07
+    - Child: 61d827ab-cdfe-41da-bee8-db9cd6cd7d2d (span: 66, time: 1.13s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 02:14:09
+    - Child: 4a2c96c5-ad7c-44fd-a102-b2d4ac463b07 (span: 67, time: 1.22s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 02:14:10
+    - Child: 132572b9-f057-4be5-8d9d-aaad3d69c1ac (span: 68, time: 0.94s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 02:14:11
+    - Child: e0d446b4-2f82-4077-8fbb-8f8c5f96888b (span: 69, time: 7.52s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 02:14:18
+    - Child: 7f78cd16-ab6f-4132-bb0f-571c72887105 (span: 70, time: 2.95s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 02:14:21
+    - Child: d0f13820-187b-4de8-9684-27c158a751b5 (span: 71, time: 4.45s, type: tool)
+      - Tool: search
+      - Records: 1
+      - Timestamp: 2025-12-05 02:14:26
+    - Child: 551905bc-e134-48db-bda7-77183c045b36 (span: 47, time: 278.65s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 02:14:30
+    - Child: 0ffbcb1e-ce25-4664-bf45-7b5b178e8094 (span: 61, time: 110.85s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 02:14:46
+    - Child: 7655b561-43c5-47b1-a6b9-0ec2c2b8a523 (span: 72, time: 21.02s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 02:14:47
+    - Child: 7a77aa4b-133a-4442-8a39-b1976ae55ed9 (span: 73, time: 2.48s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 02:14:49
+    - Child: 6816e7d0-8db9-4bd9-b7e3-a4310d43c66c (span: 74, time: 4.02s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 02:14:53
+    - Child: 00807ae3-0618-4f70-8557-1d1db121242e (span: 75, time: 1.99s, type: tool)
+      - Tool: fetch
+      - Records: 1
+      - Timestamp: 2025-12-05 02:14:55
+    - Child: dc1bcebe-ddfe-48f2-8afd-3f8b87a97bff (span: 1, time: 958.18s, type: agent)
+      - Records: 1
+      - Timestamp: 2025-12-05 02:14:55
+- Evaluation Results: 
+
+  - Eval id: 1
+    - Evaluation Description: 
+
+    - Reason: output is not equal to ground-truth
+
+    - Passed? <span color="red">False<span>
+
+### Task
+- config: test/web_search/info_search_task_0050.json
+- parent_id: fff1614c-c7a4-4747-8eb1-a71f1a25ed44
+- LLM Call Count: 25
+- Total Execution Time: 1512.83s
+- Average Response Time: 40.89s
+- Total Records: 37
+- Agent Response:
+  - llm_prompt: 25
+
+- Trace Structure:
+  - Parent Trace: fff1614c-c7a4-4747-8eb1-a71f1a25ed44
+    - Child: 23268893-8b59-4197-8038-5c0b04eff1a2 (span: 1, time: 23.60s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 02:15:21
+    - Child: bdb8d9d3-f93e-4b0e-bc2a-123f323d5631 (span: 2, time: 3.46s, type: tool)
+      - Tool: search
+      - Records: 1
+      - Timestamp: 2025-12-05 02:15:24
+    - Child: 1e23c728-7453-47fb-8dc7-20c1a995209c (span: 3, time: 1.73s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 02:15:26
+    - Child: 14ecf2a2-e983-4550-9c37-cf2fc5908a94 (span: 4, time: 3.12s, type: tool)
+      - Tool: search
+      - Records: 1
+      - Timestamp: 2025-12-05 02:15:29
+    - Child: ac89d259-30be-49f0-8407-9ec68f609c5a (span: 6, time: 4.33s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 02:16:39
+    - Child: 734bc893-7642-4d5d-8cd2-5bdb897a3d07 (span: 7, time: 5.82s, type: tool)
+      - Tool: search
+      - Records: 1
+      - Timestamp: 2025-12-05 02:16:45
+    - Child: ce1f5593-79dc-44c4-834d-971d8c3afbd5 (span: 8, time: 2.01s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 02:16:47
+    - Child: e590e070-8ed8-4a1c-9c70-04b110e9f486 (span: 9, time: 0.84s, type: tool)
+      - Tool: fetch
+      - Records: 1
+      - Timestamp: 2025-12-05 02:16:47
+    - Child: ed888c23-dc0b-46d0-8cc3-0abea2e63209 (span: 10, time: 17.20s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 02:17:05
+    - Child: 50991031-aa15-419b-9df5-716947982acc (span: 11, time: 2.49s, type: tool)
+      - Tool: search
+      - Records: 1
+      - Timestamp: 2025-12-05 02:17:07
+    - Child: a5773150-6fd9-4332-bb67-c00275c2a0fa (span: 12, time: 4.17s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 02:17:12
+    - Child: 6d6c31ef-7b42-43c4-bd2e-e07644a53c02 (span: 5, time: 102.29s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 02:17:12
+    - Child: a084945e-0d28-4e63-8262-2d0e5b40d584 (span: 13, time: 2.67s, type: tool)
+      - Tool: search
+      - Records: 1
+      - Timestamp: 2025-12-05 02:17:14
+    - Child: 4809d615-31b4-48ef-937e-8113a2756a80 (span: 14, time: 0.75s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 02:17:15
+    - Child: b8f28efa-493a-4658-b17c-134c610b8ebf (span: 16, time: 2.30s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 02:18:22
+    - Child: 15f88f00-4f1e-4014-9be9-49c2095dc5a4 (span: 17, time: 0.93s, type: tool)
+      - Tool: fetch
+      - Records: 1
+      - Timestamp: 2025-12-05 02:18:23
+    - Child: 789a414e-5531-4060-956b-c278a6da7112 (span: 18, time: 1.71s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 02:18:25
+    - Child: 2005e3d7-980e-4598-9ca6-16a199b7689b (span: 19, time: 8.42s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 02:18:33
+    - Child: cd3dad5e-8f57-4b32-a4a7-62d144869e67 (span: 20, time: 4.61s, type: tool)
+      - Tool: search
+      - Records: 1
+      - Timestamp: 2025-12-05 02:18:38
+    - Child: bc11cbc6-0588-401b-85e3-8693f2fd5c88 (span: 21, time: 0.98s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 02:18:39
+    - Child: ea012634-e234-474e-b055-05f8114b0852 (span: 22, time: 0.79s, type: tool)
+      - Tool: fetch
+      - Records: 1
+      - Timestamp: 2025-12-05 02:18:40
+    - Child: 76740d81-054b-4470-8480-b29a6b96276e (span: 23, time: 5.92s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 02:18:46
+    - Child: 21a5f870-53e5-4650-9563-fcdcb9623d50 (span: 25, time: 1.19s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 02:19:52
+    - Child: e1522eb7-7c69-479e-9f40-cac7751fccbb (span: 26, time: 1.35s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 02:19:53
+    - Child: f194f16f-bbf6-4b54-b266-71f4f7914bfb (span: 27, time: 6.22s, type: tool)
+      - Tool: search
+      - Records: 1
+      - Timestamp: 2025-12-05 02:20:00
+    - Child: 9c6d4492-8cbe-4449-8f65-d712c411fb50 (span: 24, time: 106.23s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 02:20:32
+    - Child: 4b22225f-1a63-4638-8590-48cac4c0a259 (span: 15, time: 248.60s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 02:21:24
+    - Child: fcf57b5b-d190-44d0-850f-00077abc49d6 (span: 29, time: 64.91s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 02:22:10
+    - Child: acd94e46-610c-42f3-9bb7-05836cc10307 (span: 30, time: 0.81s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 02:22:10
+    - Child: 5a4fc688-d610-4efd-ac37-984236dae8c6 (span: 32, time: 12.71s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 02:23:28
+    - Child: 5ccf22b4-5a17-4879-a07b-ba181ace1a18 (span: 33, time: 4.30s, type: tool)
+      - Tool: search
+      - Records: 1
+      - Timestamp: 2025-12-05 02:23:32
+    - Child: ba6bdd2b-65f6-48ef-9bca-9d7e82c4e12f (span: 34, time: 2.06s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 02:23:35
+    - Child: 2e864dd3-8ee1-4eac-961d-eb8cd3ed9826 (span: 35, time: 1.77s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 02:23:36
+    - Child: 0165802a-13ff-46ad-83d7-610fbb47f3d4 (span: 28, time: 242.39s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 02:24:02
+    - Child: 73cdab81-22ad-4c84-8d28-f71ec47e5f1b (span: 36, time: 48.91s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 02:24:25
+    - Child: 4aaea873-8e0d-46e4-be30-cb787150e2ee (span: 37, time: 1.50s, type: llm)
+      - Records: 1
+      - Timestamp: 2025-12-05 02:24:27
+    - Child: fff1614c-c7a4-4747-8eb1-a71f1a25ed44 (span: 1, time: 569.73s, type: agent)
+      - Records: 1
+      - Timestamp: 2025-12-05 02:24:27
+- Evaluation Results: 
+
+  - Eval id: 1
+    - Evaluation Description: 
+
+    - Reason: output is not equal to ground-truth
+
+    - Passed? <span color="red">False<span>

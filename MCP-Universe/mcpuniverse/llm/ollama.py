@@ -102,6 +102,10 @@ class OllamaModel(BaseLLM):
             schema = json.dumps(schema)
             messages.append({"role": "user", "content": f"The results must follow this JSON format {schema}"})
 
+        # Check if this is a reasoning model that needs JSON format enforcement
+        model_name_lower = self.config.model_name.lower()
+        is_reasoning_model = any(name in model_name_lower for name in ["deepseek-r1", "gpt-oss", "deepseek:r1"])
+
         data = {
             "model": self.config.model_name,
             "messages": messages,
@@ -115,12 +119,20 @@ class OllamaModel(BaseLLM):
                 "frequency_penalty": self.config.frequency_penalty,
             }
         }
-        if response_format is not None:
+        # Force JSON format for reasoning models to prevent chain-of-thought text in output
+        if response_format is not None or is_reasoning_model:
             data["format"] = "json"
 
-        response = requests.post(url, json=data, timeout=int(kwargs.get("timeout", 30)))
+        # Increased default timeout to 300s for larger models
+        response = requests.post(url, json=data, timeout=int(kwargs.get("timeout", 300)))
         json_data = json.loads(response.text)
-        content = json_data["message"]["content"]
+        message = json_data["message"]
+        # Handle reasoning models (e.g., deepseek-r1, gpt-oss) that return thinking instead of content
+        content = message.get("content", "")
+        thinking = message.get("thinking", "")
+        # Use thinking if content is empty (reasoning models put response in thinking field)
+        if not content and thinking:
+            content = thinking
         if response_format is None:
             return content
         try:

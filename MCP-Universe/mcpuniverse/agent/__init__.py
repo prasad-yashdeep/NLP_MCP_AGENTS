@@ -9,6 +9,15 @@ from .base import BaseAgent
 from .claude_code import ClaudeCodeAgent
 from .openai_agent_sdk import OpenAIAgentSDK
 
+# Web search multi-agent workers
+from .web_search import (
+    QueryFormulationAgent,
+    SearchExecutionAgent,
+    ContentFetchAgent,
+    FactVerificationAgent,
+    SynthesisAgent,
+)
+
 __all__ = [
     "FunctionCall",
     "BasicAgent",
@@ -18,5 +27,11 @@ __all__ = [
     "Reflection",
     "BaseAgent",
     "ClaudeCodeAgent",
-    "OpenAIAgentSDK"
+    "OpenAIAgentSDK",
+    # Web search workers
+    "QueryFormulationAgent",
+    "SearchExecutionAgent",
+    "ContentFetchAgent",
+    "FactVerificationAgent",
+    "SynthesisAgent",
 ]

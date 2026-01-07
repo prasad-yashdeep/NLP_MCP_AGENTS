@@ -2,3 +2,8 @@
 **/.DS_Store
 terminals/
 
+.claude/
+penv/
+ollama/
+containers/
+cache/
