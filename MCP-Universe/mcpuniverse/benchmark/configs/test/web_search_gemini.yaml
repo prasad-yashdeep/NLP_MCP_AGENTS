@@ -3,7 +3,7 @@ spec:
   name: llm-1
   type: openrouter
   config:
-    model_name: Gemini_2.5_Pro_OR
+    model_name: Gemini_2.0_Flash_OR
 
 ---
 kind: agent

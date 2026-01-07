@@ -81,7 +81,7 @@ spec:
     search_agent: search-execution-agent
     fetch_agent: content-fetch-agent
     verify_agent: fact-verification-agent
-    max_iterations: 12
+    max_iterations: 10
     model: GPTOSS120B_OR
 
 ---

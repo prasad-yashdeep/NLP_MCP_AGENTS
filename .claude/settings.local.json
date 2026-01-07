@@ -1,7 +1,8 @@
 {
   "permissions": {
     "allow": [
-      "Bash(./run_with_node.sh python scripts/test_react_search.py)"
+      "Bash(./run_with_node.sh python scripts/test_react_search.py)",
+      "Bash(cat:*)"
     ],
     "deny": [],
     "ask": []

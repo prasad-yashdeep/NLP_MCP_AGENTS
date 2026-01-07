@@ -8,14 +8,12 @@ import unittest
 import pytest
 from mcpuniverse.tracer.collectors import FileCollector
 from mcpuniverse.benchmark.runner import BenchmarkRunner
-from mcpuniverse.benchmark.report import BenchmarkReport
 from mcpuniverse.callbacks.handlers.vprint import get_vprint_callbacks
 
 
 class TestWebSearchMultiAgent(unittest.IsolatedAsyncioTestCase):
     """Test suite for multi-agent web search system."""
 
-    @pytest.mark.skip(reason="Requires API keys and MCP servers")
     async def test_multiagent_web_search(self):
         """
         Test the full multi-agent web search pipeline.
@@ -42,10 +40,6 @@ class TestWebSearchMultiAgent(unittest.IsolatedAsyncioTestCase):
             trace_collector=trace_collector,
             callbacks=get_vprint_callbacks()
         )
-
-        # Generate report
-        report = BenchmarkReport(benchmark, trace_collector=trace_collector)
-        report.dump()
 
         # Print evaluation results
         print('=' * 66)
@@ -134,7 +128,6 @@ class TestWebSearchMultiAgent(unittest.IsolatedAsyncioTestCase):
             SearchExecutionAgent,
             ContentFetchAgent,
             FactVerificationAgent,
-            SynthesisAgent
         )
         from mcpuniverse.callbacks.handlers.vprint import get_vprint_callbacks
         from mcpuniverse.tracer.collectors import MemoryCollector
@@ -142,19 +135,18 @@ class TestWebSearchMultiAgent(unittest.IsolatedAsyncioTestCase):
 
         # Initialize LLM
         llm = OpenRouterModel(config={
-            "model_name": "GPTOSS20B_OR",
+            "model_name": "GPTOSS120B_OR",
             "reasoning": "high"
         })
 
         # Initialize MCP manager
         mcp_manager = MCPManager()
 
-        # Create worker agents
+        # Create worker agents (no synthesis agent - orchestrator generates answers directly)
         query_agent = QueryFormulationAgent(mcp_manager=mcp_manager, llm=llm)
         search_agent = SearchExecutionAgent(mcp_manager=mcp_manager, llm=llm)
         fetch_agent = ContentFetchAgent(mcp_manager=mcp_manager, llm=llm)
         verify_agent = FactVerificationAgent(mcp_manager=mcp_manager, llm=llm)
-        synthesis_agent = SynthesisAgent(mcp_manager=mcp_manager, llm=llm)
 
         # Create orchestrator with OpenAI Agent SDK
         orchestrator = WebSearchOrchestrator(
@@ -163,9 +155,8 @@ class TestWebSearchMultiAgent(unittest.IsolatedAsyncioTestCase):
             search_agent=search_agent,
             fetch_agent=fetch_agent,
             verify_agent=verify_agent,
-            synthesis_agent=synthesis_agent,
             max_iterations=12,
-            model="GPTOSS20B_OR"  # Model for OpenAI Agent SDK orchestration
+            model="GPTOSS120B_OR"
         )
 
         # Initialize

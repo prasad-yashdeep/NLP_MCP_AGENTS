@@ -34,6 +34,7 @@ model_name_map = {
     "Gemma3_27B_OR": "google/gemma-3-27b-it",
     "Gemini_2.5_Flash_OR": "google/gemini-2.0-flash-exp:free",
     "Gemini_2.5_Pro_OR": "google/gemini-2.5-pro",
+    "Gemma3_12B_OR": "google/gemma-3-12b-it:free",
 }
 
 @dataclass
